@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos los tragos</title>
+
+    <link rel="shortcut icon" href="../img/coctel-favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/header_footer_dinamicos.css">
+
+</head>
+
+<body>
+    <header id="header"></header>
+    <main>
+        <section>
+            <h1>Titulo Tragos</h1>
+        </section>
+        <section class="menu-inicio">
+            <div class="contenedor-imagenes ">
+                <h2>tragos con alcohol</h2>
+
+                <!-- este div contiene todas las imagenes que trae por ID desde la API -->
+                <div class="alcohol " id="contenedor-tragos"></div>
+                
+                <!-- La estructura se crea por JS con sus contenedores y clases -->
+                <!-- <div class="alcohol " id="contenedor-tragos">
+                    
+                    ESTA PARTE ES LA QUE SE REPITE POR CADA IMAGEN
+                    <div class="imagenes">
+                        <img src=" URL de la imagen que muestra" alt=" DESCRIPCION DE LA IMAGEN QUE SE MUESTRA ">
+                        <p> NOMBRE DEL TRAGO QUE MUESTRA LA IMAGEN </p>
+                        <p class="id-trago"> ID DEL TRAGO QUE MUESTRA </p>
+                    </div>
+                
+                
+                </div> -->
+
+            </div>
+
+        </section>
+
+        <!-- Ventana Modal permanece oculta hasta que se clickea una imagen -->
+        <div id="miModal" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" id="cerrarModal">&times;</span>
+                <h2>Receta</h2>
+                <div  id="contenidoModal"></div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer"></footer>
+    
+    <!-- Scripts de JavaScript -->
+    <script src="../js/script2.js"></script>
+    <script src="../js/header_footer.js"></script>
+
+
+
+
+</body>
+
+</html>
