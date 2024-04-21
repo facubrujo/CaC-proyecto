@@ -8,7 +8,7 @@ header {
     min-width: 20rem;
     min-height: 5rem;
     background-color: rgb(0, 0, 0);
-    
+
 }
 
 .contenedor-imagenes {
@@ -70,16 +70,17 @@ header {
     cursor: pointer;
 }
 
-.imagen-modal{
+.imagen-modal {
     width: 20rem;
 }
 
 
-.carousel-contenedor{
+.carousel-contenedor {
     margin: auto;
     width: 40rem;
 }
-.img-carousel{
+
+.img-carousel {
     width: 20px;
     height: 100%;
 }
@@ -100,18 +101,21 @@ header {
 
 /*------------------- FORMULARIO DE REGISTRO ---------------*/
 
-.form{
+.form {
     width: 60%;
     padding: 1em;
 }
 
-.form-contenedor{
+.form-contenedor {
     background-image: url("https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.form-contenedor .form{
+
+.form-contenedor .form {
     background-color: #ffffffc9;
     display: flex;
     flex-direction: column;
@@ -124,24 +128,26 @@ header {
     display: flex;
 }
 
-.form-label label{
+.form-label label {
     display: block;
     margin-bottom: 5px;
     color: #717171;
     font-weight: 600;
     font-size: 12px;
 }
-.form-label input{
+
+.form-label input {
     width: 80%;
     padding: 12px 16px;
     border-radius: 8px;
     color: #000;
     font-family: inherit;
-    background-color: transparent;
-    border: 1px solid #414141;
+    background-color: ffffffc9;
+    /* border: 1px solid #414141; */
+    border: none;
 }
 
-.form-btn{
+.form-btn {
     margin-top: 1rem;
     width: 80%;
     height: 2rem;
@@ -149,6 +155,34 @@ header {
     font-weight: bold;
 
 }
-.form-btn:hover{
+
+.form-btn:hover {
     background-color: orange;
+}
+
+.btn-seleccionar {
+    background-color: #ffffffc9;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+.btn-seleccionar:hover {
+    background-color: cadetblue;
+    color: #fefefe;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.select {
+    background-color: #ffffffc9;
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+}
+.form-radio{
+    display: flex;
 }

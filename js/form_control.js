@@ -1,5 +1,11 @@
 /*
 ------ Este script maneja el control del formulario de registro --------
+
+El sitio web debe incluir un formulario de contacto, con al menos 5
+campos que incluya (un checkbox o radiobutton), un select y una
+imagen, con validación realizada mediante JavaScript para que los
+campos sean obligatorios.
+
 */
 
 // ---- Control del input de NOMBRE  -----
@@ -38,7 +44,7 @@ email.addEventListener('input', function () {
     if (!emailRegex.test(mail)) {
         emailError.innerText = 'Debe contener "@" y "." ';
     } else {
-        emailError.innerText = '';
+        emailError.innerText = 'ok';
     }
 });
 
@@ -51,7 +57,7 @@ password.addEventListener('input', function () {
     if (pass.length < 8 || !/[A-Z]/.test(pass)) { // regex controla que sean mas de 8 caracteres y al menos 1 mayuscula
         passwordError.innerText = 'La contraseña debe tener al menos 8 caracteres, incluyendo al menos 1 mayúscula.';
     } else {
-        passwordError.innerText = '';
+        passwordError.innerText = 'ok';
     }
 });
 
@@ -68,6 +74,6 @@ password2.addEventListener('input', function () {
     if (pass !== pass2) {
         password2Error.innerText = 'Las contraseñas no coinciden.';
     } else {
-        password2Error.innerText = '';
+        password2Error.innerText = 'ok';
     }
 });

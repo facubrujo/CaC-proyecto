@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,86 +12,76 @@
     <!-- Link a hojas de estilos CSS -->
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/header_footer_dinamicos.css">
-
 </head>
+
 <body>
     <header id="header"></header>
     <main>
-        <h1>REGISTRO</h1>     
+        <h1>REGISTRO</h1>
         <section class="form-contenedor">
 
             <form class="form" action="show_data.html" method="">
                 <h2>Formulario de registro</h2>
                 <section class="form-label">
                     <div>
-                        <label for="email">Email: </label>
-                        <input id="email" type="email" name="email" placeholder="Ingrese su email aqui...">
-                        <div id="emailError" class="mensaje-error text-danger fw-bold"></div>
-                    </div>
-                    <div>
-                        <label for="pass">Contraseña: </label>
-                        <input id="password" type="password" name="contraseña" placeholder="Ingrese su contraseña aqui...">
-                        <div id="passwordError" class="mensaje-error text-danger fw-bold"></div>
-                    </div>
-                    <div>
-                        <label for="pass2">Repetir contraseña: </label>
-                        <input id="password2" type="password" name="contraseña2" placeholder="Repetir contraseña...">
-                        <div id="password2Error" class="mensaje-error text-danger fw-bold"></div>
-                    </div>
-                </section>
-                <section class="form-label">
-                    <div>
                         <label for="nombre">Nombre: </label>
-                        <input id="nombre" type="text" name="firstname" placeholder="Ingrese su nombre aqui...">
+                        <input id="nombre" type="text" name="firstname" placeholder="Ingrese su nombre">
                         <div id="nombreError" class="mensaje-error text-danger fw-bold"></div>
                     </div>
                     <div>
                         <label for="apellido">Apellido: </label>
-                        <input id="apellido" type="text" name="apellido" placeholder="Ingrese su apellido aqui...">
+                        <input id="apellido" type="text" name="apellido" placeholder="Ingrese su apellido">
                         <div id="apellidoError" class="mensaje-error text-danger fw-bold"></div>
                     </div>
                 </section>
-
-                <!-- <section class="form-label">
+                <section  class="form-label">
                     <div>
-                        <label for="street">Dirección: </label>
-                        <input type="text" name="street" placeholder="Ingrese su nombre aqui...">
+                        <label for="email">Email: </label>
+                        <input id="email" type="email" name="email" placeholder="Ingrese su email">
+                        <div id="emailError" class="mensaje-error text-danger fw-bold"></div>
                     </div>
                     <div>
-                        <label for="city">Ciudad: </label>
-                        <input type="text" name="city" placeholder="Ingrese su nombre aqui...">
+                        <label for="email">Edad: </label>
+                        <select name="select" class="select">
+                            <option value="value1">Soy mayor de edad</option>
+                            <option value="value2" >Soy menor de edad</option>
+                        </select>
                     </div>
                 </section>
                 <section class="form-label">
+                    
                     <div>
-                        <label for="zipcode">Código Postal: </label>
-                        <input type="text" name="zipcode" placeholder="Ingrese su nombre aqui...">
+                        <label for="pass">Contraseña: </label>
+                        <input id="password" type="password" name="contraseña"
+                            placeholder="Su contraseña">
+                        <div id="passwordError" class="mensaje-error text-danger fw-bold"></div>
                     </div>
                     <div>
-                        <label for="BirthDate">Fecha de Nacimiento: </label>
-                        <input type="text" name="BirthDate" placeholder="Ingrese su nombre aqui...">
+                        <label for="pass2">Repetir contraseña: </label>
+                        <input id="password2" type="password" name="contraseña2" placeholder="Repetir contraseña">
+                        <div id="password2Error" class="mensaje-error text-danger fw-bold"></div>
                     </div>
-                </section> -->
+                </section>
+                
+                <section  class="form-label">
+                    <div>
+                        <label for="archivo" class="btn-seleccionar">Carga una imagen</label>
+                        <input id="archivo" type="file" name="imagen" accept="image/*">
+                    </div>
+                </section>
 
                 <div class="form-radio">
                     <input type="radio" name="gender" value="hombre" checked>Hombre
                     <input type="radio" name="gender" value="Mujer">Mujer
                     <input type="radio" name="gender" value="Otro">Otro
                 </div>
-                <!-- <div class="form-check">
-                    <input type="checkbox" name="estudio" value="primarios">Primarios
-                    <input type="checkbox" name="estudio" value="secundarios">Secundarios
-                    <input type="checkbox" name="estudio" value="terciarios">Terciarios
-                    <input type="checkbox" name="estudio" value="universitarios">Universitarios
-                    <input type="checkbox" name="estudio" value="otro">Otro
-                </div> -->
+
                 <input class="form-btn" type="submit" value="Enviar">
-                <!-- <p>Si usted hace click en el boton "Enviar", la información sera enviada a la pagina "show_data.html".
-                </p> -->
+
 
             </form>
-        </section>  
-        
+        </section>
+
     </main>
 
     <footer id="footer"></footer>
@@ -99,4 +90,5 @@
     <script src="../js/header_footer.js"></script>
     <script src="../js/form_control.js"></script>
 </body>
+
 </html>
