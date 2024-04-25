@@ -13,7 +13,7 @@ async function tragosAlcoholicos() {
         const data = await response.json();
 
         // devuelve array con tragos
-        const primerosCincoTragos = data.drinks.slice(0, data.drinks.length);
+        const primerosCincoTragos = data.drinks.slice(0, 5);
 
         // instanciar las imágenes, nombres y IDs de los tragos en el HTML
         const contenedorTragos = document.getElementById("contenedor-tragos");
