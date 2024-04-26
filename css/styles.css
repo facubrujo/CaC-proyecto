@@ -25,13 +25,12 @@ header {
     /* width: 5rem; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 80px;
+    grid-gap: 0px;
 
 }
 
 .imagenes img{
-    width: 20rem;
-    height: 20rem;
+    width: -webkit-fill-available;
 }
 .imagenes:hover {
     transform: scale(1.1);
