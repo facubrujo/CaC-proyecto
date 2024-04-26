@@ -25,10 +25,14 @@ header {
     /* width: 5rem; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 10px;
+    grid-gap: 80px;
 
 }
 
+.imagenes img{
+    width: 20rem;
+    height: 20rem;
+}
 .imagenes:hover {
     transform: scale(1.1);
     cursor: pointer;
@@ -102,21 +106,22 @@ header {
 
 /*------------------- FORMULARIO DE REGISTRO ---------------*/
 
-.form {
-    width: 60%;
+.formulario {
+    width: 50%;
     padding: 1em;
+    background-color: #f0f8ff96;
 }
 
-.form-contenedor {
+.formulario-contenedor {
     background-image: url("https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.form-contenedor .form {
+.formulario-contenedor .form {
     background-color: #ffffffc9;
     display: flex;
     flex-direction: column;
@@ -124,12 +129,16 @@ header {
     align-items: center;
 }
 
-.form-label {
+.formulario-label {
     margin-top: 1em;
     display: flex;
+    justify-content: center;
 }
+/* .formulario div{
+    width: 82%;
+} */
 
-.form-label label {
+.formulario-label label {
     display: block;
     margin-bottom: 5px;
     color: #717171;
@@ -137,8 +146,10 @@ header {
     font-size: 12px;
 }
 
-.form-label input {
+.formulario-label input,
+.formulario-label select {
     width: 80%;
+    height: 3rem;
     padding: 12px 16px;
     border-radius: 8px;
     color: #000;
@@ -148,7 +159,11 @@ header {
     border: none;
 }
 
-.form-btn {
+.mensaje-error{
+    width: auto;
+    color: #9b0000;
+}
+.formulario-btn {
     margin-top: 1rem;
     width: 80%;
     height: 2rem;
@@ -157,12 +172,13 @@ header {
 
 }
 
-.form-btn:hover {
+.formulario-btn:hover {
     background-color: orange;
 }
 
 .btn-seleccionar {
     background-color: #ffffffc9;
+    width: 100%;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
@@ -184,6 +200,6 @@ input[type="file"] {
     border-radius: 10px;
     height: 35px;
 }
-.form-radio{
+.formulario-radio{
     display: flex;
 }
