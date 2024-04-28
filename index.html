@@ -79,18 +79,23 @@
             <div class="container mt-5">
                 <div class="row justify-content-center">
 
-                    <form id="searchForm" class="form-busqueda-index" action="resultado_busqueda.html" method="GET">
+                    <form id="formulario-busqueda" class="form-busqueda-index" action="resultado_busqueda.html" method="GET">
                         <div class="col-md-9">
                             <div class="input-group">
-                                <input type="text" id="searchInput" name="s" class="form-control"
-                                    placeholder="Buscar tragos">
+                                <input type="text" id="input-busqueda" name="s" class="form-control" placeholder="Buscar tragos">
+                                <input type="text" id="url" name="p" value="pages/" hidden>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="submit">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-9 mt-3">
-                            <div class="d-flex justify-content-center">
-                                <button type="submit" class="btn btn-outline-secondary btn-md">Buscar</button>
-                            </div>
-                        </div>
+                            <!-- <div class="col-md-9 mt-3">
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-outline-secondary btn-md">Buscar</button>
+                                </div>
+                            </div> -->
                     </form>
 
                 </div>

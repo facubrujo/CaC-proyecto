@@ -50,7 +50,7 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Todos los tragos</a></li>
+                                    <li><a class="dropdown-item" href="todos_los_tragos.html">Todos los tragos</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -73,43 +73,46 @@
     </header>
     <main>
         <section>
-            <h1>Titulo Tragos</h1>
+            <h1>Tragos</h1>
         </section>
+
         <section>
-            <ul id="buscador-alfabetico"></ul>
-        </section>
-        <section class="menu-inicio">
-            <div class="contenedor-imagenes ">
-                <h2>tragos con alcohol</h2>
-
-                <!-- este div contiene todas las imagenes que trae por ID desde la API -->
-                <div class="alcohol " id="contenedor-tragos"></div>
-
-                <!-- La estructura se crea por JS con sus contenedores y clases -->
-                <!-- <div class="alcohol " id="contenedor-tragos">
-                    
-                    ESTA PARTE ES LA QUE SE REPITE POR CADA IMAGEN
-                    <div class="imagenes">
-                        <img src=" URL de la imagen que muestra" alt=" DESCRIPCION DE LA IMAGEN QUE SE MUESTRA ">
-                        <p> NOMBRE DEL TRAGO QUE MUESTRA LA IMAGEN </p>
-                        <p class="id-trago"> ID DEL TRAGO QUE MUESTRA </p>
+            <ul class="alfabetico" id="buscador-alfabetico"></ul>
+            <form id="formulario-busqueda" class="form-busqueda-index" action="pages/todos_los_tragos.html" method="GET">
+                <div class="col-md-9">
+                    <div class="input-group">
+                        <input type="text" id="input-busqueda" name="s" class="form-control"
+                            placeholder="Buscar tragos por ej: margarita , belmont , daiquiiri">
                     </div>
-                
-                
-                </div> -->
-
+                </div>
+                <div class="col-md-9 mt-3">
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-outline-secondary btn-md">Buscar</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        
+        <!-- <section id="uno" class="prueba">
+            PRUEBA DE PRUEBA
+            <div id="resultsContainer" class="results-container">
+                 Aquí se mostrarán los resultados de la búsqueda
             </div>
-
+        </section> -->
+        
+        <section class="contenedor-imagenes">
+                <h2>Todas nuestras bebidas</h2>
+                <article class="alcohol " id="contenedor-tragos"></article>
         </section>
 
         <!-- Ventana Modal permanece oculta hasta que se clickea una imagen -->
-        <div id="miModal" class="modal">
+        <section id="miModal" class="modal">
             <div class="modal-contenido">
                 <span class="cerrar" id="cerrarModal">&times;</span>
                 <h2>Receta</h2>
                 <div id="contenidoModal"></div>
             </div>
-        </div>
+        </section>
 
     </main>
 
@@ -165,8 +168,11 @@
     </footer>
 
     <!-- Scripts de JavaScript -->
-    <script src="../js/script2.js"></script>
-    <!-- <script src="../js/header_footer.js"></script> -->
+    <!-- <script src="../js/script2.js"></script> -->
+    <script src="../js/busqueda_tragos.js"></script>
+    <script src="../js/resultado_busqueda.js"></script>
+    <script src="../js/consultasApi.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

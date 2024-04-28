@@ -24,10 +24,16 @@
 
 }
 
-.imagenes img{
+.imagenes img {
     width: -webkit-fill-available;
 }
+
+.imagenes {
+    transition: transform 0.3s ease;
+}
+
 .imagenes:hover {
+    z-index: 1;
     transform: scale(1.1);
     cursor: pointer;
 }
@@ -128,6 +134,7 @@
     display: flex;
     justify-content: center;
 }
+
 /* .formulario div{
     width: 82%;
 } */
@@ -153,10 +160,11 @@
     border: none;
 }
 
-.mensaje-error{
+.mensaje-error {
     width: auto;
     color: #9b0000;
 }
+
 .formulario-btn {
     margin-top: 1rem;
     width: 80%;
@@ -179,6 +187,7 @@
     cursor: pointer;
     text-align: center;
 }
+
 .btn-seleccionar:hover {
     background-color: cadetblue;
     color: #fefefe;
@@ -194,12 +203,13 @@ input[type="file"] {
     border-radius: 10px;
     height: 35px;
 }
-.formulario-radio{
+
+.formulario-radio {
     display: flex;
 }
 
 /*Estilo del Index*/
-#Home{
+#Home {
     background-image: url('../img/tragos-playa.jpg');
     background-size: cover;
     background-position: center;
@@ -213,14 +223,56 @@ input[type="file"] {
     text-shadow: 3px 3px 5px rgba(255, 215, 0, 0.7)
 }
 
- 
+
 #Home button {
     background-color: rgba(255, 215, 0);
 }
 
-.form-busqueda-index{
+.form-busqueda-index {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
+}
+
+
+/* ----- Busqueda de tragos -----*/
+
+.trago {
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+    border: black solid 1px;
+    gap: 2rem;
+
+}
+
+.trago img {
+    width: 20rem;
+}
+
+.prueba {
+    display: none;
+}
+
+/* ----- vista todos los tragos -----*/
+/* ----- ul li alfabeto -----*/
+.alfabetico {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.letra {
+    text-decoration: none;
+    margin: 0 2px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+.letra:hover{
+    background-color: #fefefe;
+    color: #f80000;
+    transform: scale(1.5);
+    z-index: 10;
 }
