@@ -11,72 +11,127 @@
 
     <!-- Link a hojas de estilos CSS -->
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/header_footer_dinamicos.css">
+    <!-- <link rel="stylesheet" href="../css/header_footer_dinamicos.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
-    <header ></header>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-bs-theme="dark"
+            aria-label="Offcanvas navbar large">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="../img/cocktail_icono.png" alt="Logo" width="50" height="50" class="d-inline-block">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+                    aria-labelledby="offcanvasNavbar2Label">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbar2Label"></h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Tragos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Con alcohol</a></li>
+                                    <li><a class="dropdown-item" href="#">Sin alcohol</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="todos_los_tragos.html">Todos los tragos</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Quienes somos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="registro.html">Registro</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3 mt-lg-0" role="search">
+                            <button class="btn btn-outline-success" type="submit">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
     <main>
         <h1>REGISTRO</h1>
-        <section class="form-contenedor">
+        <section class="formulario-contenedor">
 
-            <form class="form" action="show_data.html" method="">
+            <form class="formulario" action="" method="">
                 <h2>Formulario de registro</h2>
-                <section class="form-label">
+                <section class="formulario-label">
                     <div>
                         <label for="nombre">Nombre: </label>
                         <input id="nombre" type="text" name="firstname" placeholder="Ingrese su nombre">
-                        <div id="nombreError" class="mensaje-error text-danger fw-bold"></div>
+                        <div id="nombreError" class="mensaje-error"></div>
                     </div>
                     <div>
                         <label for="apellido">Apellido: </label>
                         <input id="apellido" type="text" name="apellido" placeholder="Ingrese su apellido">
-                        <div id="apellidoError" class="mensaje-error text-danger fw-bold"></div>
+                        <div id="apellidoError" class="mensaje-error"></div>
                     </div>
                 </section>
-                <section  class="form-label">
+                <section class="formulario-label">
                     <div>
                         <label for="email">Email: </label>
                         <input id="email" type="email" name="email" placeholder="Ingrese su email">
-                        <div id="emailError" class="mensaje-error text-danger fw-bold"></div>
+                        <div id="emailError" class="mensaje-error"></div>
                     </div>
                     <div>
                         <label for="email">Edad: </label>
                         <select name="select" class="select">
                             <option value="value1">Soy mayor de edad</option>
-                            <option value="value2" >Soy menor de edad</option>
+                            <option value="value2">Soy menor de edad</option>
                         </select>
                     </div>
                 </section>
-                <section class="form-label">
-                    
+                <section class="formulario-label">
+
                     <div>
-                        <label for="pass">Contraseña: </label>
-                        <input id="password" type="password" name="contraseña"
-                            placeholder="Su contraseña">
-                        <div id="passwordError" class="mensaje-error text-danger fw-bold"></div>
+                        <label for="password">Contraseña: </label>
+                        <input id="password" type="password" name="contraseña" placeholder="Su contraseña">
+                        <div id="passwordError" class="mensaje-error"></div>
                     </div>
                     <div>
-                        <label for="pass2">Repetir contraseña: </label>
+                        <label for="password2">Repetir contraseña: </label>
                         <input id="password2" type="password" name="contraseña2" placeholder="Repetir contraseña">
-                        <div id="password2Error" class="mensaje-error text-danger fw-bold"></div>
+                        <div id="password2Error" class="mensaje-error"></div>
                     </div>
                 </section>
-                
-                <section  class="form-label">
+
+                <section class="formulario-label">
                     <div>
                         <label for="archivo" class="btn-seleccionar">Carga una imagen</label>
                         <input id="archivo" type="file" name="imagen" accept="image/*">
                     </div>
                 </section>
 
-                <div class="form-radio">
+                <div class="formulario-radio">
                     <input type="radio" name="gender" value="hombre" checked>Hombre
                     <input type="radio" name="gender" value="Mujer">Mujer
                     <input type="radio" name="gender" value="Otro">Otro
                 </div>
 
-                <input class="form-btn" type="submit" value="Enviar">
+                <input class="formmulario-btn" type="submit" value="Enviar">
 
 
             </form>
@@ -136,8 +191,15 @@
     </footer>
 
     <!-- Scripts de JavaScript -->
-    <script src="../js/header_footer.js"></script>
+    <!-- <script src="../js/header_footer.js"></script> -->
     <script src="../js/form_control.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
