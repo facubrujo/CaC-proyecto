@@ -18,14 +18,20 @@
 
 .alcohol {
     /* width: 5rem; */
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 0px;
-
+    grid-gap: 0px; */
+    display: flex;
+    grid-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .imagenes img {
-    width: -webkit-fill-available;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 5px;
+    box-shadow: .5rem .5rem 16px #696969;
 }
 
 .imagenes {
@@ -56,9 +62,24 @@
 .modal-contenido {
     background-color: #fefefe;
     margin: 15% auto;
-    padding: 20px;
+    /* padding: 5px; */
     border: 1px solid #888;
     width: 80%;
+}
+.trago-modal{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+}
+.trago-modal .receta{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.receta p{
+    width: 25rem;/*auto*/
 }
 
 .cerrar {
@@ -80,7 +101,7 @@
 }
 
 
-.carousel-contenedor {
+/* .carousel-contenedor {
     margin: auto;
     width: 40rem;
 }
@@ -88,7 +109,7 @@
 .img-carousel {
     width: 20px;
     height: 100%;
-}
+} */
 
 /* .modal {
     display: block;
@@ -270,7 +291,8 @@ input[type="file"] {
     transition: transform 0.3s ease;
     display: inline-block;
 }
-.letra:hover{
+
+.letra:hover {
     background-color: #fefefe;
     color: #f80000;
     transform: scale(1.5);
