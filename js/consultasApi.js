@@ -168,20 +168,27 @@ async function contenidoModal(idTrago) {
 
         const contenidoModal = document.getElementById("contenidoModal");
 
+        const contImg = document.createElement("div");
+        const contReceta = document.createElement("div");
+        contReceta.className = "receta";
+        
         const imagen = document.createElement("img");
         imagen.src = trago.strDrinkThumb;
         imagen.alt = "imagen de trago";
         imagen.className = "imagen-modal";
+        contImg.appendChild(imagen);
 
         // nombre del trago
-        const nombre = document.createElement("p");
+        const nombre = document.createElement("h3");
         const nombreTrago = trago.strDrink;
         nombre.textContent = nombreTrago;
+        contReceta.appendChild(nombre);
 
         // descripcion del trago
         const descripcion = document.createElement("p");
         const descripcionTrago = trago.strInstructions;
         descripcion.textContent = descripcionTrago;
+        contReceta.appendChild(descripcion);
 
         // ingredientes
         const ul = document.createElement("ul");
@@ -195,11 +202,15 @@ async function contenidoModal(idTrago) {
                 break;
             }
         }
+        contReceta.appendChild(ul);
 
-        contenidoModal.appendChild(nombre);
-        contenidoModal.appendChild(imagen);
-        contenidoModal.appendChild(ul);
-        contenidoModal.appendChild(descripcion);
+
+        contenidoModal.appendChild(contImg);
+        contenidoModal.appendChild(contReceta);
+        // contenidoModal.appendChild(nombre);
+        // contenidoModal.appendChild(imagen);
+        // contenidoModal.appendChild(ul);
+        // contenidoModal.appendChild(descripcion);
 
     } catch (error) {
         console.error("Error al obtener los detalles del trago:", error);
