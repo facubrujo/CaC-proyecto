@@ -79,10 +79,12 @@
             <div class="container mt-5">
                 <div class="row justify-content-center">
 
-                    <form id="formulario-busqueda" class="form-busqueda-index" action="resultado_busqueda.html" method="GET">
+                    <form id="formulario-busqueda" class="form-busqueda-index" action="resultado_busqueda.html"
+                        method="GET">
                         <div class="col-md-9">
                             <div class="input-group">
-                                <input type="text" id="input-busqueda" name="s" class="form-control" placeholder="Buscar tragos">
+                                <input type="text" id="input-busqueda" name="s" class="form-control"
+                                    placeholder="Buscar tragos">
                                 <input type="text" id="url" name="p" value="pages/" hidden>
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary" type="submit">
@@ -198,22 +200,23 @@
         -->
     </main>
 
-        <footer>
-    <div class="footerContainer">
-        <div class="footerNav">
-            <ul><li><a href="">Home</a></li>
-                <li><a href="">News</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact Us</a></li>
-                <li><a href="">our Team</a></li>
-            </ul>
+    <footer>
+        <div class="footerContainer">
+            <div class="footerNav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">our Team</a></li>
+                </ul>
+            </div>
+
         </div>
-        
-    </div>
-    <div class="footerBottom">
-        <p>Copyright &copy;2023; Designed by <span class="designer">Noman</span></p>
-    </div>
-</footer>
+        <div class="footerBottom">
+            <p>Copyright &copy;2024; Proyecto Full-Stack Python Codo a Codo 
+        </div>
+    </footer>
 
     <footer class="bg-dark text-white pt-5 pb-4">
         <div class="container text-center text-md-left">
@@ -281,19 +284,19 @@
 
 
 
-<!-- MOVER A UBICACION CORRECTA -- OCULTA NAVBAR CUANDO HACEMOS SCROLL -->
-        <script type="text/javascript">
-            
-            var nav = document.querySelector("nav");
-        
-            window.addEventListener("scroll", function () {
-              if (window.pageYOffset > 100) {
+    <!-- MOVER A UBICACION CORRECTA -- OCULTA NAVBAR CUANDO HACEMOS SCROLL -->
+    <script type="text/javascript">
+
+        var nav = document.querySelector("nav");
+
+        window.addEventListener("scroll", function () {
+            if (window.pageYOffset > 100) {
                 nav.classList.add("bg-dark", "shadow");
-              } else {
+            } else {
                 nav.classList.remove("bg-dark", "shadow");
-              }
-            });
-          </script>
+            }
+        });
+    </script>
 </body>
 
 </html>
