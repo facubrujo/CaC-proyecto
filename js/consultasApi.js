@@ -43,6 +43,15 @@ async function tragosPorLetraAlfabeto(letra) {
         console.error("error al obtener 'tragos por letra'", error);
     }
 }
+async function imagenesIngredientes(ingredienteNombre) {
+    try {
+        const respuesta = await fetch(`https://www.thecocktaildb.com/images/ingredients/${ingredienteNombre}-Medium.png`);
+        const datos = await respuesta.json();
+        return datos;
+    } catch (error) {
+        console.error("error al obtener 'tragos por letra'", error);
+    }
+}
 
 // ---- CREAR LISTA CON LETRAS PARA BUSQUEDA ----
 const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -102,10 +111,16 @@ function vistaElementosCuadricula(datos) {
             const div = document.createElement("div");
             div.classList.add("imagenes");
 
+            // const imgContenedor = document.createElement("div");
+            // const imgTarjeta = document.createElement("div");
+            // imgContenedor.style.backgroundImage = trago.strDrinkThumb;
+            // imgTarjeta.style.backgroundColor = "red";
             const img = document.createElement("img");
             img.src = trago.strDrinkThumb;
             img.alt = trago.strDrink;
             div.appendChild(img);
+            // imgContenedor.appendChild(imgTarjeta);
+            // div.appendChild(imgContenedor);
 
             const p = document.createElement("p");
             p.textContent = trago.strDrink;
@@ -186,6 +201,7 @@ async function contenidoModal(idTrago) {
 
         // descripcion del trago
         const descripcion = document.createElement("p");
+        descripcion.className = "texto";
         const descripcionTrago = trago.strInstructions;
         descripcion.textContent = descripcionTrago;
         contReceta.appendChild(descripcion);
@@ -194,9 +210,18 @@ async function contenidoModal(idTrago) {
         const ul = document.createElement("ul");
         for (let i = 1; i <= 15; i++) {
             const ingrediente = trago[`strIngredient${i}`];
+            const ingredienteNombre = trago[`strIngredient${i}`];
+            const medida = trago[`strMeasure${i}`];
             if (ingrediente) {
                 const li = document.createElement("li");
-                li.textContent = ingrediente;
+                const ingredienteImg = document.createElement("img");
+                console.log(ingredienteNombre.toLocaleLowerCase());
+                ingredienteImg.src = `https://www.thecocktaildb.com/images/ingredients/${ingredienteNombre.toLocaleLowerCase()}-Small.png`;// consulta api imagenes
+                ingredienteImg.alt = "imagen de ingrediente";
+                ingredienteImg.style.width = "60px";
+                li.className = "texto";
+                li.textContent =`${ingrediente} : ${medida}`;
+                li.appendChild(ingredienteImg);
                 ul.appendChild(li);
             } else {
                 break;
@@ -211,7 +236,7 @@ async function contenidoModal(idTrago) {
         // contenidoModal.appendChild(imagen);
         // contenidoModal.appendChild(ul);
         // contenidoModal.appendChild(descripcion);
-
+        //traducir();
     } catch (error) {
         console.error("Error al obtener los detalles del trago:", error);
     }
@@ -239,10 +264,49 @@ async function todasLasBebidas() {
             const div = document.createElement("div");
             div.classList.add("imagenes");
 
-            const img = document.createElement("img");
-            img.src = trago.strDrinkThumb;
-            img.alt = trago.strDrink;
-            div.appendChild(img);
+            // const img = document.createElement("img");
+            // img.src = trago.strDrinkThumb;
+            // img.alt = trago.strDrink;
+            // div.appendChild(img);
+            const imgContenedor = document.createElement("div");
+            imgContenedor.className = "imgFondo";
+            
+            const imgTarjeta = document.createElement("div");
+            const calificacionForm = document.createElement("form");
+            calificacionForm.id = "form";
+            calificacionForm.className = "form";
+            for(let i=0; i<5; i++){
+                const btn = document.createElement("button");
+                btn.className = "btn-calificacion";
+                btn.textContent = `⭐${""}`;
+                btn.style.background = "none";
+                calificacionForm.appendChild(btn);
+            }
+
+            
+            const tituloTarjeta = document.createElement("h3");
+            tituloTarjeta.textContent = trago.strDrink;
+            tituloTarjeta.style.textAlign = "center";
+            tituloTarjeta.style.color = "#fff";
+            imgTarjeta.className = "tarjeta-imagen";
+            console.log(trago.strDrinkThumb);
+            imgContenedor.style.backgroundImage = `url('${trago.strDrinkThumb}')`;
+            // imgContenedor.style.backgroundSize = "cover";
+            // imgContenedor.style.width = "20rem";
+            // imgContenedor.style.height = "20rem";
+            // imgTarjeta.style.backgroundColor = "red";
+            // imgTarjeta.style.width = "20rem";
+            // imgTarjeta.style.height = "20rem";
+            // const img = document.createElement("img");
+            // img.src = trago.strDrinkThumb;
+            // img.alt = trago.strDrink;
+            // div.appendChild(img);
+
+
+            imgTarjeta.appendChild(tituloTarjeta);
+            imgTarjeta.appendChild(calificacionForm);
+            imgContenedor.appendChild(imgTarjeta);
+            div.appendChild(imgContenedor);
 
             const p = document.createElement("p");
             p.textContent = trago.strDrink;
@@ -266,7 +330,28 @@ async function todasLasBebidas() {
     }
 }
 
+// ------ Funcion traducir de ingles a español ------
 
+function traducir() {
+    const textosEnIngles = document.querySelectorAll('.texto');
+
+    const idiomaOrigen = 'en';
+    const idiomaDestino = 'es';
+
+    textosEnIngles.forEach(texto => {
+        const textoEnIngles = texto.textContent;
+
+        const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${idiomaOrigen}&tl=${idiomaDestino}&dt=t&q=${encodeURIComponent(textoEnIngles)}`;
+
+        fetch(url)
+            .then(respuesta => respuesta.json())
+            .then(data => {
+                const textoTraducido = data[0][0][0];
+                texto.textContent = textoTraducido;
+            })
+            .catch(error => console.error('Error al traducir:', error));
+    });
+}
 
 
 todasLasBebidas();

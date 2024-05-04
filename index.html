@@ -279,6 +279,21 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
 
+
+
+<!-- MOVER A UBICACION CORRECTA -- OCULTA NAVBAR CUANDO HACEMOS SCROLL -->
+        <script type="text/javascript">
+            
+            var nav = document.querySelector("nav");
+        
+            window.addEventListener("scroll", function () {
+              if (window.pageYOffset > 100) {
+                nav.classList.add("bg-dark", "shadow");
+              } else {
+                nav.classList.remove("bg-dark", "shadow");
+              }
+            });
+          </script>
 </body>
 
 </html>

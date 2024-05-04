@@ -43,6 +43,7 @@ async function buscarTragos(busqueda) {
                     const medida = trago[`strMeasure${i}`];
                     if (ingrediente) {
                         const ingredienteItem = document.createElement("li");
+                        ingredienteItem.className = "texto";
                         ingredienteItem.textContent = `${ingrediente}: ${medida}`;
                         ingredientes.appendChild(ingredienteItem);
                     } else {
@@ -53,12 +54,14 @@ async function buscarTragos(busqueda) {
                 tragoContenedor.appendChild(txtContenedor);
 
                 const instrucciones = document.createElement("p");
+                instrucciones.className = "texto";
                 instrucciones.textContent = trago.strInstructions;
 
                 txtContenedor.appendChild(instrucciones);
                 tragoContenedor.appendChild(txtContenedor);
 
                 resultadosContenedor.appendChild(tragoContenedor);
+                traducir();
             });
         } else {
             const resultadosContenedor = document.getElementById("resultados-busqueda");
@@ -85,3 +88,28 @@ document.getElementById("formulario-busqueda").addEventListener("submit", functi
     }
 });
 
+
+// function traducir() {
+//     // Texto en inglés
+//     const textosEnIngles = document.querySelectorAll('.texto');
+
+//     // Idioma origen: inglés ('en') y destino: español ('es')
+//     const idiomaOrigen = 'en';
+//     const idiomaDestino = 'es';
+
+//     textosEnIngles.forEach(texto => {
+//         // Texto en inglés
+//         const textoEnIngles = texto.textContent;
+
+//         // URL de la API de Google Translate
+//         const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${idiomaOrigen}&tl=${idiomaDestino}&dt=t&q=${encodeURIComponent(textoEnIngles)}`;
+
+//         fetch(url)
+//             .then(response => response.json())
+//             .then(data => {
+//                 const textoTraducido = data[0][0][0];
+//                 texto.textContent = textoTraducido;
+//             })
+//             .catch(error => console.error('Error al traducir:', error));
+//     });
+// }
