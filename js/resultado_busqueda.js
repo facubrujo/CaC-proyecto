@@ -61,13 +61,17 @@ async function buscarTragos(busqueda) {
                 tragoContenedor.appendChild(txtContenedor);
 
                 resultadosContenedor.appendChild(tragoContenedor);
-                traducir();
+                //traducir();
+
+                ocultarCarga();
             });
         } else {
+            ocultarCarga();
             const resultadosContenedor = document.getElementById("resultados-busqueda");
             resultadosContenedor.textContent = "No se encontraron resultados para la búsqueda.";
         }
     } catch (error) {
+
         console.error("Error al buscar tragos:", error);
     }
 }

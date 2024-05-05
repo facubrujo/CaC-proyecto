@@ -1,0 +1,103 @@
+/*------------------- FORMULARIO DE REGISTRO ---------------*/
+
+.formulario {
+    width: 50%;
+    padding: 1em;
+    background-color: #f0f8ff96;
+}
+
+.formulario-contenedor {
+    background-image: url("https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg");
+    background-repeat: repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario-contenedor .form {
+    background-color: #ffffffc9;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.formulario-label {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+/* .formulario div{
+    width: 82%;
+} */
+
+.formulario-label label {
+    display: block;
+    margin-bottom: 5px;
+    color: #717171;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.formulario-label input,
+.formulario-label select {
+    width: 80%;
+    height: 3rem;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #000;
+    font-family: inherit;
+    background-color: ffffffc9;
+    /* border: 1px solid #414141; */
+    border: none;
+}
+
+.mensaje-error {
+    width: auto;
+    color: #9b0000;
+}
+
+.formulario-btn {
+    margin-top: 1rem;
+    width: 80%;
+    height: 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+
+}
+
+.formulario-btn:hover {
+    background-color: orange;
+}
+
+.btn-seleccionar {
+    background-color: #ffffffc9;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-seleccionar:hover {
+    background-color: cadetblue;
+    color: #fefefe;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.select {
+    background-color: #ffffffc9;
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+}
+
+.formulario-radio {
+    display: flex;
+}
