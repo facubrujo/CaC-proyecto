@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/styles_tlt.css">
+    <link rel="stylesheet" href="../css/modo_oscuro.css">
 
     <!-- <link rel="stylesheet" href="css/header_footer_dinamicos.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -19,7 +20,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body >
+<body>
     <!-- <div class="carga" id="cargar">
         <div class="lds-ellipsis">
             <div></div>
@@ -80,6 +81,21 @@
                             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Login</button>
                         </form>
+
+                        <!-- Modo oscuro -->
+                        <div class="modo-oscuro">
+
+                            <label class="modo-oscuro-btn" for="toggle" >
+                                <!--<span>&#x1F31E;</span>-->
+                                <i class="bi bi-sun-fill text-warning"></i>
+                                <input type="checkbox" id="toggle">
+                                <span class="slider"></span>
+                                <i class="bi bi-moon-stars-fill text-warning"></i>
+                                <!--<span>🌜</span>-->
+                            </label>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -90,8 +106,7 @@
         <form id="formulario-busqueda" class="form-busqueda-index" action="resultado_busqueda.html" method="GET">
             <div class="col-md-9">
                 <div class="input-group">
-                    <input type="text" id="input-busqueda" name="s" class="form-control"
-                        placeholder="Buscar tragos">
+                    <input type="text" id="input-busqueda" name="s" class="form-control" placeholder="Buscar tragos">
                 </div>
             </div>
             <div class="col-md-9 mt-3">
@@ -172,7 +187,8 @@
     <script src="../js/resultado_busqueda.js"></script>
     <script src="../js/busqueda_tragos.js"></script>
     <script src="../js/metodos_varios.js"></script>
-    
+    <script src="../js/modo_oscuro.js"></script>
+
     <script src="../js/ventana_carga.js"></script>
 
     <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script> -->
