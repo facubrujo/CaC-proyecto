@@ -547,3 +547,14 @@ footer{
         flex-grow: 0.7;
     }
 }
+
+.herramientas {
+    display: flex; /* Usar flexbox para distribuir los íconos */
+    justify-content: space-around; /* Distribuir los íconos de manera uniforme */
+    align-items: center; /* Centrar verticalmente los íconos */
+}
+
+.herramientas i {
+    font-size: 2rem; /* Tamaño de fuente más grande para los íconos */
+    flex: 1; /* Hacer que los íconos ocupen todo el espacio disponible */
+}
