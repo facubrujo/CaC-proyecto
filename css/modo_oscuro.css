@@ -5,7 +5,7 @@
     justify-content: space-between;
     height: 28px;
     width: 60px;
-    background-color: #1f1e1e;
+    background-color: #1f1e1e73;
     border-radius: 16px;
     padding: 2px 2px 0 2px;
     position: relative;
@@ -70,7 +70,7 @@ input:checked+.slider::before {
 
     /* --- Vista index ---*/
 
-    section{
+    .section{
         background-color: #292929;
         color: #f3f3f3;
     }
