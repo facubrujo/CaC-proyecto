@@ -119,7 +119,8 @@
             </div>
         </section>
         <section id="Mejores"
-            class="full-screen-section d-flex flex-column justify-content-center align-items-center vh-100 section"><!--style="background-color: #f2f2f2;"-->
+            class="full-screen-section d-flex flex-column justify-content-center align-items-center vh-100 section">
+            <!--style="background-color: #f2f2f2;"-->
             <div class="container mt-5">
                 <div class="row justify-content-around">
                     <div class="col-md-9">
@@ -198,6 +199,35 @@
                 //btnModoOscuro.style.backgroundColor = "#1f1e1e73";
             }
         });
+    </script>
+    <script>
+        window.onload = function () {
+
+            const session = sessionStorage.getItem('session'); // true o false
+
+            const esMayor = sessionStorage.getItem('esMayor'); // esto devuelve true o false
+
+            if (session === null) {
+                const resp = prompt(
+                    "eres mayor de edad? si / no"
+                );
+                if (resp === "si") {
+                    sessionStorage.setItem('session', true);
+                    sessionStorage.setItem('esMayor', true);
+                    
+                    alert("session iniciada y ... eres mayor de edad");
+                } else {
+
+                    sessionStorage.setItem('session', true);
+                    sessionStorage.setItem('esMayor', false);
+
+                    alert(" session iniciada, peroooo .... eres menor de edad");
+                };
+            }else{
+                console.log("estado de la session : "+sessionStorage.getItem("session"));
+            };
+
+        };
     </script>
 </body>
 
