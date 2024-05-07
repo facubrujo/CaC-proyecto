@@ -8,6 +8,7 @@
 body {
     background-color: #f2f2f2;
 }
+
 .contenedor-imagenes {
     max-width: 80%;
     margin: auto;
@@ -24,7 +25,7 @@ body {
     width: 15rem;
     height: 15rem;
     border-radius: 5px;
-    box-shadow: .5rem .5rem 16px #696969;
+    box-shadow: 0.5rem 0.5rem 16px #696969;
 }
 
 .imagenes {
@@ -55,7 +56,7 @@ body {
     margin: 15% auto;
     /* padding: 5px; */
     /* border: 1px solid #888; */
-    border:none;
+    border: none;
     width: 80%;
 }
 
@@ -95,7 +96,6 @@ body {
 .imagen-modal {
     width: 20rem;
 }
-
 
 /* .carousel-contenedor {
     margin: auto;
@@ -173,8 +173,8 @@ body {
     color: #000;
     font-family: inherit;
     background-color: ffffffc9; */
-    /* border: 1px solid #414141; */
-    /* border: none;
+/* border: 1px solid #414141; */
+/* border: none;
 }
 
 .mensaje-error {
@@ -233,7 +233,6 @@ input[type="file"] {
     align-items: center;
     border: black solid 1px;
     gap: 2rem;
-
 }
 
 .trago img {
@@ -270,7 +269,7 @@ input[type="file"] {
 /*------------------- Estilo del Index -------------------*/
 
 #Home {
-    background-image: url('../img/tragos-playa.jpg');
+    background-image: url("../img/tragos-playa.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -280,7 +279,7 @@ input[type="file"] {
 
 #Home h1 {
     color: white;
-    text-shadow: 3px 3px 5px rgba(255, 215, 0, 0.7)
+    text-shadow: 3px 3px 5px rgba(255, 215, 0, 0.7);
 }
 
 #Home button {
@@ -296,31 +295,36 @@ input[type="file"] {
 
 /*------------------- FOOTER -------------------*/
 
-.footerBottom{
+.footerBottom {
     background-color: #111;
     padding: 20px;
     text-align: center;
 }
-.footerBottom p{
+
+.footerBottom p {
     color: white;
 }
-.designer{
+
+.designer {
     opacity: 0.7;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 400;
     margin: 0px 5px;
 }
-@media (max-width: 700px){
-    .footerNav ul{
+
+@media (max-width: 700px) {
+    .footerNav ul {
         flex-direction: column;
-    } 
-    .footerNav ul li{
-        width:100%;
+    }
+
+    .footerNav ul li {
+        width: 100%;
         text-align: center;
         margin: 10px;
     }
-    .socialIcons a{
+
+    .socialIcons a {
         padding: 8px;
         margin: 4px;
     }
@@ -375,7 +379,7 @@ input[type="file"] {
     transition: 0.5s ease;
 }
 
-.about-img:hover img{
+.about-img:hover img {
     transform: scale(1.05);
 }
 
@@ -398,17 +402,18 @@ input[type="file"] {
 /*-------------- SECCION QUIENES SOMOS EQUIPO----------*/
 
 .contenedor {
-    margin:1rem;
+    margin: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
-#seccion-equipo{
+#seccion-equipo {
     width: 100%;
     min-height: 60vh;
     display: flex;
+    background-color: #f3f3f3;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -423,9 +428,9 @@ input[type="file"] {
     margin: 20px;
 }
 
-.heading i{
+.heading i {
     background-color: #333;
-    color: #ffffff;
+    color: #fff;
     width: 50px;
     height: 50px;
     display: flex;
@@ -435,33 +440,33 @@ input[type="file"] {
     margin: 0 20px;
 }
 
-.cardss{
-    width: 266px;
-    height: 310px;
-    background-color: rgb(235, 231, 231);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+.cardss {
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
     padding: 20px;
-    border-radius: 15px;
-    margin: 30px;
+    border-radius: 10px;
+    margin: 20px;
     position: relative;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.8);
     cursor: pointer;
+    transition: 0.5s;
 }
 
-.cardss:hover{
-    transform: scale(1.01);
-    transition: all ease 0.1s;
+.cardss:hover {
+    box-shadow: 5px 5px 10px #565656, -5px -5px 10px #8a8a8a;
 }
 
-.top-bar{
+strong {
+    font-size: 20px;
+    margin: 15px 20px;
+}
+
+.top-bar {
     width: 50%;
     height: 4px;
     position: absolute;
     left: 50%;
-    top:0;
+    top: 0;
     transform: translate(-50%);
     background-color: #333;
     border-radius: 0 0 10px 10px;
@@ -483,52 +488,51 @@ input[type="file"] {
     object-position: center;
 }
 
-.details p{
-    font-size: 0.8rem;
-    color: #7a7a7a;
-    margin: 5px 0;
-}
-
-.iconosredes{
+.iconosredes {
     width: 100%;
-    height: 100%;
     display: flex;
+    margin: 10px;
     justify-content: center;
     align-items: center;
 }
 
-.iconosredes a{
-    height: 45px;
-    width: 45px;
+.iconosredes a {
+    display: inline-block;
+    color: #000;
+    padding: 10px;
     border-radius: 10px;
-    font-size: 22px;
-    line-height: 45px;
-    color: #333;
+    margin: 5px;
+    transition: 0.5s;
+}
+.iconosredes a i {
+    font-size: 20px;
 }
 
-.iconosredes a i {
-    padding-left: 13px;
-}
 
 .iconosredes a:hover {
     color: #fff;
     background-color: #333;
-    transition: all ease 0.3s;
+    margin: 5px;
 }
 
-@media(max-width:612px){
-    .cardss{
+@media (max-width: 612px) {
+    .cardss {
         flex-grow: 0.7;
     }
 }
 
 .herramientas {
-    display: flex; /* Usar flexbox para distribuir los íconos */
-    justify-content: space-around; /* Distribuir los íconos de manera uniforme */
-    align-items: center; /* Centrar verticalmente los íconos */
+    display: flex;
+    /* Usar flexbox para distribuir los íconos */
+    justify-content: space-around;
+    /* Distribuir los íconos de manera uniforme */
+    align-items: center;
+    /* Centrar verticalmente los íconos */
 }
 
 .herramientas i {
-    font-size: 2rem; /* Tamaño de fuente más grande para los íconos */
-    flex: 1; /* Hacer que los íconos ocupen todo el espacio disponible */
+    font-size: 2rem;
+    /* Tamaño de fuente más grande para los íconos */
+    flex: 1;
+    /* Hacer que los íconos ocupen todo el espacio disponible */
 }
