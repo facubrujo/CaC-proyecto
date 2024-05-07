@@ -3,14 +3,16 @@
 .formulario {
     width: 50%;
     padding: 1em;
-    background-color: #dbed4096;
+    background-color: #c7c7c196;
+    margin-top:  10px;
     margin-bottom:  10px;
 }
 
 .formulario-contenedor {
-/*     background-image: url("https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg");
-    background-repeat: repeat;
-    background-position: center; */
+    background-image: url(../img/pexels-magda-ehlers-pexels-1189261.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +45,7 @@
 .formulario-label label {
     display: block;
     margin-bottom: 5px;
-    color: #717171;
+    color: #272626;
     font-weight: 600;
     font-size: 12px;
     text-align: left;
