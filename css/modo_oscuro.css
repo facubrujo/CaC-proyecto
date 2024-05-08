@@ -41,7 +41,8 @@ input:checked+.slider::before {
 }
 
 .modo-oscuro {
-    margin: 0 15px 0 15px;
+    /* margin: 0 15px 0 15px;*/
+    display: math;
 }
 
 
@@ -70,7 +71,7 @@ input:checked+.slider::before {
 
     /* --- Vista index ---*/
 
-    .section{
+    .section {
         background-color: #292929;
         color: #f3f3f3;
     }

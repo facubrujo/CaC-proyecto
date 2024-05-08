@@ -9,6 +9,9 @@ function vistaElementosCuadricula(datos) {
         datos.drinks.forEach((trago) => {
             const div = document.createElement("div");
             div.classList.add("imagenes");
+            if(esMayor === "false" && trago.strAlcoholic === "Alcoholic"){
+                div.style.display = "none";
+            }
 
             // const imgContenedor = document.createElement("div");
             // const imgTarjeta = document.createElement("div");
@@ -45,7 +48,7 @@ function vistaElementosCuadricula(datos) {
         const mensaje = document.createElement("p");
         mensaje.textContent = "No se encontraron resultados";
         contenedor.appendChild(mensaje);
-        // ocultarCarga();
+        ocultarCarga();
     }
 };
 

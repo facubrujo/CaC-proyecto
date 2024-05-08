@@ -18,9 +18,18 @@ async function buscarTragos(busqueda) {
         if (data.drinks) {
             const resultadosContenedor = document.getElementById("resultados-busqueda");
 
+            const esMayor = sessionStorage.getItem("esMayor");
+
             data.drinks.forEach(trago => {
                 const tragoContenedor = document.createElement("div");
                 tragoContenedor.classList.add("trago");
+                if (esMayor === "false" && trago.strAlcoholic === "Alcoholic"){
+                    tragoContenedor.style.display = "none";
+                    const tex = document.createElement("p");
+                    tex.textContent = `Lo sentimos, esta bebida "${trago.strDrink}" es para mayores de edad"`;
+                    resultadosContenedor.appendChild(tex);
+                    
+                }
 
                 const imgContenedor = document.createElement("div");
                 const imagen = document.createElement("img");

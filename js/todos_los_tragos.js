@@ -17,18 +17,32 @@ async function tragosSinAlcohol() {
     }
 }
 
-// ---- FUNCION TODAS LAS BEBIDAS ALCOOHLICAS Y NO ALCOHOLICAS ----
 
+// ---- FUNCION TODAS LAS BEBIDAS ALCOOHLICAS Y NO ALCOHOLICAS ----
+// let esMayor = null;
+// window.onload = function(){
+//     esMayor = sessionStorage.getItem("esMayor");
+// }
 async function todasLasBebidas() {
     try {
+        esMayor = sessionStorage.getItem("esMayor");
+        
+        let todos;
+        
         const alcoholicas = await tragosConAlcohol();
         const noAlcoholicas = await tragosSinAlcohol();
-
-        const alc = alcoholicas.drinks || [];
-        const noAlc = noAlcoholicas.drinks || [];
-
-        const todos = [...alc, ...noAlc]
-        //console.log("TODAS LAS BEBIDAS : ", todos);
+        if (esMayor === "true") {
+            // const alc = alcoholicas.drinks;// || [];
+            // const noAlc = noAlcoholicas.drinks;// || [];
+            
+            todos = alcoholicas.drinks.concat(noAlcoholicas.drinks);
+            //todos = [...alc, ...noAlc]
+            console.log("TODAS LAS BEBIDAS : ", todos);
+        }else{
+            console.log("valor de session storage esMayor  :  "+esMayor)
+            todos = noAlcoholicas.drinks; // || {};
+            console.log("TODAS LAS BEBIDAS SIN ALCOHOL : ", todos);
+        }
         //vistaElementosCuadricula(todos.drinks);
         // vistaElementosCuadricula(noAlcoholicas);
 
@@ -64,9 +78,9 @@ async function todasLasBebidas() {
             tituloTarjeta.style.textAlign = "center";
             tituloTarjeta.style.color = "#fff";
             imgTarjeta.className = "tarjeta-imagen";
-            
+
             //console.log(trago.strDrinkThumb);
-            
+
             imgContenedor.style.backgroundImage = `url('${trago.strDrinkThumb}')`;
             // imgContenedor.style.backgroundSize = "cover";
             // imgContenedor.style.width = "20rem";

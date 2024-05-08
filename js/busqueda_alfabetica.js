@@ -35,18 +35,15 @@ function devolverLetra() {
             const datos = await tragosPorLetraAlfabeto(enlace.textContent.toLocaleLowerCase());
             // console.log("DATOS : " + datos)
 
-
-            // const contenedor = document.getElementById("uno");
-            // const contenedor2 = document.getElementById("resultsContainer");
-
-            // contenedor.style.display = "block"
-            // contenedor2.textContent = ""
+            let datosFiltrados =[];
+            esMayor = sessionStorage.getItem("esMayor");
+            console.log("esMayor = "+esMayor);
 
             console.log("BUSCANDO TRAGOS CON LETRA " + enlace.textContent.toLocaleLowerCase())
 
+            console.log("datps fitrados : "+  datosFiltrados)
             //limpiarContenedor();
             vistaElementosCuadricula(datos);
-           
         });
     });
 };
