@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        section form{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+        section form button{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form action="" id="login" method="POST">
+            <div>
+                <label for="email">Email</label><br>
+                <input  id="email" type="email" name="email" >
+            </div>
+            <div>
+                <label for="pass">Contraseña</label><br>
+                <input type="password" name="pass" id="pass">
+            </div>
+            <button type="submit">iniciar sesión</button>
+        </form>
+    </section>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>
