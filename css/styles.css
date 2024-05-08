@@ -97,6 +97,29 @@ body {
     width: 20rem;
 }
 
+.cont-img-ingr{
+    width: 15rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.cont-img-ingr div{
+    width: 3rem;
+    height: 100%;
+    display: contents;
+}
+.cont-img-ingr div img{
+    filter: drop-shadow(3px 3px 4px #000);
+    transition: transform 0.5s ease;
+}
+.cont-img-ingr div img:hover{
+    transform: scale(1.5);
+    z-index: 33;
+}
+
+.texto-contenedor{
+    width: 40rem;
+}
 /* .carousel-contenedor {
     margin: auto;
     width: 40rem;
@@ -231,8 +254,10 @@ input[type="file"] {
     margin: 3rem;
     display: flex;
     align-items: center;
-    border: black solid 1px;
+    border:none;
+    border-radius: 10px;
     gap: 2rem;
+    box-shadow: 0px 16px 26px #434343b8;
 }
 
 .trago img {

@@ -62,12 +62,7 @@ async function contenidoModal(idTrago) {
         nombre.textContent = nombreTrago;
         contReceta.appendChild(nombre);
 
-        // descripcion del trago
-        const descripcion = document.createElement("p");
-        descripcion.className = "texto";
-        const descripcionTrago = trago.strInstructions;
-        descripcion.textContent = descripcionTrago;
-        contReceta.appendChild(descripcion);
+
 
         // ingredientes
         const ul = document.createElement("ul");
@@ -77,14 +72,14 @@ async function contenidoModal(idTrago) {
             const medida = trago[`strMeasure${i}`];
             if (ingrediente) {
                 const li = document.createElement("li");
-                const ingredienteImg = document.createElement("img");
-                console.log(ingredienteNombre.toLocaleLowerCase());
-                ingredienteImg.src = `https://www.thecocktaildb.com/images/ingredients/${ingredienteNombre.toLocaleLowerCase()}-Small.png`;// consulta api imagenes
-                ingredienteImg.alt = "imagen de ingrediente";
-                ingredienteImg.style.width = "60px";
+                //const ingredienteImg = document.createElement("img");
+                //console.log(ingredienteNombre.toLocaleLowerCase());
+                //ingredienteImg.src = `https://www.thecocktaildb.com/images/ingredients/${ingredienteNombre.toLocaleLowerCase()}-Small.png`;// consulta api imagenes
+                //ingredienteImg.alt = "imagen de ingrediente";
+                //ingredienteImg.style.width = "60px";
                 li.className = "texto";
                 li.textContent = `${ingrediente} : ${medida}`;
-                li.appendChild(ingredienteImg);
+                //li.appendChild(ingredienteImg);
                 ul.appendChild(li);
             } else {
                 break;
@@ -92,14 +87,43 @@ async function contenidoModal(idTrago) {
         }
         contReceta.appendChild(ul);
 
+        // descripcion del trago
+        const descripcion = document.createElement("p");
+        descripcion.className = "texto";
+        const descripcionTrago = trago.strInstructions;
+        descripcion.textContent = descripcionTrago;
+        contReceta.appendChild(descripcion);
+
+        // imagenes ingredientes
+        const contImgIngr = document.createElement("div");
+        contImgIngr.className = "cont-img-ingr";
+        for (let i = 1; i <= 15; i++) {
+            const ingrediente = trago[`strIngredient${i}`];
+            const imgIngrNombre = trago[`strIngredient${i}`];
+            if (ingrediente) {
+                const imgCont = document.createElement("div");
+                const ingredienteImg = document.createElement("img");
+                console.log(imgIngrNombre.toLocaleLowerCase());
+                ingredienteImg.src = `https://www.thecocktaildb.com/images/ingredients/${imgIngrNombre.toLocaleLowerCase()}-Small.png`;// consulta api imagenes
+                ingredienteImg.alt = "imagen de ingrediente";
+                ingredienteImg.style.width = "60px";
+                //li.className = "texto";
+                //li.textContent = `${ingrediente} : ${medida}`;
+                imgCont.appendChild(ingredienteImg);
+                contImgIngr.appendChild(imgCont);
+            } else {
+                break;
+            }
+        }
 
         contenidoModal.appendChild(contImg);
         contenidoModal.appendChild(contReceta);
+        contenidoModal.appendChild(contImgIngr);
         // contenidoModal.appendChild(nombre);
         // contenidoModal.appendChild(imagen);
         // contenidoModal.appendChild(ul);
         // contenidoModal.appendChild(descripcion);
-        //traducir();
+        traducir();
     } catch (error) {
         console.error("Error al obtener los detalles del trago:", error);
     }
