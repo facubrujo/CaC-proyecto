@@ -77,3 +77,46 @@ password2.addEventListener('input', function () {
         password2Error.innerText = 'ok';
     }
 });
+
+// ----- prueba crear objeto usuario con datos de formulario ------
+
+document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.getElementById("formulario");
+    const alerta = document.getElementById("carga-correcta");
+    alerta.style.display = "none";
+
+    formulario.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nombre = document.getElementById("nombre").value;
+        const apellido = document.getElementById("apellido").value;
+        const email = document.getElementById("email").value;
+        const mayorEdad = document.getElementById("mayor-edad").value;
+        const password = document.getElementById("password").value;
+        const password2 = document.getElementById("password2").value;
+        const genero = document.querySelector('input[name="gender"]:checked').value;
+        const imagen = document.getElementById("archivo").files[0];
+
+        const usuario = {
+            nombre: nombre,
+            apellido: apellido,
+            email: email,
+            password: password,
+            mayorEdad: mayorEdad,
+            genero: genero,
+            imagen: imagen
+        };
+
+        console.log(usuario);
+
+        formulario.style.display = "none";
+        const usuNombre = document.getElementById("usuario-nombre");
+        usuNombre.innerHTML = `"${usuario.nombre}", `;
+        alerta.style.display = "block";
+        alerta.style.backgroundColor = "green";
+
+        const guardarUsu = JSON.stringify(usuario)
+        localStorage.setItem("usuario" , guardarUsu);
+
+    });
+});

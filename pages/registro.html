@@ -100,7 +100,7 @@
 <!--             <div class="titulo">
                 <h1>Registro</h1>
             </div> -->
-            <form class="formulario" action="" method="">
+            <form class="formulario" id="formulario" action="" method="POST">
                 <h2>Formulario de registro</h2>
                 <section class="formulario-label">
                     <div>
@@ -122,10 +122,10 @@
                     </div>
                     <div>
                         <label for="email">Mayor de edad: </label>
-                        <select name="select" class="select">
-                            <option value="value0">Seleccione una opción</option>
-                            <option value="value1">Si</option>
-                            <option value="value2">No</option>
+                        <select id="mayor-edad" name="select" class="select">
+                            <option >Seleccione una opción</option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
                         </select>
                     </div>
                 </section>
@@ -157,9 +157,16 @@
                     </div>
                 </section>
 
-                <input class="btn-enviar" type="submit" value="Enviar">
+                <input class="btn-enviar" type="submit" value="Registrarme">
             </form>
+            <section>
+                <div id="carga-correcta">
+                    <h3><span id="usuario-nombre"></span> tu cuenta ha sido creada correctamente</h3>
+                </div>
+                <div></div>
+            </section>
         </section>
+        
 
     </main>
 
