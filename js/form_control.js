@@ -80,6 +80,7 @@ password2.addEventListener('input', function () {
 
 // ----- prueba crear objeto usuario con datos de formulario ------
 
+console.log("buscar si existe array en storage : "+localStorage.getItem("usuarios"));
 document.addEventListener("DOMContentLoaded", function () {
     const formulario = document.getElementById("formulario");
     const alerta = document.getElementById("carga-correcta");
@@ -97,6 +98,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const genero = document.querySelector('input[name="gender"]:checked').value;
         const imagen = document.getElementById("archivo").files[0];
 
+        const sesion = false;
+
+        console.log("creando objeto usuario con datos del form");
         const usuario = {
             nombre: nombre,
             apellido: apellido,
@@ -104,10 +108,35 @@ document.addEventListener("DOMContentLoaded", function () {
             password: password,
             mayorEdad: mayorEdad,
             genero: genero,
-            imagen: imagen
+            imagen: imagen,
+            sesion: sesion
         };
+        console.log("nuevo objeto usuario creado : "+usuario);
+        
+        if(localStorage.getItem("usuarios") === null){
+            console.log("Array usuarios no existe, creando array");
+            const usuarios = [];
+            
+            console.log("agregando usuario nuevo a la lista/array");
+            usuarios.push(usuario);
+            console.log("Array de objetos usuario : "+usuarios);
+            
+            const guardarUsu = JSON.stringify(usuarios)
+            localStorage.setItem("usuarios", guardarUsu);
+        }else{
+            console.log("Array de objetos existe, buscando en Storage");
+            const usuarios = JSON.parse(localStorage.getItem("usuarios"));
+            console.log("Array recuperado, usuarios : "+usuarios);
+            console.log("agregando nuevo usuario a la lista");
+            usuarios.push(usuario);
+            console.log("usuario agregado : "+usuarios);
 
-        console.log(usuario);
+            const guardarUsu = JSON.stringify(usuarios)
+            localStorage.setItem("usuarios", guardarUsu);
+        }
+
+        
+
 
         formulario.style.display = "none";
         const usuNombre = document.getElementById("usuario-nombre");
@@ -115,8 +144,46 @@ document.addEventListener("DOMContentLoaded", function () {
         alerta.style.display = "block";
         alerta.style.backgroundColor = "green";
 
-        const guardarUsu = JSON.stringify(usuario)
-        localStorage.setItem("usuario" , guardarUsu);
 
     });
 });
+
+// --- Alerta cuenta creada correctamente --- //
+// function cuentaCreadaCorrectamente() {
+//     formulario.style.display = "none";
+//     const usuNombre = document.getElementById("usuario-nombre");
+//     usuNombre.innerHTML = `"${usuario.nombre}", `;
+//     alerta.style.display = "block";
+//     alerta.style.backgroundColor = "green";
+// }
+
+/*
+
+para crear muchos usuarios habria que usar un Array de objetos usuarios
+
+const usuarios = [
+
+    usuario[i]{   // usuario0
+        nombre: nombre,
+        apellido: apellido,
+        email: email,
+        password: password,
+        mayorEdad: mayorEdad,
+        genero: genero,
+        imagen: imagen,
+        sesion: sesion
+    },
+    usuario[i]{   // usuario1
+        nombre: nombre,
+        apellido: apellido,
+        email: email,
+        password: password,
+        mayorEdad: mayorEdad,
+        genero: genero,
+        imagen: imagen,
+        sesion: sesion
+    }
+
+];
+
+*/
