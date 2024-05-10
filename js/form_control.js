@@ -78,9 +78,27 @@ password2.addEventListener('input', function () {
     }
 });
 
+// -- mostrar imagen que se carga en formulario
+let imagenUrl = "";
+document.querySelector('#archivo').addEventListener('change', function (event) {
+    const imagenInput = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+        imagenUrl = e.target.result;
+        const imagenMuestra = document.getElementById('imagen-muestra');
+        imagenMuestra.src = e.target.result;
+        document.getElementById('contenedor-de-imagen').style.display = 'block';
+        console.log(e.target.result);
+    }
+    reader.readAsDataURL(imagenInput);
+});
+
+
+
 // ----- prueba crear objeto usuario con datos de formulario ------
 
-console.log("buscar si existe array en storage : "+localStorage.getItem("usuarios"));
+//console.log("buscar si existe array en storage : " + localStorage.getItem("usuarios"));
 document.addEventListener("DOMContentLoaded", function () {
     const formulario = document.getElementById("formulario");
     const alerta = document.getElementById("carga-correcta");
@@ -100,6 +118,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const sesion = false;
 
+        const reader = new FileReader();
+
+        // const img = reader.readAsDataURL(reader.result);// onload = function (e) {
+        //     // const imagenPreview = document.getElementById('imagenPreview');
+        //     // imagenPreview.src = e.target.result;
+        //     // document.getElementById('imagenPreviewContainer').style.display = 'block';
+        // //     return e.target.result;
+        // // }
+        // console.log("reader es : "+ img)
+
         console.log("creando objeto usuario con datos del form");
         const usuario = {
             nombre: nombre,
@@ -108,34 +136,34 @@ document.addEventListener("DOMContentLoaded", function () {
             password: password,
             mayorEdad: mayorEdad,
             genero: genero,
-            imagen: imagen,
+            imagen: imagenUrl,
             sesion: sesion
         };
-        console.log("nuevo objeto usuario creado : "+usuario);
-        
-        if(localStorage.getItem("usuarios") === null){
+        console.log("nuevo objeto usuario creado : " + usuario);
+
+        if (localStorage.getItem("usuarios") === null) {
             console.log("Array usuarios no existe, creando array");
             const usuarios = [];
-            
+
             console.log("agregando usuario nuevo a la lista/array");
             usuarios.push(usuario);
-            console.log("Array de objetos usuario : "+usuarios);
-            
+            console.log("Array de objetos usuario : " + usuarios);
+
             const guardarUsu = JSON.stringify(usuarios)
             localStorage.setItem("usuarios", guardarUsu);
-        }else{
+        } else {
             console.log("Array de objetos existe, buscando en Storage");
             const usuarios = JSON.parse(localStorage.getItem("usuarios"));
-            console.log("Array recuperado, usuarios : "+usuarios);
+            console.log("Array recuperado, usuarios : " + usuarios);
             console.log("agregando nuevo usuario a la lista");
             usuarios.push(usuario);
-            console.log("usuario agregado : "+usuarios);
+            console.log("usuario agregado : " + usuarios);
 
             const guardarUsu = JSON.stringify(usuarios)
             localStorage.setItem("usuarios", guardarUsu);
         }
 
-        
+
 
 
         formulario.style.display = "none";

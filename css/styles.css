@@ -561,3 +561,43 @@ strong {
     flex: 1;
     /* Hacer que los íconos ocupen todo el espacio disponible */
 }
+
+
+
+
+/* VISTA LOGIN*/
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.login form button{
+    margin: 10px 0;
+    border: 1px solid black;
+}
+
+/* VISTA PERFIL USUARIO*/
+
+.perfil-usuario {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.perfil-usuario div{
+    border-radius: 50%;
+    height: 10rem;
+    overflow: hidden;
+}
+.perfil-usuario img {
+    width: 10rem;
+}

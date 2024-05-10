@@ -40,7 +40,6 @@
 
 .imagenes:hover p {
     transition: display 0.3s ease;
-    ;
     display: none;
 }
 

@@ -93,12 +93,14 @@
 
 .btn-seleccionar {
     background-color: #ffffffc9;
+    color: #000;
     width: 50%;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     text-align: center;
+    transition: background-color 0.3s;
 }
 
 .btn-seleccionar:hover {
@@ -147,4 +149,12 @@ input[type="submit"]:hover {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
+}
+
+.imagen-muestra{
+    object-fit: cover;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
 }

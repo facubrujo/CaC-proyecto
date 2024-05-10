@@ -2,9 +2,9 @@ const usuarios = localStorage.getItem("usuarios");
 const usuarioDatos = document.getElementById("perfil-usuario");
 const cerrarSesion = document.getElementById("cerrar-sesion");
 
-console.log(usuarios);
+//console.log(usuarios);
 const todosLosUsuarios = JSON.parse(usuarios);
-console.log("Todos los usuarios : "+todosLosUsuarios);
+//console.log("Todos los usuarios : " + todosLosUsuarios);
 
 let usuario = [];
 
@@ -19,38 +19,36 @@ for (let i = 0; i < todosLosUsuarios.length; i++) {
     }
 }
 
-console.log(usuario);
-const ul = document.createElement("ul");
-const nombre = document.createElement("li");
-nombre.textContent = usuario.nombre;
-const apellido = document.createElement("li");
-apellido.textContent = usuario.apellido;
-const email = document.createElement("li");
-email.textContent = usuario.email;
+//console.log(usuario);
+const ul = document.getElementById("ul");
+for (let clave in usuario) {
+    const li = document.createElement('li');
+    if (clave === "imagen" || clave === "password") {
+        // li.style.display = "none";
+        li.setAttribute("hidden", true);
+    } else {
+        li.textContent = `${clave}: ${usuario[clave]}`;
+        ul.appendChild(li);
+    }
+}
 
-ul.appendChild(nombre);
-ul.appendChild(apellido);
-ul.appendChild(email);
+const img = document.getElementById("img");
+img.src = usuario.imagen;
 
-const img = document.createElement("img");
-//img.src = usuario.imagen;
-
-usuarioDatos.appendChild(img);
+// usuarioDatos.appendChild(img);
 usuarioDatos.appendChild(ul);
 
-cerrarSesion.addEventListener("click", ()=>{
+cerrarSesion.addEventListener("click", () => {
     console.log("cerrar sesión");
     for (let i = 0; i < todosLosUsuarios.length; i++) {
-        if(todosLosUsuarios[i].sesion === true){
+        if (todosLosUsuarios[i].sesion === true) {
             todosLosUsuarios[i].sesion = false;
             localStorage.setItem("usuarios", JSON.stringify(todosLosUsuarios));
-            console.log("estado de sesion al cerrar : "+ todosLosUsuarios[i].sesion)
+            console.log("estado de sesion al cerrar : " + todosLosUsuarios[i].sesion)
             window.location.href = "/index.html";
             break;
         }
-        
     }
-
 });
 
 
