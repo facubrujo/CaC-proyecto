@@ -13,16 +13,40 @@ function vistaElementosCuadricula(datos) {
                 div.style.display = "none";
             }
 
-            // const imgContenedor = document.createElement("div");
-            // const imgTarjeta = document.createElement("div");
-            // imgContenedor.style.backgroundImage = trago.strDrinkThumb;
-            // imgTarjeta.style.backgroundColor = "red";
-            const img = document.createElement("img");
-            img.src = trago.strDrinkThumb;
-            img.alt = trago.strDrink;
-            div.appendChild(img);
-            // imgContenedor.appendChild(imgTarjeta);
-            // div.appendChild(imgContenedor);
+
+            const imgContenedor = document.createElement("div");
+            imgContenedor.className = "imgFondo";
+
+            const imgTarjeta = document.createElement("div");
+            const calificacionForm = document.createElement("form");
+            calificacionForm.id = "form";
+            calificacionForm.className = "form";
+            for (let i = 0; i < 5; i++) {
+                const btn = document.createElement("button");
+                btn.className = "btn-calificacion";
+                btn.textContent = `⭐${""}`;
+                btn.style.background = "none";
+                calificacionForm.appendChild(btn);
+            }
+
+
+            const tituloTarjeta = document.createElement("h3");
+            tituloTarjeta.textContent = trago.strDrink;
+            tituloTarjeta.style.textAlign = "center";
+            tituloTarjeta.style.color = "#fff";
+            imgTarjeta.className = "tarjeta-imagen";
+
+            //console.log(trago.strDrinkThumb);
+
+            imgContenedor.style.backgroundImage = `url('${trago.strDrinkThumb}')`;
+
+
+
+            imgTarjeta.appendChild(tituloTarjeta);
+            imgTarjeta.appendChild(calificacionForm);
+            imgContenedor.appendChild(imgTarjeta);
+            div.appendChild(imgContenedor);
+
 
             const p = document.createElement("p");
             p.textContent = trago.strDrink;

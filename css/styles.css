@@ -132,7 +132,7 @@ body {
 
 /* .modal {
     display: block;
-    
+
 }
 .modal-contenido{
     margin: auto;
@@ -258,6 +258,7 @@ input[type="file"] {
     border-radius: 10px;
     gap: 2rem;
     box-shadow: 0px 16px 26px #434343b8;
+    overflow: hidden;
 }
 
 .trago img {
@@ -567,25 +568,96 @@ strong {
 
 /* VISTA LOGIN*/
 .login {
+    background-image: url("../img/login-bg-01.jpg");
+    background-size: cover;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
 }
-.login form{
+.img-login-contenedor{
     display: flex;
-    flex-direction: column;
-    width: 300px;
+    width: 20rem;
+    height: 20rem;
+    backdrop-filter: blur(40px);
+    align-items: center;
+    justify-content: center;
 }
-.login form button{
+.login-form{
+    display: flex;
+    height: auto;
+    width: 20rem;
+    padding: 15px;
+    backdrop-filter: blur(40px);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-form button{
+    padding: 10px;
+    border-radius: 10px;
     margin: 10px 0;
     border: 1px solid black;
+    background-color: #ffeb00a1;
+    transition: background-color .5s;
+    font-weight: 500;
+}
+.login-form button:hover{
+    transition: background-color .5s;
+    background-color: #6bc701;
+    color: #f2f2f2;
+}
+
+.label{
+    display: grid;
+    grid-template-areas: "input";
+}
+.input{
+    margin: .7rem 0;
+    padding-left: 5px;
+    grid-area: input;
+    font: inherit;
+}
+
+.label-name{
+    grid-area: input;
+    margin: 14px 0;
+    z-index: 2;
+    padding: 0 .5rem;
+    color: #cecece;
+
+    transition: transform .2s;
+    transform-origin: center left;
+}
+
+.input:focus + .label-name,
+.input:not(:placeholder-shown) + .label-name{
+    transform: translateY(-100%) scale(.7);
+    background-color: #00000000;
+    
+}
+
+.login-form input{
+    border-radius: 8px;
+    height: 2rem;
+    width:15rem;
+}
+.img-login{
+    border-radius: 100px;
+    overflow: hidden;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
 }
 
 /* VISTA PERFIL USUARIO*/
 
 .perfil-usuario {
+    margin: 3rem 0 ;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -600,4 +672,24 @@ strong {
 }
 .perfil-usuario img {
     width: 10rem;
+    height: 10rem;
+    object-fit: cover;
 }
+
+.img-perfil{
+    height: 2.7rem;
+    width: 2.7rem;
+    object-fit: cover;
+}
+
+/* .img-perfil-nav{
+    border-radius: 20px;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+} */
+
+/* .img-login{
+    margin: 0 5px;
+} */

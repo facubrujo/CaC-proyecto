@@ -1,15 +1,31 @@
 todosUsuarios = localStorage.getItem("usuarios");
-console.log(todosUsuarios);
+// console.log(todosUsuarios);
 
 usu = JSON.parse(todosUsuarios);
 
 // console.log(usu.nombre);
 // console.log(usu.email);
 // console.log(usu.password);
-for (let i = 0; i < usu.length; i++) {
-    // const element = array[index];
-    console.log(usu[i]);
-}
+// for (let i = 0; i < usu.length; i++) {
+//     // const element = array[index];
+//     console.log(usu[i]);
+// }
+
+const imgPerfil = document.getElementById("img-login");
+document.getElementById('email').addEventListener('input', function (event) {
+    const email = event.target.value;
+    console.log(email);
+    const emailIngresado = usu.find(function(usuario){
+        return usuario.email === email;
+    });
+    if(emailIngresado){
+
+        imgPerfil.src = emailIngresado.imagen;
+    }else{
+        imgPerfil.src = "../img/usuario_icono.png";
+    }
+});
+
 
 login = document.getElementById("login");
 login.addEventListener("submit", function (event) {
@@ -42,9 +58,13 @@ login.addEventListener("submit", function (event) {
             const guardarUsu = JSON.stringify(usu)
             localStorage.setItem("usuarios", guardarUsu);
 
+            const navLogin = document.getElementById("login-nav");
+            const navNoLogin = document.getElementById("nav-nologin");
+            navLogin.style.display = "block";
+            navNoLogin.style.display = "none";
+
             window.location.href = "perfil_usuario.html";
 
-            // break;
         } else {
             console.log("la contraseña es incorrecta");
             console.log("error, usuario no existe")
@@ -54,7 +74,6 @@ login.addEventListener("submit", function (event) {
             error.innerHTML = "";
             error.textContent = "contraseña incorrecta";
             login.appendChild(error);
-            // break;
 
         }
     } else {
@@ -66,7 +85,7 @@ login.addEventListener("submit", function (event) {
         error.innerHTML = "";
         error.textContent = "usuario no registrado o no existe";
         login.appendChild(error);
-        // break;
+
     }
 
     // for (let i = 0; i < usu.length; i++) {

@@ -41,8 +41,8 @@ input:checked+.slider::before {
 }
 
 .modo-oscuro {
-    /* margin: 0 15px 0 15px;*/
-    display: math;
+    margin: 0 15px 0 15px;
+    /* display: math; */
 }
 
 

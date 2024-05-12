@@ -35,6 +35,9 @@ for (let clave in usuario) {
 const img = document.getElementById("img");
 img.src = usuario.imagen;
 
+const imgPerfil = document.getElementById("img-perfil");
+imgPerfil.src = usuario.imagen;
+
 // usuarioDatos.appendChild(img);
 usuarioDatos.appendChild(ul);
 
@@ -45,10 +48,16 @@ cerrarSesion.addEventListener("click", () => {
             todosLosUsuarios[i].sesion = false;
             localStorage.setItem("usuarios", JSON.stringify(todosLosUsuarios));
             console.log("estado de sesion al cerrar : " + todosLosUsuarios[i].sesion)
-            window.location.href = "/index.html";
+            // window.location.href = "/index.html";
+            window.location.href = "https://facubrujo.github.io/CaC-proyecto/index.html";
             break;
         }
     }
 });
 
+const btnLogin = document.getElementById("boton-login");
+const imgLogin = document.getElementById("img-login");
+btnLogin.classList.remove("d-flex");
+btnLogin.style.display = "none";
+imgLogin.style.display = "block";
 

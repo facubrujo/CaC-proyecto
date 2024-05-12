@@ -53,10 +53,7 @@ async function todasLasBebidas() {
             const div = document.createElement("div");
             div.classList.add("imagenes");
 
-            // const img = document.createElement("img");
-            // img.src = trago.strDrinkThumb;
-            // img.alt = trago.strDrink;
-            // div.appendChild(img);
+
             const imgContenedor = document.createElement("div");
             imgContenedor.className = "imgFondo";
 
@@ -82,16 +79,7 @@ async function todasLasBebidas() {
             //console.log(trago.strDrinkThumb);
 
             imgContenedor.style.backgroundImage = `url('${trago.strDrinkThumb}')`;
-            // imgContenedor.style.backgroundSize = "cover";
-            // imgContenedor.style.width = "20rem";
-            // imgContenedor.style.height = "20rem";
-            // imgTarjeta.style.backgroundColor = "red";
-            // imgTarjeta.style.width = "20rem";
-            // imgTarjeta.style.height = "20rem";
-            // const img = document.createElement("img");
-            // img.src = trago.strDrinkThumb;
-            // img.alt = trago.strDrink;
-            // div.appendChild(img);
+     
 
 
             imgTarjeta.appendChild(tituloTarjeta);
