@@ -77,15 +77,33 @@
                                 <a class="nav-link" href="registro.html">Registro</a>
                             </li>
                         </ul>
-                        <form class="d-flex mt-3 mt-lg-0" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                            <a href="login.html" class="btn btn-outline-warning" type="submit">Login</a>
-                        </form>
+                        <div class="d-flex mt-3 mt-lg-0" role="search">
+                            <a id="boton-login" href="login.html" class="btn btn-outline-warning"
+                                type="submit">Login</a>
+                        </div>
+
+                        <div class="dropdown" style="display : none;" id="contenedor-img-login">
+                            <a href="#" class="d-block link-body-emphasis 
+                            text-decoration-none dropdown-toggle nav-link active " data-bs-toggle="dropdown"
+                                aria-expanded="true">
+                                <img src="../img/usuario_icono.png" alt="mdo" class="rounded-circle img-perfil"
+                                    id="img-perfil">
+                            </a>
+                            <ul class="dropdown-menu text-small " data-popper-placement="bottom-end">
+                                <li><a class="dropdown-item" href="perfil_usuario.html">Mi perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Favoritos</a></li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a id="cerrar-sesion" class="dropdown-item" href="#">Cerrar sesión</a></li>
+                            </ul>
+                        </div>
 
                         <!-- Modo oscuro -->
                         <div class="modo-oscuro">
 
-                            <label class="modo-oscuro-btn" for="toggle" >
+                            <label class="modo-oscuro-btn" for="toggle">
                                 <!--<span>&#x1F31E;</span>-->
                                 <i class="bi bi-sun-fill text-warning"></i>
                                 <input type="checkbox" id="toggle">
@@ -143,6 +161,7 @@
     <script src="../js/busqueda_tragos.js"></script>
     <script src="../js/metodos_varios.js"></script>
     <script src="../js/modo_oscuro.js"></script>
+    <script src="../js/verificacion.js"></script>
 
     <script src="../js/ventana_carga.js"></script>
 

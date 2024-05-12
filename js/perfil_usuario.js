@@ -48,15 +48,16 @@ cerrarSesion.addEventListener("click", () => {
             todosLosUsuarios[i].sesion = false;
             localStorage.setItem("usuarios", JSON.stringify(todosLosUsuarios));
             console.log("estado de sesion al cerrar : " + todosLosUsuarios[i].sesion)
-            // window.location.href = "/index.html";
-            window.location.href = "https://facubrujo.github.io/CaC-proyecto/index.html";
+            sessionStorage.removeItem('usuarioOnline');
+            window.location.href = "/index.html";
+            // window.location.href = "https://facubrujo.github.io/CaC-proyecto/index.html";
             break;
         }
     }
 });
 
 const btnLogin = document.getElementById("boton-login");
-const imgLogin = document.getElementById("img-login");
+const imgLogin = document.getElementById("contenedor-img-login");
 btnLogin.classList.remove("d-flex");
 btnLogin.style.display = "none";
 imgLogin.style.display = "block";

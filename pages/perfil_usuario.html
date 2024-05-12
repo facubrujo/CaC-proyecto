@@ -66,21 +66,20 @@
                                 <a class="nav-link active" href="registro.html">Registro</a>
                             </li>
                         </ul>
-                        <div class="d-flex mt-3 mt-lg-0" role="search" id="boton-login">
-                            <a href="login.html" class="btn btn-outline-warning" type="submit">Login</a>
+                        <div class="d-flex mt-3 mt-lg-0" role="search">
+                            <a id="boton-login" href="login.html" class="btn btn-outline-warning"
+                                type="submit">Login</a>
                         </div>
 
-                        <div class="dropdown" style="display : none;" id="img-login">
+                        <div class="dropdown" style="display : none;" id="contenedor-img-login">
                             <a href="#" class="d-block link-body-emphasis 
-                            text-decoration-none dropdown-toggle nav-link active "
-                                data-bs-toggle="dropdown" aria-expanded="true">
-                                <img src="https://github.com/mdo.png" alt="mdo" 
-                                    class="rounded-circle img-perfil" id="img-perfil">
+                            text-decoration-none dropdown-toggle nav-link active " data-bs-toggle="dropdown"
+                                aria-expanded="true">
+                                <img src="../img/usuario_icono.png" alt="mdo" class="rounded-circle img-perfil"
+                                    id="img-perfil">
                             </a>
-                            <ul class="dropdown-menu text-small "
-                                
-                                data-popper-placement="bottom-end">
-                                <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+                            <ul class="dropdown-menu text-small " data-popper-placement="bottom-end">
+                                <li><a class="dropdown-item" href="perfil_usuario.html">Mi perfil</a></li>
                                 <li><a class="dropdown-item" href="#">Favoritos</a></li>
                                 <li><a class="dropdown-item" href="#">Profile</a></li>
                                 <li>
@@ -88,7 +87,7 @@
                                 </li>
                                 <li><a id="cerrar-sesion" class="dropdown-item" href="#">Cerrar sesión</a></li>
                             </ul>
-                        </div> 
+                        </div>
 
 
                         <!-- Modo oscuro -->
@@ -138,6 +137,7 @@
 
     <script src="../js/modo_oscuro.js"></script>
     <script src="../js/perfil_usuario.js"></script>
+    <script src="../js/verificacion.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

@@ -40,6 +40,13 @@ window.onload = function () {
         });
     };
 
+    // const usuarioLog = sessionStorage.getItem('usuarioLogueado');
+    // if(usuarioLog === null){
+    //     console.log("No hay ningun usuario logueado");
+    // }else{
+    //     console.log("hay un usuario logueado : "+JSON.parse(usuarioLog));
+    // }
+
     // if (session === null) {
     //     const resp = prompt(
     //         "eres mayor de edad? si / no"

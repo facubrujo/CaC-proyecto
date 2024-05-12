@@ -1,27 +1,28 @@
-todosUsuarios = localStorage.getItem("usuarios");
-// console.log(todosUsuarios);
+const todosUsuarios = localStorage.getItem("usuarios");
+console.log(todosUsuarios);
 
-usu = JSON.parse(todosUsuarios);
+const usuList = JSON.parse(todosUsuarios);
 
-// console.log(usu.nombre);
-// console.log(usu.email);
-// console.log(usu.password);
-// for (let i = 0; i < usu.length; i++) {
-//     // const element = array[index];
-//     console.log(usu[i]);
-// }
+console.log("usu.nombre"+ usuList);
 
 const imgPerfil = document.getElementById("img-login");
 document.getElementById('email').addEventListener('input', function (event) {
     const email = event.target.value;
-    console.log(email);
-    const emailIngresado = usu.find(function(usuario){
+    console.log("email que se ingreso en input : "+email);
+    const emailIngresado = usuList.find(function(usuario){
         return usuario.email === email;
     });
+
+    // for (let i = 0; i < usu.length; i++) {
+    //     if(email === usu[i].email){
+    //         console.log("el usuario encontrado es "+usu.email);
+    //     }
+    // }
     if(emailIngresado){
 
         imgPerfil.src = emailIngresado.imagen;
     }else{
+        console.log("se setea imagen por defecto");
         imgPerfil.src = "../img/usuario_icono.png";
     }
 });
@@ -37,7 +38,7 @@ login.addEventListener("submit", function (event) {
     console.log("email desde login :" + loginMail);
     console.log("pass desde login :" + loginPassword);
 
-    const usuarioLogeando = usu.find(function (usuario) {
+    const usuarioLogeando = usuList.find(function (usuario) {
         return usuario.email === loginMail;
     });
 
@@ -55,13 +56,20 @@ login.addEventListener("submit", function (event) {
             logueado.textContent = "Logueado correctamente";
             login.appendChild(logueado);
 
-            const guardarUsu = JSON.stringify(usu)
+            const guardarUsu = JSON.stringify(usuList)
             localStorage.setItem("usuarios", guardarUsu);
 
-            const navLogin = document.getElementById("login-nav");
-            const navNoLogin = document.getElementById("nav-nologin");
-            navLogin.style.display = "block";
-            navNoLogin.style.display = "none";
+            sessionStorage.setItem("usuarioOnline", JSON.stringify(usuarioLogeando));// guarda el usuario que loguea
+
+            // const navLogin = document.getElementById("login-nav");
+            // const navNoLogin = document.getElementById("nav-nologin");
+            // navLogin.style.display = "block";
+            // navNoLogin.style.display = "none";
+
+
+            // console.log("desde login.js usuario logueado : "+ usuarioLogeando);
+            // alert("desde login.js usuario logueado : "+ usuarioLogeando.email);
+            // sessionStorage.setItem('usuarioLogueado', ('usuarioLogueado',usuarioLogeando));
 
             window.location.href = "perfil_usuario.html";
 

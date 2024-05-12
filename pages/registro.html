@@ -72,9 +72,28 @@
                                 <a class="nav-link active" href="registro.html">Registro</a>
                             </li>
                         </ul>
-                        <form class="d-flex mt-3 mt-lg-0" role="search">
-                            <a href="login.html" class="btn btn-outline-warning" type="submit">Login</a>
-                        </form>
+                        <div class="d-flex mt-3 mt-lg-0" role="search">
+                            <a id="boton-login" href="login.html" class="btn btn-outline-warning"
+                                type="submit">Login</a>
+                        </div>
+
+                        <div class="dropdown" style="display : none;" id="contenedor-img-login">
+                            <a href="#" class="d-block link-body-emphasis 
+                            text-decoration-none dropdown-toggle nav-link active " data-bs-toggle="dropdown"
+                                aria-expanded="true">
+                                <img src="../img/usuario_icono.png" alt="mdo" class="rounded-circle img-perfil"
+                                    id="img-perfil">
+                            </a>
+                            <ul class="dropdown-menu text-small " data-popper-placement="bottom-end">
+                                <li><a class="dropdown-item" href="perfil_usuario.html">Mi perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Favoritos</a></li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a id="cerrar-sesion" class="dropdown-item" href="#">Cerrar sesión</a></li>
+                            </ul>
+                        </div>
 
                         <!-- Modo oscuro -->
                         <div class="modo-oscuro">
@@ -97,7 +116,7 @@
     </header>
     <main>
         <section class="formulario-contenedor">
-<!--             <div class="titulo">
+            <!--             <div class="titulo">
                 <h1>Registro</h1>
             </div> -->
             <form class="formulario" id="formulario" action="" method="POST">
@@ -123,7 +142,7 @@
                     <div>
                         <label for="email">Mayor de edad: </label>
                         <select id="mayor-edad" name="select" class="select">
-                            <option >Seleccione una opción</option>
+                            <option>Seleccione una opción</option>
                             <option value="si">Si</option>
                             <option value="no">No</option>
                         </select>
@@ -145,7 +164,7 @@
 
                 <section>
                     <div>
-                        <div id="contenedor-de-imagen" style="display: none;" >
+                        <div id="contenedor-de-imagen" style="display: none;">
                             <img id="imagen-muestra" class="imagen-muestra" alt="">
                         </div>
                         <label for="archivo" class="btn-seleccionar">Carga una imagen</label>
@@ -170,7 +189,7 @@
                 <div></div>
             </section>
         </section>
-        
+
 
     </main>
 
@@ -185,6 +204,8 @@
     <script src="../js/form_control.js"></script>
 
     <script src="../js/modo_oscuro.js"></script>
+
+    <script src="../js/verificacion.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
