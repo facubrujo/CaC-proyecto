@@ -1,8 +1,8 @@
 window.onload = function () {
-    const session = sessionStorage.getItem('session'); // true o false
+    const session = sessionStorage.getItem('session'); // null, true o false
     console.log(`1 --- estado de la sesion = ${sessionStorage.getItem("session")}`);
 
-    let esMayor = sessionStorage.getItem('esMayor'); // esto devuelve true o false
+    let esMayor = sessionStorage.getItem('esMayor'); // null, true o false
     console.log(`1 --- estado de esMayor = ${sessionStorage.getItem("esMayor")}`);
 
     venAlerta = document.querySelector(".alerta-edad-contenedor");
@@ -14,7 +14,7 @@ window.onload = function () {
     btnSi = document.getElementById("si");
     btnNo = document.getElementById("no");
 
-    if (session !== null) {
+    if (!session !== null) {
         venAlerta.style.display = "none";
         venBloqueo.style.display = "none";
         body.style.removeProperty("overflow", true);
@@ -39,36 +39,4 @@ window.onload = function () {
             body.style.removeProperty("overflow", true);
         });
     };
-
-    // const usuarioLog = sessionStorage.getItem('usuarioLogueado');
-    // if(usuarioLog === null){
-    //     console.log("No hay ningun usuario logueado");
-    // }else{
-    //     console.log("hay un usuario logueado : "+JSON.parse(usuarioLog));
-    // }
-
-    // if (session === null) {
-    //     const resp = prompt(
-    //         "eres mayor de edad? si / no"
-    //     );
-    //     if (resp === "si") {
-    //         sessionStorage.setItem('session', true);
-    //         sessionStorage.setItem('esMayor', true);
-
-    //         alert("session iniciada y ... eres mayor de edad");
-    //     } else {
-
-    //         sessionStorage.setItem('session', true);
-    //         sessionStorage.setItem('esMayor', false);
-
-    //         alert(" session iniciada, peroooo .... eres menor de edad");
-    //     };
-    // } else {
-    //     console.log("estado de la session : " + sessionStorage.getItem("session"));
-    // };
-
-    //window.addEventListener("beforeunload", function(event) {
-    //    sessionStorage.clear();
-    //});
-
 };
