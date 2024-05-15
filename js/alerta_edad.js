@@ -14,7 +14,7 @@ window.onload = function () {
     btnSi = document.getElementById("si");
     btnNo = document.getElementById("no");
 
-    if (!session !== null) {
+    if (session !== null) {
         venAlerta.style.display = "none";
         venBloqueo.style.display = "none";
         body.style.removeProperty("overflow", true);
