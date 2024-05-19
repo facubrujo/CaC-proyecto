@@ -110,7 +110,7 @@ async function buscarTragos(busqueda) {
 }
 
 document.getElementById("formulario-busqueda").addEventListener("submit", function (event) {
-    event.preventDefault(); // Evita que el formulario se envíe de manera tradicional
+    event.preventDefault();
 
     const searchTerm = document.getElementById("input-busqueda").value;
     const ruta = document.getElementById("url");
@@ -124,29 +124,3 @@ document.getElementById("formulario-busqueda").addEventListener("submit", functi
         }
     }
 });
-
-
-// function traducir() {
-//     // Texto en inglés
-//     const textosEnIngles = document.querySelectorAll('.texto');
-
-//     // Idioma origen: inglés ('en') y destino: español ('es')
-//     const idiomaOrigen = 'en';
-//     const idiomaDestino = 'es';
-
-//     textosEnIngles.forEach(texto => {
-//         // Texto en inglés
-//         const textoEnIngles = texto.textContent;
-
-//         // URL de la API de Google Translate
-//         const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${idiomaOrigen}&tl=${idiomaDestino}&dt=t&q=${encodeURIComponent(textoEnIngles)}`;
-
-//         fetch(url)
-//             .then(response => response.json())
-//             .then(data => {
-//                 const textoTraducido = data[0][0][0];
-//                 texto.textContent = textoTraducido;
-//             })
-//             .catch(error => console.error('Error al traducir:', error));
-//     });
-// }

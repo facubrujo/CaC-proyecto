@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         inputEmailValor = event.target.value;
 
         usuarioLog = todosUsuarios.find(function (usuario) {
-            console.log(usuario)
+            //console.log(usuario)
             return usuario.email === inputEmailValor;
         });
 

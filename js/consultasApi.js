@@ -1,3 +1,4 @@
+// ---------- ESTE CODIGO ESTA OBSOLETO -----------------
 // async function tragosConAlcohol() {
 //     try {
 //         const respuesta = await fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic");

@@ -1,4 +1,4 @@
-/*
+/* --------- ESTE CODIGO ESTA OBSOLETO  ----------------
 ------ Este script maneja el control del formulario de registro --------
 
 El sitio web debe incluir un formulario de contacto, con al menos 5
@@ -6,7 +6,7 @@ campos que incluya (un checkbox o radiobutton), un select y una
 imagen, con validación realizada mediante JavaScript para que los
 campos sean obligatorios.
 
-*/
+
 
 var submitControl = {
     nombre: false,

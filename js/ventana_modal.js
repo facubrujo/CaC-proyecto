@@ -72,11 +72,6 @@ async function contenidoModal(idTrago) {
             const medida = trago[`strMeasure${i}`];
             if (ingrediente) {
                 const li = document.createElement("li");
-                //const ingredienteImg = document.createElement("img");
-                //console.log(ingredienteNombre.toLocaleLowerCase());
-                //ingredienteImg.src = `https://www.thecocktaildb.com/images/ingredients/${ingredienteNombre.toLocaleLowerCase()}-Small.png`;// consulta api imagenes
-                //ingredienteImg.alt = "imagen de ingrediente";
-                //ingredienteImg.style.width = "60px";
                 li.className = "texto";
                 li.textContent = `${ingrediente} : ${medida}`;
                 //li.appendChild(ingredienteImg);
@@ -107,8 +102,7 @@ async function contenidoModal(idTrago) {
                 ingredienteImg.src = `https://www.thecocktaildb.com/images/ingredients/${imgIngrNombre.toLocaleLowerCase()}-Small.png`;// consulta api imagenes
                 ingredienteImg.alt = "imagen de ingrediente";
                 ingredienteImg.style.width = "60px";
-                //li.className = "texto";
-                //li.textContent = `${ingrediente} : ${medida}`;
+
                 imgCont.appendChild(ingredienteImg);
                 contImgIngr.appendChild(imgCont);
             } else {
@@ -119,10 +113,7 @@ async function contenidoModal(idTrago) {
         contenidoModal.appendChild(contImg);
         contenidoModal.appendChild(contReceta);
         contenidoModal.appendChild(contImgIngr);
-        // contenidoModal.appendChild(nombre);
-        // contenidoModal.appendChild(imagen);
-        // contenidoModal.appendChild(ul);
-        // contenidoModal.appendChild(descripcion);
+        
         traducir();
     } catch (error) {
         console.error("Error al obtener los detalles del trago:", error);
