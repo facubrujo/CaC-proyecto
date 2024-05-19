@@ -30,18 +30,18 @@ function devolverLetra() {
     letras.forEach((enlace) => {
         enlace.addEventListener("click", async function () {
             mostrarCarga();
-            console.log("SI HIZO CLIC EN LA LETRA : " + enlace.textContent.toLocaleLowerCase());
+            //console.log("SI HIZO CLIC EN LA LETRA : " + enlace.textContent.toLocaleLowerCase());
 
             const datos = await tragosPorLetraAlfabeto(enlace.textContent.toLocaleLowerCase());
             // console.log("DATOS : " + datos)
 
             let datosFiltrados =[];
             esMayor = sessionStorage.getItem("esMayor");
-            console.log("esMayor = "+esMayor);
+            //console.log("esMayor = "+esMayor);
 
-            console.log("BUSCANDO TRAGOS CON LETRA " + enlace.textContent.toLocaleLowerCase())
+            //console.log("BUSCANDO TRAGOS CON LETRA " + enlace.textContent.toLocaleLowerCase())
 
-            console.log("datps fitrados : "+  datosFiltrados)
+            //console.log("datps fitrados : "+  datosFiltrados)
             //limpiarContenedor();
             vistaElementosCuadricula(datos);
         });

@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("desde input : "+this.value);
         let existe = existeUsuario(this.value);
 
+        console.log("existe : "+existe);
         if (validaciones.email.test(this.value) && !existe) {
             error.className = "error-ok";
             error.textContent = "ok";
@@ -220,33 +221,20 @@ document.addEventListener("DOMContentLoaded", function () {
         usuNombre.innerHTML = `"${usuarioNuevo.nombre}", `;
         alerta.style.display = "block";
         alerta.style.backgroundColor = "#00800078";
-
     });
-
-
-
 });
 
 // metodo verificar direccion de usuario
 function existeUsuario(usuarioEmail) {
-    console.log("input email desde metodo buscar : "+usuarioEmail)
-
     let todosUsuarios = JSON.parse(localStorage.getItem("usuarios"));
     if (todosUsuarios === null) {
         return false;
     } else {
-        let emailRepetido = "";
-        for (let i = 0; i < todosUsuarios.length; i++) {
-            console.log("input email desde for  : "+usuarioEmail)
-
-            if (todosUsuarios[i].email !== usuarioEmail) {
-                emailRepetido = false;
-                break;
-            } else {
-                emailRepetido = true;
-                break;
+        for(let clave in todosUsuarios){
+            if(todosUsuarios[clave].email === usuarioEmail){
+                return true;
             }
         }
-        return emailRepetido;
+        return false;
     }
 }

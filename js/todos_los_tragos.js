@@ -19,10 +19,7 @@ async function tragosSinAlcohol() {
 
 
 // ---- FUNCION TODAS LAS BEBIDAS ALCOOHLICAS Y NO ALCOHOLICAS ----
-// let esMayor = null;
-// window.onload = function(){
-//     esMayor = sessionStorage.getItem("esMayor");
-// }
+
 async function todasLasBebidas() {
     try {
         esMayor = sessionStorage.getItem("esMayor");
@@ -32,19 +29,13 @@ async function todasLasBebidas() {
         const alcoholicas = await tragosConAlcohol();
         const noAlcoholicas = await tragosSinAlcohol();
         if (esMayor === "true") {
-            // const alc = alcoholicas.drinks;// || [];
-            // const noAlc = noAlcoholicas.drinks;// || [];
-            
             todos = alcoholicas.drinks.concat(noAlcoholicas.drinks);
-            //todos = [...alc, ...noAlc]
-            console.log("TODAS LAS BEBIDAS : ", todos);
+            //console.log("TODAS LAS BEBIDAS : ", todos);
         }else{
-            console.log("valor de session storage esMayor  :  "+esMayor)
+            //console.log("valor de session storage esMayor  :  "+esMayor)
             todos = noAlcoholicas.drinks; // || {};
-            console.log("TODAS LAS BEBIDAS SIN ALCOHOL : ", todos);
+            //console.log("TODAS LAS BEBIDAS SIN ALCOHOL : ", todos);
         }
-        //vistaElementosCuadricula(todos.drinks);
-        // vistaElementosCuadricula(noAlcoholicas);
 
         //   console.log("DATOS DSDE LA FUNCION : " + todos);
         const contenedor = document.getElementById("contenedor-tragos");
@@ -69,7 +60,6 @@ async function todasLasBebidas() {
                 calificacionForm.appendChild(btn);
             }
 
-
             const tituloTarjeta = document.createElement("h3");
             tituloTarjeta.textContent = trago.strDrink;
             tituloTarjeta.style.textAlign = "center";
@@ -79,8 +69,6 @@ async function todasLasBebidas() {
             //console.log(trago.strDrinkThumb);
 
             imgContenedor.style.backgroundImage = `url('${trago.strDrinkThumb}')`;
-     
-
 
             imgTarjeta.appendChild(tituloTarjeta);
             imgTarjeta.appendChild(calificacionForm);
