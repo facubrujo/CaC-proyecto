@@ -24,7 +24,9 @@ function imagenesClickeables() {
 // ---- FUNCION PARA ABRIR EL MODAL Y MOSTAR LOS DATOS -----
 function abrirModal(idTrago) {
     const modal = document.getElementById("miModal");
-    modal.style.display = "block";
+    modal.style.display = "flex";
+    modal.style.flexWrap = "wrap";
+    modal.style.justifyContent = "center";
     contenidoModal(idTrago);
 }
 
