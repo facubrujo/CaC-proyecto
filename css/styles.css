@@ -699,3 +699,8 @@ strong {
     background-color: green;
     color: #aaa;
 }
+
+.titulo p {
+    margin: 0;
+    padding: 20px;
+}
