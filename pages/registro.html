@@ -99,12 +99,10 @@
                         <div class="modo-oscuro">
 
                             <label class="modo-oscuro-btn" for="toggle">
-                                <!--<span>&#x1F31E;</span>-->
                                 <i class="bi bi-sun-fill text-warning"></i>
                                 <input type="checkbox" id="toggle">
                                 <span class="slider"></span>
                                 <i class="bi bi-moon-stars-fill text-warning"></i>
-                                <!--<span>🌜</span>-->
                             </label>
 
                         </div>
@@ -116,48 +114,60 @@
     </header>
     <main>
         <section class="formulario-contenedor">
-            <!--             <div class="titulo">
-                <h1>Registro</h1>
-            </div> -->
+
             <form class="formulario" id="formulario" action="" method="POST">
                 <h2>Formulario de registro</h2>
                 <section class="formulario-label">
                     <div>
-                        <label for="nombre">Nombre: </label>
-                        <input id="nombre" type="text" name="firstname" placeholder="Ingrese su nombre">
+                        <label for="nombre">Nombre: 
+                            <span id="nombre-error" ></span>
+                        </label>
+                        <input id="nombre" type="text" name="firstname" placeholder="Ingrese su nombre" required>
                         <div id="nombreError" class="mensaje-error"></div>
                     </div>
                     <div>
-                        <label for="apellido">Apellido: </label>
-                        <input id="apellido" type="text" name="apellido" placeholder="Ingrese su apellido">
+                        <label for="apellido">Apellido:
+                            <span id="apellido-error" ></span>    
+                        </label>
+                        <input id="apellido" type="text" name="apellido" placeholder="Ingrese su apellido" required>
                         <div id="apellidoError" class="mensaje-error"></div>
+                        
                     </div>
                 </section>
                 <section class="formulario-label">
                     <div>
-                        <label for="email">Email: </label>
-                        <input id="email" type="email" name="email" placeholder="Ingrese su email">
-                        <div id="emailError" class="mensaje-error"></div>
+                        <label for="email">Email: 
+                            <span id="email-error" ></span>
+                        </label>
+                        <input id="email" type="email" name="email" placeholder="Ingrese su email" required>
+                        <div id="email-error" ></div>
                     </div>
                     <div>
-                        <label for="email">Mayor de edad: </label>
-                        <select id="mayor-edad" name="select" class="select">
+                        <label for="esMayor">Mayor de edad: 
+                            <span id="esMayor-error" ></span>
+                        </label>
+                        <select id="esMayor" name="select" class="select" required>
                             <option>Seleccione una opción</option>
                             <option value="si">Si</option>
                             <option value="no">No</option>
                         </select>
+                        
                     </div>
                 </section>
                 <section class="formulario-label">
 
                     <div>
-                        <label for="password">Contraseña: </label>
-                        <input id="password" type="password" name="contraseña" placeholder="Su contraseña">
+                        <label for="password1">Contraseña: 
+                            <span id="password1-error" ></span>
+                        </label>
+                        <input id="password1" type="password" name="contraseña" placeholder="Su contraseña" required>
                         <div id="passwordError" class="mensaje-error"></div>
                     </div>
                     <div>
-                        <label for="password2">Repetir contraseña: </label>
-                        <input id="password2" type="password" name="contraseña2" placeholder="Repetir contraseña">
+                        <label for="password2">Repetir contraseña: 
+                            <span id="password2-error" ></span>
+                        </label>
+                        <input id="password2" type="password" name="contraseña2" placeholder="Repetir contraseña" required>
                         <div id="password2Error" class="mensaje-error"></div>
                     </div>
                 </section>
@@ -173,15 +183,18 @@
                 </section>
                 <section>
                     <div class="formulario-radio">
-                        <input type="radio" name="gender" value="hombre" checked>Hombre
-                        <input type="radio" name="gender" value="Mujer">Mujer
-                        <input type="radio" name="gender" value="Otro">Otro
+                        <label>Género:</label>
+                        <input type="radio" name="genero" value="hombre" required>Hombre
+                        <input type="radio" name="genero" value="mujer">Mujer
+                        <input type="radio" name="genero" value="otro">Otro
+                        <br><span id="genero-error"></span>
                     </div>
                 </section>
 
-                <input class="btn-enviar" type="submit" value="Registrarme">
+                <input id="submit" class="btn-enviar" type="submit" value="Registrarme">
+                <!-- <div class="error" id="error"></div> -->
             </form>
-            <section>
+            <section class="carga-correcta">
                 <div id="carga-correcta">
                     <h3><span id="usuario-nombre"></span> tu cuenta ha sido creada correctamente</h3>
                     <a href="pages/login.html" class="btn btn-outline-warning" type="submit">Login</a>
@@ -201,7 +214,8 @@
 
     <!-- Scripts de JavaScript -->
 
-    <script src="../js/form_control.js"></script>
+    <!-- <script src="../js/form_control.js"></script> -->
+    <script src="../js/formulario_control.js"></script>
 
     <script src="../js/modo_oscuro.js"></script>
 

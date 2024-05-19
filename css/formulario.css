@@ -158,3 +158,9 @@ input[type="submit"]:hover {
     border-radius: 50%;
     overflow: hidden;
 }
+
+.carga-correcta{
+    height: inherit;
+    display: flex;
+    align-items: center;
+}

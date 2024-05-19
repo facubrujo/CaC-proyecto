@@ -8,15 +8,29 @@ campos sean obligatorios.
 
 */
 
+var submitControl = {
+    nombre: false,
+    apellido: false,
+    email: false,
+    password: false,
+    passrord2: false,
+    mayorEdad: false,
+    genero: false
+};
+
+var submitControl = false;
+
 // ---- Control del input de NOMBRE  -----
 const nombreError = document.getElementById('nombreError');
 const nombreInput = document.getElementById('nombre');
 nombreInput.addEventListener('input', function () {
     var nombre = this.value;
+    const nombreCtrl = /^[a-zA-Z]+$/;
 
     if (!nombre) {
         nombreError.innerText = 'Campo obligatorio';
     } else {
+        submitControl = true;
         nombreError.innerText = 'ok';
     }
 });
@@ -26,9 +40,11 @@ const apellidoError = document.getElementById('apellidoError');
 const apellido = document.getElementById('apellido');
 apellido.addEventListener('input', function () {
     var apelli = this.value;
+    const apellidoCtrl = /^[a-zA-Z]+$/;
     if (!apelli) {
         apellidoError.innerText = 'Campo obligatorio';
     } else {
+        submitControl.apellido = true;
         apellidoError.innerText = 'ok';
     }
 });
@@ -40,10 +56,11 @@ const email = document.getElementById('email');
 // controla que el email contenga "@" y  un "." como campos obligatorios
 email.addEventListener('input', function () {
     var mail = this.value;
-    var emailRegex = /\S+@\S+\.\S+/; // regex controla si el email lleva "@" y un "."
+    const emailCtrl = /\S+@\S+\.\S+/; // regex controla si el email lleva "@" y un "."
     if (!emailRegex.test(mail)) {
         emailError.innerText = 'Debe contener "@" y "." ';
     } else {
+        submitControl.email = true;
         emailError.innerText = 'ok';
     }
 });
@@ -54,9 +71,11 @@ const password = document.getElementById('password');
 // esta funcion controla que la contraseña tenga al menos 8 caracteres y una MAYUSCULA como campo obligatorio
 password.addEventListener('input', function () {
     var pass = this.value;
+    const contraseñaCtrl = "";
     if (pass.length < 8 || !/[A-Z]/.test(pass)) { // regex controla que sean mas de 8 caracteres y al menos 1 mayuscula
         passwordError.innerText = 'La contraseña debe tener al menos 8 caracteres, incluyendo al menos 1 mayúscula.';
     } else {
+        submitControl.password = true;
         passwordError.innerText = 'ok';
     }
 });
@@ -74,9 +93,16 @@ password2.addEventListener('input', function () {
     if (pass !== pass2) {
         password2Error.innerText = 'Las contraseñas no coinciden.';
     } else {
+        submitControl.passrord2 = true;
         password2Error.innerText = 'ok';
     }
 });
+
+const seleccionado = document.querySelector('input[type="radio"]:checked');
+if (seleccionado) {
+    submitControl.genero = true;
+} 
+
 
 // -- mostrar imagen que se carga en formulario
 let imagenUrl = "";
@@ -94,6 +120,15 @@ document.querySelector('#archivo').addEventListener('change', function (event) {
     reader.readAsDataURL(imagenInput);
 });
 
+// document.getElementById(formulario).addEventListener('submit', function(event){
+//     event.preventDefault();
+
+//     for (let clave in submitControl){
+//         if(!submitControl[clave]){
+
+//         }
+//     }
+// });
 
 
 // ----- prueba crear objeto usuario con datos de formulario ------
@@ -101,8 +136,11 @@ document.querySelector('#archivo').addEventListener('change', function (event) {
 //console.log("buscar si existe array en storage : " + localStorage.getItem("usuarios"));
 document.addEventListener("DOMContentLoaded", function () {
     const formulario = document.getElementById("formulario");
+    const btnSubmit = document.getElementById("submit");
     const alerta = document.getElementById("carga-correcta");
+
     alerta.style.display = "none";
+    //btnSubmit.disabled = true;
 
     formulario.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -120,6 +158,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const reader = new FileReader();
 
+
+
         // const img = reader.readAsDataURL(reader.result);// onload = function (e) {
         //     // const imagenPreview = document.getElementById('imagenPreview');
         //     // imagenPreview.src = e.target.result;
@@ -127,6 +167,17 @@ document.addEventListener("DOMContentLoaded", function () {
         // //     return e.target.result;
         // // }
         // console.log("reader es : "+ img)
+
+        // for(let i in submitControl){
+        //     if(!submitControl[i]){
+        //         const error = document.getElementById("error");
+        //         error.textContent = "Por favor, rellene todos los campos del formulario";
+        //         break;
+        //     }else{
+        //         //btnSubmit.disabled = fasle;
+
+        //     }
+        // }
 
         console.log("creando objeto usuario con datos del form");
         const usuario = {

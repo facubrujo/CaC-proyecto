@@ -21,14 +21,6 @@
 </head>
 
 <body>
-    <!-- <div class="carga" id="cargar">
-        <div class="lds-ellipsis">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div> -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-bs-theme="dark"
             aria-label="Offcanvas navbar large">
@@ -104,12 +96,10 @@
                         <div class="modo-oscuro">
 
                             <label class="modo-oscuro-btn" for="toggle">
-                                <!--<span>&#x1F31E;</span>-->
                                 <i class="bi bi-sun-fill text-warning"></i>
                                 <input type="checkbox" id="toggle">
                                 <span class="slider"></span>
                                 <i class="bi bi-moon-stars-fill text-warning"></i>
-                                <!--<span>🌜</span>-->
                             </label>
 
                         </div>
@@ -121,16 +111,13 @@
     </header>
 
     <main>
-        <form id="formulario-busqueda" class="form-busqueda-index" action="resultado_busqueda.html" method="GET">
-            <div class="col-md-9">
-                <div class="input-group">
-                    <input type="text" id="input-busqueda" name="s" class="form-control" placeholder="Buscar tragos">
-                </div>
+        <form id="formulario-busqueda" class="form-busqueda-tlt" action="pages/todos_los_tragos.html" method="GET">
+            <div>
+                <input type="text" id="input-busqueda" name="s" class="form-control"
+                    placeholder="Buscar tragos por ej: margarita , belmont , daiquiiri">
             </div>
-            <div class="col-md-9 mt-3">
-                <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-outline-secondary btn-md">Buscar</button>
-                </div>
+            <div>
+                <button type="submit" class="btn btn-outline-secondary btn-md">Buscar</button>
             </div>
         </form>
 
@@ -156,7 +143,6 @@
         </div>
     </footer>
 
-    <!-- <script src="../js/consultasApi.js"></script> -->
     <script src="../js/resultado_busqueda.js"></script>
     <script src="../js/busqueda_tragos.js"></script>
     <script src="../js/metodos_varios.js"></script>
@@ -164,16 +150,6 @@
     <script src="../js/verificacion.js"></script>
 
     <script src="../js/ventana_carga.js"></script>
-
-    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script> -->
-
-    <!-- <script>
-        window.onload = function(){
-            //alert("cargando pagina");
-            $('#cargar').fadeOut();
-            $('#body').removeClass('hidden');
-        };
-    </script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

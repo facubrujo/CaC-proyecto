@@ -181,3 +181,19 @@
         transform: translate(24px, 0);
     }
 }
+
+
+
+.form-busqueda-tlt {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.form-busqueda-tlt > div {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
