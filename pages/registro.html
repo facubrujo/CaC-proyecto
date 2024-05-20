@@ -133,8 +133,8 @@
                         <div id="apellidoError" class="mensaje-error"></div>
                         
                     </div>
-                </section>
-                <section class="formulario-label">
+                <!-- </section>
+                <section class="formulario-label"> -->
                     <div>
                         <label for="email">Email: 
                             <span id="email-error" ></span>
@@ -153,8 +153,8 @@
                         </select>
                         
                     </div>
-                </section>
-                <section class="formulario-label">
+                <!-- </section>
+                <section class="formulario-label"> -->
 
                     <div>
                         <label for="password1">Contraseña: 
@@ -170,24 +170,29 @@
                         <input id="password2" type="password" name="contraseña2" placeholder="Repetir contraseña" required>
                         <div id="password2Error" class="mensaje-error"></div>
                     </div>
-                </section>
+                <!-- </section>
 
-                <section>
-                    <div>
+                <section> -->
+                    <div class="contenedor-imagen">
                         <div id="contenedor-de-imagen" style="display: none;">
                             <img id="imagen-muestra" class="imagen-muestra" alt="">
                         </div>
                         <label for="archivo" class="btn-seleccionar">Carga una imagen</label>
                         <input id="archivo" type="file" name="imagen" accept="image/*">
                     </div>
-                </section>
-                <section>
+                <!-- </section>
+                <section> -->
                     <div class="formulario-radio">
-                        <label>Género:</label>
-                        <input type="radio" name="genero" value="hombre" required>Hombre
-                        <input type="radio" name="genero" value="mujer">Mujer
-                        <input type="radio" name="genero" value="otro">Otro
-                        <br><span id="genero-error"></span>
+                        <div>
+                            <label>Género:
+                                <span id="genero-error"></span>
+                            </label>
+                        </div>
+                        <div class="btn-radio">
+                            <input type="radio" name="genero" value="hombre" required>Hombre
+                            <input type="radio" name="genero" value="mujer">Mujer
+                            <input type="radio" name="genero" value="otro">Otro
+                        </div>
                     </div>
                 </section>
 
