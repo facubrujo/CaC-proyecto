@@ -49,6 +49,7 @@ body {
     height: 100%;
     background-color:#000000c9;
     overflow: auto;
+    align-items: center;
 }
 
 .modal-contenido {
@@ -57,7 +58,9 @@ body {
     /* padding: 5px; */
     /* border: 1px solid #888; */
     border: none;
-    width: 80%;
+    width: initial;
+    /* display:flex;
+    flex-direction: row-reverse; */
 }
 
 .trago-modal {
@@ -65,6 +68,8 @@ body {
     flex-wrap: wrap;
     align-items: center;
     gap: 25px;
+    width: auto;
+    justify-content: center;
 }
 
 .trago-modal .receta {
@@ -74,23 +79,38 @@ body {
     gap: 10px;
 }
 
+.receta h3{
+    width: inherit;
+}
 .receta p {
-    width: 25rem;
+    width: 20rem;
     /*auto*/
 }
 
+.cerrar-modal{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
 .cerrar {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+    font-weight: 600;
+    margin: 1% 0;
+    width: 20rem;
+    padding: 4px 21px;
+    background-color: transparent;
+    color: #000;
+    border: solid #ffc107 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
 }
 
 .cerrar:hover,
 .cerrar:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+    background-color: #ffc107;
+    color: #fefefe;
 }
 
 .imagen-modal {
@@ -98,7 +118,7 @@ body {
 }
 
 .cont-img-ingr{
-    width: 15rem;
+    width: 10rem;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -567,7 +587,7 @@ strong {
 
 
 
-
+/*--------------------------------------*/
 /* VISTA LOGIN*/
 .login {
     background-image: url("../img/login-bg-01.jpg");
@@ -655,7 +675,7 @@ strong {
     height: 10rem;
     object-fit: cover;
 }
-
+/*-----------------------------------*/
 /* VISTA PERFIL USUARIO*/
 
 .perfil-usuario {
@@ -691,4 +711,9 @@ strong {
 .error-ok{
     background-color: green;
     color: #aaa;
+}
+/*--------------------------------------*/
+.titulo p {
+    margin: 0;
+    padding: 20px;
 }
