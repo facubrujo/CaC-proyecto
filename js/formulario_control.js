@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mayorEdad: "",
         genero: "",
         imagen: "../img/usuario_icono.png",
+        miLista: [],
         sesion: false
     };
 
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const error = document.getElementById("nombre-error");
         if (validaciones.nombre.test(this.value)) {
             error.className = "error-ok";
-            error.textContent = "ok";
+            error.textContent = "OK";
            // submitControl.nombre = true;
             usuarioNuevo.nombre = this.value;
             //console.log("usuario nombre : "+ usuarioNuevo.nombre)
@@ -67,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const error = document.getElementById("apellido-error");
         if (validaciones.apellido.test(this.value)) {
             error.className = "error-ok";
-            error.textContent = "ok";
+            error.textContent = "OK";
             //submitControl.apellido = true;
             usuarioNuevo.apellido = this.value;
         } else {
@@ -86,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("existe : "+existe);
         if (validaciones.email.test(this.value) && !existe) {
             error.className = "error-ok";
-            error.textContent = "ok";
+            error.textContent = "OK";
             //submitControl.email = true;
             usuarioNuevo.email = this.value;
         } else if (validaciones.email.test(this.value) && existe !== null) {
@@ -104,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const error = document.getElementById("password1-error");
         if (validaciones.password1.test(this.value)) {
             error.className = "error-ok";
-            error.textContent = "ok";
+            error.textContent = "OK";
             //submitControl.password = true;
             usuarioNuevo.password = this.value;
         } else {
@@ -120,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const error = document.getElementById("password2-error");
         if (pass1 === this.value.toString()) {
             error.className = "error-ok";
-            error.textContent = "ok";
+            error.textContent = "OK";
             //submitControl.passrord2 = true;
         } else {
             error.className = "error";
@@ -136,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (this.value === "si" || this.value === "no") {
             console.log("ok");
             error.className = "error-ok";
-            error.textContent = "ok";
+            error.textContent = "OK";
             //submitControl.mayorEdad = true;
             usuarioNuevo.mayorEdad = this.value;
         } else {
@@ -153,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const error = document.getElementById("genero-error");
             if (input.checked) {
                 error.className = "error-ok"
-                error.textContent = "ok";
+                error.textContent = "OK";
                 //submitControl.genero = true;
                 usuarioNuevo.genero = input.value;
             } else {

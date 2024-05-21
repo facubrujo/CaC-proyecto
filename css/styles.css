@@ -88,6 +88,25 @@ body {
     justify-content: center;
 }
 
+.btn-guardar{
+    font-weight: 600;
+    margin: 1% 0;
+    width: 20rem;
+    padding: 4px 21px;
+    background-color: transparent;
+    color: #000;
+    border: solid #019922 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.btn-guardar:hover{
+    background-color: #019922;
+    color: #fefefe;
+}
+
 .cerrar {
     font-weight: 600;
     margin: 1% 0;
@@ -646,12 +665,12 @@ strong {
     object-fit: cover;
 }
 .error{
-    background-color: red;
-    color: #aaa;
+    /* background-color: red; */
+    color: #ff0000;
 }
 .error-ok{
-    background-color: green;
-    color: #aaa;
+    /* background-color: green; */
+    color: #4CAF50;
 }
 /*-----------------------------------*/
 /* VISTA PERFIL USUARIO*/

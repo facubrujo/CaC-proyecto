@@ -42,28 +42,14 @@ input:checked+.slider::before {
 
 .modo-oscuro {
     margin: 0 15px 0 15px;
-    /* display: math; */
 }
-
-
-/* tema oscuro*/
-/*variables de color*/
-/* :root {
-    --bg-color: #f3f3f3;
-    --txt-color: #030303;
-    --bg-modal-color: #f3f3f3;
-} */
 
 /*tema oscuro*/
 [data-theme='oscuro'] {
-    /* --bg-color: #292929;
-    --txt-color: #e9e5e5;
-    --targetaIndex-color: #2f2f2f;
-    --bg-modal-color: #292929; */
-
     body,
     .modal-contenido,
     .cerrar-modal,
+    .btn-guardar,
     .cerrar,
     .alfabetico li,
     .letra {

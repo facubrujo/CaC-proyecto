@@ -10,7 +10,7 @@ main{
     display: flex;
     width: 60%;
     padding: 1em;
-    background-color: #c7c7c196;
+    background-color: #c7c7c1ab;
     margin-top: 10px;
     margin-bottom: 10px;
     flex-wrap: wrap;
@@ -19,6 +19,7 @@ main{
     align-content: center;
     align-items: center;
     max-width: 60rem;
+    backdrop-filter: blur(10px);
 }
 
 .formulario-contenedor {
@@ -78,8 +79,9 @@ main{
 .btn-seleccionar {
     background-color: #ffffffc9;
     color: #000;
-    width: 50%;
-    padding: 10px 20px;
+    width: 100%;
+    height: 3rem;
+    padding: 15px 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -113,6 +115,10 @@ input[type="file"] {
     align-items: center;
     flex-direction: row;
     gap: 20px;
+}
+
+input[type="radio"]{
+    width: 15px;
 }
 
 input[type="submit"] {

@@ -1,3 +1,13 @@
+const btnFav = document.getElementById("mi-lista");
+const uLog = JSON.parse(sessionStorage.getItem("usuarioOnline"));
+
+if(uLog){
+    btnFav.style.display = "block";
+}else{
+    btnFav.style.display = "none";
+}
+
+
 async function tragosPorId(idTrago) {
     try {
         const respuesta = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idTrago}`);
@@ -117,7 +127,40 @@ async function contenidoModal(idTrago) {
         contenidoModal.appendChild(contImgIngr);
         
         traducir();
+        guardarTrago(trago);
     } catch (error) {
         console.error("Error al obtener los detalles del trago:", error);
     }
+}
+
+function guardarTrago(trago){
+    const btnGuardar = document.getElementById("mi-lista").addEventListener("click", function(event){
+        event.preventDefault();
+        const listUsuarios = JSON.parse(localStorage.getItem("usuarios"));
+
+        let usLog = ""; 
+
+        usLog = listUsuarios.find(function (us) {
+            return us.email === usuario.email;
+        });
+
+        if (usLog) {
+            //console.log(usLog.email);
+            if (!usLog.miLista.includes(trago.idDrink)) {
+                usLog.miLista.push(trago.idDrink);
+                console.log("ID agregado: " + trago.idDrink);
+            } else {
+                console.log("ID ya existe en la lista: " + trago.idDrink);
+            }
+            //console.log(usLog.miLista);
+
+            const actualizarUsuarios = listUsuarios.map(us => 
+                us.email === usLog.email ? usLog : us
+            );
+
+            localStorage.setItem("usuarios", JSON.stringify(actualizarUsuarios));
+        } else {
+            console.log("Usuario no encontrado.");
+        }
+    });
 }
