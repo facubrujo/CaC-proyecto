@@ -159,6 +159,7 @@ function guardarTrago(trago){
             );
 
             localStorage.setItem("usuarios", JSON.stringify(actualizarUsuarios));
+            localStorage.setItem("usuarios", JSON.stringify(actualizarUsuarios));
         } else {
             console.log("Usuario no encontrado.");
         }
