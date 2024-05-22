@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // muestra los datos del usuario a excepcion de la url de la imagen y la contraseña y array
     for (let clave in usuario) {
         const li = document.createElement('li');
-        if (clave === "imagen" || clave === "password" || clave === "miLista") {
+        if (clave === "imagen" || clave === "password" || clave === "miLista" || clave === "sesion") {
             // li.style.display = "none";
             li.setAttribute("hidden", true);
         } else {

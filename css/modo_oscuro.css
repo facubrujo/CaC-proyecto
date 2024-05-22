@@ -49,7 +49,6 @@ input:checked+.slider::before {
     body,
     .modal-contenido,
     .cerrar-modal,
-    .btn-guardar,
     .cerrar,
     .alfabetico li,
     .letra {

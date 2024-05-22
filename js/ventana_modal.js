@@ -1,10 +1,13 @@
 const btnFav = document.getElementById("mi-lista");
+const btnFavOk = document.getElementById("mi-lista-ok");
 const uLog = JSON.parse(sessionStorage.getItem("usuarioOnline"));
 
 if(uLog){
     btnFav.style.display = "block";
+    btnFavOk.style.display = "block";
 }else{
     btnFav.style.display = "none";
+    btnFavOk.style.display = "none";
 }
 
 
@@ -125,9 +128,20 @@ async function contenidoModal(idTrago) {
         contenidoModal.appendChild(contImg);
         contenidoModal.appendChild(contReceta);
         contenidoModal.appendChild(contImgIngr);
-        
         traducir();
-        guardarTrago(trago);
+        if (uLog.miLista.includes(trago.idDrink)) {
+            btnFav.style.display = "none";
+            btnFavOk.style.display = "block";
+            // uLog.miLista.push(trago.idDrink);
+            // console.log("ID agregado: " + trago.idDrink);
+        } else {
+            btnFav.style.display = "block";
+            btnFavOk.style.display = "none";
+            guardarTrago(trago);
+        //     console.log(uLog.miLista);
+        //     console.log(uLog);
+        //     console.log("ID ya existe en la lista: " + trago.idDrink);
+        }
     } catch (error) {
         console.error("Error al obtener los detalles del trago:", error);
     }
@@ -149,6 +163,9 @@ function guardarTrago(trago){
             if (!usLog.miLista.includes(trago.idDrink)) {
                 usLog.miLista.push(trago.idDrink);
                 console.log("ID agregado: " + trago.idDrink);
+                btnFav.style.display = "none";
+                btnFavOk.style.display = "block";
+
             } else {
                 console.log("ID ya existe en la lista: " + trago.idDrink);
             }
@@ -159,7 +176,7 @@ function guardarTrago(trago){
             );
 
             localStorage.setItem("usuarios", JSON.stringify(actualizarUsuarios));
-            localStorage.setItem("usuarios", JSON.stringify(actualizarUsuarios));
+            sessionStorage.setItem("usuarioOnline", JSON.stringify(usLog));
         } else {
             console.log("Usuario no encontrado.");
         }

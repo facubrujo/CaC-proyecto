@@ -14,6 +14,7 @@ window.onload = function () {
     btnSi = document.getElementById("si");
     btnNo = document.getElementById("no");
 
+    const cAlc = document.getElementById("cAlcohol");
     if (session !== null) {
         venAlerta.style.display = "none";
         venBloqueo.style.display = "none";
@@ -26,7 +27,8 @@ window.onload = function () {
             console.log("esMayor?? - " + sessionStorage.getItem("esMayor"));
             venAlerta.style.display = "none";
             venBloqueo.style.display = "none";
-            body.style.removeProperty("overflow", true);
+            cAlc.style.display = "block"
+            
         });
 
         btnNo.addEventListener("click", function () {
@@ -37,6 +39,8 @@ window.onload = function () {
             venAlerta.style.display = "none";
             venBloqueo.style.display = "none";
             body.style.removeProperty("overflow", true);
+            body.style.removeProperty("overflow", true);
+            cAlc.style.display = "none";
         });
     };
 };

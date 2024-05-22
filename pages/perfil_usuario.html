@@ -48,8 +48,8 @@
                                     Tragos
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Con alcohol</a></li>
-                                    <li><a class="dropdown-item" href="#">Sin alcohol</a></li>
+                                    <li><a id="cAlcohol" class="dropdown-item" href="#">Con alcohol</a></li>
+                                    <li><a  id="sAlcohol" class="dropdown-item" href="#">Sin alcohol</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
@@ -60,9 +60,9 @@
                             <li class="nav-item">
                                 <a class="nav-link active" href="./quienes_somos.html">Quienes somos</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link active" href="#">Contacto</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link active" href="registro.html">Registro</a>
                             </li>
@@ -124,7 +124,8 @@
             <div class="modal-contenido">
                 <div id="contenidoModal" class="trago-modal"></div>
                 <div class="cerrar-modal">
-                    <button class="btn-guardar" id="mi-lista">Agregar a mi lista</button>
+                    <button class="favoritos-btn" id="mi-lista"><i class="bi bi-heart"></i></i></button>
+                    <button class="favoritos-btn" id="mi-lista-ok"><i class="bi bi-heart-fill"></i></button>
                     <button class="cerrar" id="cerrarModal">Cerrar</button>
                 </div>
             </div>
