@@ -249,6 +249,8 @@ body {
 #Home h1 {
     color: white;
     text-shadow: 3px 3px 5px rgba(255, 215, 0, 0.7);
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #Home button {
@@ -262,12 +264,17 @@ body {
     flex-direction: column;
 }
 
+#Mejores{
+    margin-bottom: 20px;
+}
+
 /* Estilo para los contenedores de imágenes */
-.col-md-2 img {
-        margin: 0 10px; /* Añade margen entre los contenedores */
-    overflow: hidden; /* Evita que la imagen sobresalga del contenedor */
-    border-radius: 5px; /* Ajusta según tus preferencias */
-    box-shadow: 0.5rem 0.5rem 16px #696969; /* Añade sombra si deseas */
+.mtragos img {
+    height: 25vh;
+    margin: 10px 10px 10px 10px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0.5rem 0.5rem 16px #696969; 
     display: flex; /* Usa flexbox para alinear contenido verticalmente */
     justify-content: center; /* Centra horizontalmente el contenido */
     align-items: center; /* Centra verticalmente el contenido */
