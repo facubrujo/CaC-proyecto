@@ -334,6 +334,34 @@ footer{
     }
 }
 
+#scrollBtn {
+    display: none; /* Ocultar el botón por defecto */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 24px; /* Tamaño del icono */
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #ffc107;
+    cursor: pointer;
+    border: solid #ffc107 1px;
+    border-radius: 50%; /* Hacer el botón redondo */
+    width: 50px; /* Ancho del botón */
+    height: 50px; /* Altura del botón */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#scrollBtn:hover {
+    background-color: rgba(255, 215, 0); /* Color de fondo al pasar el mouse */
+    color:  #333;
+}
+
 /*------------------- SECCION QUIENES SOMOS ---------------*/
 
 .titulo {
