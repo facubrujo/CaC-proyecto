@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../css/styles_tlt.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
@@ -50,26 +50,15 @@
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link active dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Tragos
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a id="cAlcohol" class="dropdown-item" href="#">Con alcohol</a></li>
-                                    <li><a  id="sAlcohol" class="dropdown-item" href="#">Sin alcohol</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a id="todos" class="dropdown-item" href="todos_los_tragos.html">Todos los tragos</a></li>
-                                </ul>
+
+                            <li class="nav-item">
+                                <a id="todos" class="nav-link active" href="todos_los_tragos.html">Todos los
+                                    tragos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="./quienes_somos.html">Quienes somos</a>
                             </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link active" href="#">Contacto</a>
-                            </li> -->
+
                             <li class="nav-item">
                                 <a class="nav-link active" href="registro.html">Registro</a>
                             </li>
@@ -128,19 +117,37 @@
         </section>
 
         <!-- Contenido luego de la carga, consulta API -->
+        <div class="btn-tlt-contenedor">
+            <a href="#" id="cAlcohol" class="btn-tlt">
+                <div class="btn-tlt-img">
+                    <img src="../img/c.jpg" alt="">
+                    <h3>Con alcohol</h3>
+                </div>
+            </a>
+            <a href="#" id="sAlcohol" class="btn-tlt">
+                <div class="btn-tlt-img">
+                    <img src="../img/d.jpg" alt="">
+                    <h3>Sin alcohol</h3>
+                </div>
+            </a>
+        </div>
         <section id="contenido" class="contenedor-imagenes hidden">
-            <h2 class="titulo">Todas nuestras bebidas</h2>
-            <article class="alcohol " id="contenedor-tragos">
-                
+            
+
                 <!-- pantalla de carga -->
-                <!-- <div class="carga" id="ventana-carga">
+                <div class="carga" id="ventana-carga">
                     <div class="lds-ellipsis">
                         <div></div>
                         <div></div>
                         <div></div>
                         <div></div>
                     </div>
-                </div> -->
+                </div>
+
+            <h2 class="titulo">Todas nuestras bebidas</h2>
+            <article class="alcohol " id="contenedor-tragos">
+
+
 
             </article>
         </section>
@@ -156,7 +163,8 @@
                 </div>
             </div>
         </section>
-        <button onclick="scrollToTop()" id="scrollBtn" title="Subir arriba"><i class="fa-solid fa-chevron-up"></i></button>
+        <button onclick="scrollToTop()" id="scrollBtn" title="Subir arriba"><i
+                class="fa-solid fa-chevron-up"></i></button>
     </main>
 
     <footer>
@@ -164,8 +172,9 @@
             <p>Copyright &copy;2024; Proyecto Full-Stack Python Codo a Codo </p>
         </div>
     </footer>
-
+    
     <!-- Scripts de JavaScript -->
+    <script src="../js/ventana_carga.js"></script>
     <script src="../js/modo_oscuro.js"></script>
 
     <script src="../js/busqueda_alfabetica.js"></script>
@@ -181,7 +190,6 @@
 
     <script src="../js/resultado_busqueda.js"></script>
 
-    <!-- <script src="../js/ventana_carga.js"></script> -->
 
     <script src="../js/verificacion.js"></script>
 

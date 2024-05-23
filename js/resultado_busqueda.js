@@ -76,7 +76,7 @@ async function buscarTragos(busqueda) {
                     if (ingrediente) {
                         const imgCont = document.createElement("div");
                         const ingredienteImg = document.createElement("img");
-                        console.log(imgIngrNombre.toLocaleLowerCase());
+                       // console.log(imgIngrNombre.toLocaleLowerCase());
                         ingredienteImg.src = `https://www.thecocktaildb.com/images/ingredients/${imgIngrNombre.toLocaleLowerCase()}-Small.png`;// consulta api imagenes
                         ingredienteImg.alt = "imagen de ingrediente";
                         ingredienteImg.style.width = "60px";

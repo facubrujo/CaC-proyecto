@@ -171,14 +171,14 @@ input[type="submit"]:hover {
 }
 
 .footerBottom{
-    position: absolute;
+    /* position: absolute; */
     bottom: 0px;
     width: 100%;
 }
 
 @media (max-width: 1186px) {
     .footerBottom{
-        position: relative;
+        /* position: relative; */
     }
     main{
         height: auto;

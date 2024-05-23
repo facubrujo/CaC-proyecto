@@ -18,13 +18,7 @@ if(usuario !== null){
     console.log("ningun usuario en linea");
 }
 
-    esMayor = JSON.parse(sessionStorage.getItem("esMayor"));
-    const cAlc = document.getElementById("cAlcohol");
-    if(!esMayor){
-        cAlc.style.display = "none";
-    }else{
-        cAlc.style.display = "block"
-    }
+
 
 
 

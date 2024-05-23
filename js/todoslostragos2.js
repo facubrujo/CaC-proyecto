@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     let todos;
     if (esMayor) {
         todos = alcoholicas.drinks.concat(noAlcoholicas.drinks);
-        console.log("TODAS LAS BEBIDAS : ", todos);
+       // console.log("TODAS LAS BEBIDAS : ", todos);
         todasLasBebidas(todos);
     }else{
         //console.log("valor de session storage esMayor  :  "+esMayor)
@@ -42,7 +42,7 @@ document.getElementById('todos').addEventListener('click', async function(esMayo
     let todos;
     if (esMayor) {
         todos = alcoholicas.drinks.concat(noAlcoholicas.drinks);
-        console.log("TODAS LAS BEBIDAS : ", todos);
+       // console.log("TODAS LAS BEBIDAS : ", todos);
         todasLasBebidas(todos);
     }else{
         //console.log("valor de session storage esMayor  :  "+esMayor)
@@ -72,7 +72,7 @@ document.getElementById('sAlcohol').addEventListener('click', async function() {
 async function todasLasBebidas(todos) {
     try {
         
-        console.log("DATOS DSDE LA FUNCION ----- : " + todos);
+        //console.log("DATOS DSDE LA FUNCION ----- : " + todos);
         const contenedor = document.getElementById("contenedor-tragos");
         contenedor.innerHTML = "";
         todos.forEach((trago) => {
@@ -111,7 +111,7 @@ async function todasLasBebidas(todos) {
             div.appendChild(imgContenedor);
 
             const p = document.createElement("p");
-            p.style.maxWidth = "15rem";
+            // p.style.maxWidth = "15rem";
             p.textContent = trago.strDrink;
             div.appendChild(p);
 
@@ -124,15 +124,23 @@ async function todasLasBebidas(todos) {
             contenedor.appendChild(div);
         });
         imagenesClickeables();
-       // ocultarCarga()
+        ocultarCarga()
     } catch (error) {
-       //ocultarCarga();
+        ocultarCarga();
         const contenedor = document.getElementById("contenedor-tragos");
         console.log("error al instanciar elementos" + error)
         const mensaje = document.createElement("p");
         mensaje.textContent = "No se encontraron resultados";
         contenedor.appendChild(mensaje);
     }
+}
+
+esMayor = JSON.parse(sessionStorage.getItem("esMayor"));
+const cAlc = document.getElementById("cAlcohol");
+if(!esMayor){
+    cAlc.style.display = "none";
+}else{
+    cAlc.style.display = "block"
 }
 
 // ---- llamada a los metodos ---- 

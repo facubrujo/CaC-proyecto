@@ -495,9 +495,9 @@ margin-bottom: 20px;
     padding: 15px;
     }
 
-    .modo-oscuro {
+    /* .modo-oscuro {
     
-    }
+    } */
 }
 
 @media (max-width: 380px) {
@@ -801,3 +801,7 @@ strong {
 
 
 /*--------------------------------------*/
+
+.logo-index{
+    filter: drop-shadow(5px 6px 5px black);
+}
