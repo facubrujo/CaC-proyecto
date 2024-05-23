@@ -18,10 +18,6 @@ if(usuario !== null){
     console.log("ningun usuario en linea");
 }
 
-
-
-
-
 // Escucha el boton de cerrar sesion
 // busca el usuario con session == true y lo actualiza a false
 // redirecciona a la pagina principal

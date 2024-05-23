@@ -37,12 +37,8 @@ function devolverLetra() {
 
             let datosFiltrados =[];
             esMayor = sessionStorage.getItem("esMayor");
-            //console.log("esMayor = "+esMayor);
 
-            //console.log("BUSCANDO TRAGOS CON LETRA " + enlace.textContent.toLocaleLowerCase())
-
-            //console.log("datps fitrados : "+  datosFiltrados)
-            //limpiarContenedor();
+            document.getElementById("tit-busqueda").textContent = `Resultados de busqueda : ${enlace}`;
             vistaElementosCuadricula(datos);
         });
     });

@@ -20,6 +20,8 @@ async function buscarTragos(busqueda) {
 
             const esMayor = sessionStorage.getItem("esMayor");
 
+            document.getElementById("tit-busqueda").textContent = `Resultados de busqueda : ${busqueda}`;
+
             data.drinks.forEach(trago => {
                 const tragoContenedor = document.createElement("div");
                 tragoContenedor.classList.add("trago");
