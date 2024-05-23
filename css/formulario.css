@@ -5,6 +5,7 @@ main{
     background-position: center center;
     height: 90vh;
     padding: 3rem 0;
+    filter: brightness(90%);
 }
 .formulario {
     display: flex;
@@ -20,6 +21,7 @@ main{
     align-items: center;
     max-width: 60rem;
     backdrop-filter: blur(10px);
+    border-radius: 20px;
 }
 
 .formulario-contenedor {
