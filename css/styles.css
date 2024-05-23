@@ -299,7 +299,7 @@ footer{
     margin-top: auto;
 }
 
-.footerBottom {
+.footerBottom {    
     background-color: #111;
     padding: 20px;
     text-align: center;
@@ -347,13 +347,17 @@ footer{
 }
 
 .titulo h1 {
-    font-size: 3rem;
-    color: #000;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #2c2c2c;
+    margin-bottom: 10px;
     position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-.titulo h1::after {
+/*SUBRAYADO DE TEXTO*/
+
+/* .titulo h1::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -361,7 +365,7 @@ footer{
     display: block;
     margin: 0 auto;
     background-color: #333;
-}
+} */
 
 .titulo p {
     padding: 20px;
@@ -496,7 +500,7 @@ margin-bottom: 20px;
     }
 }
 
-/*-------------- SECCION QUIENES SOMOS EQUIPO----------*/
+/*--------------QUIENES SOMOS // EQUIPO----------*/
 
 .contenedor {
     margin: 1rem;
@@ -519,10 +523,11 @@ margin-bottom: 20px;
 .heading {
     font-size: 2rem;
     color: #2c2c2c;
-    font-weight: 500;
+    font-weight: 700;
     display: flex;
     align-items: center;
     margin: 20px;
+    text-transform: uppercase;
 }
 
 .heading i {
@@ -533,7 +538,7 @@ margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     margin: 0 20px;
 }
 
@@ -602,9 +607,8 @@ strong {
     transition: 0.5s;
 }
 .iconosredes a i {
-    font-size: 20px;
+    font-size: 25px;
 }
-
 
 .iconosredes a:hover {
     color: #fff;
