@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link de favicon (icono de pestaña de navegador) -->
     <link rel="shortcut icon" href="img/coctel-favicon.png" type="image/x-icon">
+    <title>Cocktail Arg</title>
+    <meta name="description" content="Descubre una gran variedad de cócteles, tragos y bebidas. Consulta recetas de preparación, crea una cuenta y guarda tus bebidas favoritas.">
+    <meta name="keywords" content="cócteles, tragos, bebidas, recetas de cócteles, recetas de tragos, bebidas alcohólicas, bebidas sin alcohol, guardar bebidas favoritas, API de bebidas">
+    <meta name="author" content="Ruben Ledesma - Fernandez Facundo - Maximiliano Centurion">
 
     <!-- links a los estilos css -->
     <link rel="stylesheet" href="css/styles.css">
@@ -17,9 +21,8 @@
     <!-- link al CND de estilos de bootstrap necesarios para el carousel-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Pagina de tragos</title>
 
 </head>
 
@@ -34,13 +37,13 @@
             </div>
         </div>
     </div>
-    
+
     <header>
         <!---------- NAV-BAR ---------->
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="./img/10-removebg-preview.png" alt="Logo" width="50" height="50" class="d-inline-block">
+                    <img src="./img/4-removebg-preview.png" alt="Logo" width="80" height="80" class="d-inline-block">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,20 +68,19 @@
                             <a class="nav-link active" href="./pages/registro.html">Registro</a>
                         </li>
                     </ul>
-                    <div class="d-flex mt-3 mt-lg-0" role="search" >
-                        <a id="boton-login" href="pages/login.html" class="btn btn-outline-warning" type="submit">Login</a>
+                    <div class="d-flex mt-3 mt-lg-0" role="search">
+                        <a id="boton-login" href="pages/login.html" class="btn btn-outline-warning"
+                            type="submit">Login</a>
                     </div>
 
                     <div class="dropdown" style="display : none;" id="contenedor-img-login">
                         <a href="#" class="d-block link-body-emphasis 
-                        text-decoration-none dropdown-toggle nav-link active "
-                            data-bs-toggle="dropdown" aria-expanded="true">
-                            <img src="img/usuario_icono.png" alt="mdo" 
-                                class="rounded-circle img-perfil" id="img-perfil">
+                        text-decoration-none dropdown-toggle nav-link active " data-bs-toggle="dropdown"
+                            aria-expanded="true">
+                            <img src="img/usuario_icono.png" alt="mdo" class="rounded-circle img-perfil"
+                                id="img-perfil">
                         </a>
-                        <ul class="dropdown-menu text-small "
-                            
-                            data-popper-placement="bottom-end">
+                        <ul class="dropdown-menu text-small " data-popper-placement="bottom-end">
                             <li><a class="dropdown-item" href="pages/perfil_usuario.html">Mi perfil</a></li>
                             <li><a class="dropdown-item" href="#">Favoritos</a></li>
                             <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -87,7 +89,7 @@
                             </li>
                             <li><a id="cerrar-sesion" class="dropdown-item" href="#">Cerrar sesión</a></li>
                         </ul>
-                    </div> 
+                    </div>
 
                     <!-- Modo oscuro -->
                     <div class="modo-oscuro">
@@ -128,11 +130,7 @@
 
                                 </div>
                             </div>
-                            <!-- <div class="col-md-9 mt-3">
-                                <div class="d-flex justify-content-center">
-                                    <button type="submit" class="btn btn-outline-secondary btn-md">Buscar</button>
-                                </div>
-                            </div> -->
+
                     </form>
 
                 </div>
@@ -140,62 +138,38 @@
         </section>
         <section id="Mejores">
             <div>
- <!--                <div class="row justify-content-around">
-                    <div class="col-md-9">
-                        <h2 class="text-center mb-5">Mejores tragos</h2>
-                        <p class="text-center mb-5">Explora nuestras recetas de tragos mejor valoradas por nuestros
-                            usuarios. Desde cócteles clásicos hasta innovadoras creaciones, descubre cuáles son los
-                            favoritos de nuestra comunidad y anímate a probarlos.</p>
-                        <div class="row justify-content-around">
 
-                            <div class="col-md-2">
-                                <img src="./img/a.jpg" class="img-fluid responsive-img" alt="Trago 1">
-                            </div>
-                            <div class="col-md-2">
-                                <img src="./img/b.jpg" class="img-fluid responsive-img" alt="Trago 2">
-                            </div>
-                            <div class="col-md-2">
-                                <img src="./img/c.jpg" class="img-fluid responsive-img" alt="Trago 3">
-                            </div>
-                            <div class="col-md-2">
-                                <img src="./img/d.jpg" class="img-fluid responsive-img" alt="Trago 4">
-                            </div>
-                            <div class="col-md-2">
-                                <img src="./img/e.jpg" class="img-fluid responsive-img" alt="Trago 5">
-                            </div>
+                <div class="titulo">
+                    <h2>Mejores tragos</h2>
+                    <p>Explora nuestras recetas de tragos mejor valoradas por nuestros
+                        usuarios. Desde cócteles clásicos hasta innovadoras creaciones, descubre cuáles son los
+                        favoritos de nuestra comunidad y anímate a probarlos.
+                    </p>
+                </div>
+                <div>
+                    <div class="contenedor">
+                        <div class="mtragos">
+                            <img src="./img/a.jpg" alt="Trago 1">
                         </div>
-                    </div>
-                </div> -->
-            <div class="titulo">
-                <h2>Mejores tragos</h2>
-                <p>Explora nuestras recetas de tragos mejor valoradas por nuestros
-                    usuarios. Desde cócteles clásicos hasta innovadoras creaciones, descubre cuáles son los
-                    favoritos de nuestra comunidad y anímate a probarlos.
-                </p>
-            </div>
-            <div>
-                <div class="contenedor">
-                    <div class="mtragos">
-                        <img src="./img/a.jpg" alt="Trago 1">
-                    </div>
-                    <div class="mtragos">
-                        <img src="./img/b.jpg" alt="Trago 2">
-                    </div>
-                    <div class="mtragos">
-                        <img src="./img/c.jpg" alt="Trago 3">
-                    </div>
-                    <div class="mtragos">
-                        <img src="./img/d.jpg" alt="Trago 4">
-                    </div>
-                    <div class="mtragos">
-                        <img src="./img/e.jpg" alt="Trago 5">
+                        <div class="mtragos">
+                            <img src="./img/b.jpg" alt="Trago 2">
+                        </div>
+                        <div class="mtragos">
+                            <img src="./img/c.jpg" alt="Trago 3">
+                        </div>
+                        <div class="mtragos">
+                            <img src="./img/d.jpg" alt="Trago 4">
+                        </div>
+                        <div class="mtragos">
+                            <img src="./img/e.jpg" alt="Trago 5">
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
         </section>
-            <!-- Botón para subir arriba de todo -->
-    <button onclick="scrollToTop()" id="scrollBtn" title="Subir arriba"><i class="fa-solid fa-chevron-up"></i></button>
+        <!-- Botón para subir arriba de todo -->
+        <button onclick="scrollToTop()" id="scrollBtn" title="Subir arriba"><i
+                class="fa-solid fa-chevron-up"></i></button>
     </main>
 
     <footer>

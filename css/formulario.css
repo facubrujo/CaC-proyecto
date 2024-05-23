@@ -177,9 +177,7 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 1186px) {
-    .footerBottom{
-        /* position: relative; */
-    }
+
     main{
         height: auto;
     }
