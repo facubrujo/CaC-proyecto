@@ -46,7 +46,7 @@ input:checked+.slider::before {
 
 /*tema oscuro*/
 [data-theme='oscuro'] {
-    body,
+    body, .skills, .skills_contenido, .skills_box, .seccion-equipo,
     .modal-contenido,
     .cerrar-modal,
     .cerrar,
