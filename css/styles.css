@@ -290,7 +290,8 @@ body {
 
 /* Estilo para los contenedores de imágenes */
 .mtragos img {
-    height: 25vh;
+    height: 15rem;
+    width: 15rem;
     margin: 10px 10px 10px 10px;
     overflow: hidden;
     border-radius: 5px;
@@ -307,7 +308,38 @@ body {
 
 @media (max-width: 992px) {
     #Home h1 {
-        font-size: 2.5rem;
+        font-size: 1.7rem;
+    }
+
+    #Mejores .titulo h2 {
+        font-size: 1.5rem;
+    }
+
+    #Mejores .titulo p {
+        text-align: justify;
+        font-size: 1.2rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    #Home h1 {
+        font-size: 2rem;
+    }
+
+    #Mejores .titulo h2 {
+        font-size: 1.8rem;
+    }
+
+    #Mejores .titulo p {
+        text-align: justify;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #Home h1 {
+        font-size: 2.2rem;
     }
 
     #Mejores .titulo h2 {
@@ -318,35 +350,10 @@ body {
         text-align: justify;
         font-size: 1.5rem;
     }
-}
 
-@media (max-width: 768px) {
-    #Home h1 {
-        font-size: 2.6rem;
-    }
-
-    #Mejores .titulo h2 {
-        font-size: 2.1rem;
-    }
-
-    #Mejores .titulo p {
-        text-align: justify;
-        font-size: 1.6rem;
-    }
-}
-
-@media (max-width: 576px) {
-    #Home h1 {
-        font-size: 2.7rem;
-    }
-
-    #Mejores .titulo h2 {
-        font-size: 2.2rem;
-    }
-
-    #Mejores .titulo p {
-        text-align: justify;
-        font-size: 1.7rem;
+    .mtragos img{
+        height: 8rem;
+        width: 8rem;
     }
 }
 
@@ -660,7 +667,7 @@ footer {
 /*--------------QUIENES SOMOS // EQUIPO----------*/
 
 .contenedor {
-    margin: 1rem;
+    gap: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
