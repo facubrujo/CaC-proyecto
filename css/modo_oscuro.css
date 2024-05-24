@@ -67,12 +67,26 @@ input:checked+.slider::before {
     .titulo h1,
     .about-contenido h2,
     .about-contenido p,
-    .heading,
-    .cardss,
-    .iconosredes a {
+    .heading {
         background-color: #292929;
         color: #f3f3f3;
     }
 
+    .cardss {
+        background-color: #3c3c3c;
+        color: #f3f3f3;
+    }
 
+    .top-bar {
+        background-color: #ffc107;
+    }
+
+    .iconosredes a{
+        color: #f3f3f3;
+        background-color: #3c3c3c;
+    }
+
+    .iconosredes a:hover {
+        background-color: #ffc107
+    }
 }
