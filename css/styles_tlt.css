@@ -240,11 +240,25 @@
 
 
 
-@media (max-width: 1186px) {
-    
+@media (max-width: 992px) {
+    .contenedor-imagenes h2{
+        font-size: 1.5rem;
+    }
+
+    .btn-tlt-img h3{
+        font-size: 1.5rem;
+    }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
+    .contenedor-imagenes h2{
+        font-size: 1.6rem;
+    }
+
+    .btn-tlt-img h3{
+        font-size: 1.6rem;
+    }
+
     .imagenes{
         width: 9rem;
         height: 13rem;
@@ -264,6 +278,12 @@
         margin: 0;
     }
 }
-@media (max-width: 400px) {
-   
+@media (max-width: 576px) {
+    .contenedor-imagenes h2{
+        font-size: 1.7rem;
+    }
+
+    .btn-tlt-img h3{
+        font-size: 1.7rem;
+    }
 }
