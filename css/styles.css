@@ -5,7 +5,8 @@
     border: 0;
 }
 
-html, body{
+html,
+body {
     width: 100%;
     overflow-x: hidden;
 }
@@ -56,7 +57,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color:#000000c9;
+    background-color: #000000c9;
     overflow: auto;
     align-items: center;
 }
@@ -84,27 +85,29 @@ body {
     gap: 10px;
 }
 
-.receta h3{
+.receta h3 {
     width: inherit;
 }
+
 .receta p {
     width: 20rem;
 }
 
-.cerrar-modal{
+.cerrar-modal {
     margin: 1rem;
     display: flex;
     justify-content: center;
 }
 
-.favoritos-btn{
+.favoritos-btn {
     font-size: x-large;
     color: red;
     background-color: transparent;
     margin: 0 1rem;
     transition: transform 0.5s ease;
 }
-.favoritos-btn:hover{
+
+.favoritos-btn:hover {
     transform: scale(1.5);
     z-index: 33;
 }
@@ -142,7 +145,7 @@ body {
     text-align: center;
 }
 
-.cerrar:hover{
+.cerrar:hover {
     background-color: #ffc107;
     color: #fefefe;
 }
@@ -151,7 +154,7 @@ body {
     width: 20rem;
 }
 
-.cont-img-ingr{
+.cont-img-ingr {
     margin: 0 auto 1rem;
     width: 10rem;
     display: flex;
@@ -159,23 +162,26 @@ body {
     gap: 10px;
     justify-content: center;
 }
-.cont-img-ingr div{
+
+.cont-img-ingr div {
     width: 3rem;
     height: 100%;
     display: contents;
 }
-.cont-img-ingr div img{
+
+.cont-img-ingr div img {
     filter: drop-shadow(3px 3px 4px #000);
     transition: transform 0.5s ease;
 }
-.cont-img-ingr div img:hover{
+
+.cont-img-ingr div img:hover {
     transform: scale(1.5);
     z-index: 33;
 }
 
 /* ----- Busqueda de tragos -----*/
 
-.resultados-busqueda{
+.resultados-busqueda {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -189,14 +195,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    border:none;
+    border: none;
     border-radius: 10px;
     gap: 2rem;
     box-shadow: 0px 16px 26px #434343b8;
     overflow: hidden;
 }
 
-.texto-contenedor{
+.texto-contenedor {
     max-width: 30rem;
     width: auto;
     margin-left: 1rem;
@@ -278,7 +284,7 @@ body {
     flex-direction: column;
 }
 
-#Mejores{
+#Mejores {
     margin-bottom: 20px;
 }
 
@@ -288,19 +294,21 @@ body {
     margin: 10px 10px 10px 10px;
     overflow: hidden;
     border-radius: 5px;
-    box-shadow: 0.5rem 0.5rem 16px #696969; 
-    display: flex; /* Usa flexbox para alinear contenido verticalmente */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
+    box-shadow: 0.5rem 0.5rem 16px #696969;
+    display: flex;
+    /* Usa flexbox para alinear contenido verticalmente */
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
+    align-items: center;
+    /* Centra verticalmente el contenido */
 }
 
 /*------------------- FOOTER -------------------*/
-footer{
+footer {
     margin-top: auto;
 }
 
-.footerBottom {    
-    background-color: #111;
+.footerBottom {
     padding: 20px;
     text-align: center;
 }
@@ -335,21 +343,26 @@ footer{
 }
 
 #scrollBtn {
-    display: none; /* Ocultar el botón por defecto */
+    display: none;
+    /* Ocultar el botón por defecto */
     position: fixed;
     bottom: 20px;
     right: 30px;
     z-index: 99;
-    font-size: 24px; /* Tamaño del icono */
+    font-size: 24px;
+    /* Tamaño del icono */
     border: none;
     outline: none;
     background-color: transparent;
     color: #ffc107;
     cursor: pointer;
     border: solid #ffc107 1px;
-    border-radius: 50%; /* Hacer el botón redondo */
-    width: 50px; /* Ancho del botón */
-    height: 50px; /* Altura del botón */
+    border-radius: 50%;
+    /* Hacer el botón redondo */
+    width: 50px;
+    /* Ancho del botón */
+    height: 50px;
+    /* Altura del botón */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -358,8 +371,9 @@ footer{
 }
 
 #scrollBtn:hover {
-    background-color: rgba(255, 215, 0); /* Color de fondo al pasar el mouse */
-    color:  #333;
+    background-color: rgba(255, 215, 0);
+    /* Color de fondo al pasar el mouse */
+    color: #333;
 }
 
 /*------------------- SECCION QUIENES SOMOS ---------------*/
@@ -412,15 +426,17 @@ footer{
 
 .about-img {
     /* flex: 1;*/
-   /* margin-right: 20px;
+    /* margin-right: 20px;
     overflow: hidden;*/
-    
+
     flex: 1;
-    display: flex; /* Usar flexbox para centrar la imagen */
+    display: flex;
+    /* Usar flexbox para centrar la imagen */
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-bottom: 20px; /* Añadir margen inferior para espaciado en resoluciones pequeñas */
+    margin-bottom: 20px;
+    /* Añadir margen inferior para espaciado en resoluciones pequeñas */
 }
 
 .about-img img {
@@ -452,13 +468,14 @@ footer{
 }
 
 .about-contenido h3 {
-margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 /* Media query para resoluciones de pantallas */
 @media (max-width: 1200px) {
     .about {
-        flex-direction: column; /* Cambiar la dirección del flex a columna */
+        flex-direction: column;
+        /* Cambiar la dirección del flex a columna */
     }
 
     .about-img {
@@ -486,13 +503,13 @@ margin-bottom: 20px;
 
 @media only screen and (max-width: 991px) {
     .d-flex {
-    margin-bottom: 16px;
+        margin-bottom: 16px;
     }
 
     .navbar-collapse {
-    backdrop-filter: blur(40px);
-    border-radius: 20px;
-    padding: 15px;
+        backdrop-filter: blur(40px);
+        border-radius: 20px;
+        padding: 15px;
     }
 
     /* .modo-oscuro {
@@ -526,6 +543,47 @@ margin-bottom: 20px;
     .titulo h1 {
         font-size: 2.5rem;
     }
+}
+
+/*----------SECCION QUIENE SOMOS SKILLS------------*/
+
+.skills {
+    width: 100%;
+    min-height: 30vh;
+    display: flex;
+    background-color: #f3f3f393;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.skills_contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.skills_box {
+    text-align: center;
+    margin: 40px;
+}
+
+.skills_box:hover {
+    transform: translateY(-0.25rem);
+}
+
+.skills_img {
+    max-width: 70px;
+    display: block;
+}
+
+.skills_nombre {
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 /*--------------QUIENES SOMOS // EQUIPO----------*/
@@ -634,6 +692,7 @@ strong {
     margin: 5px;
     transition: 0.5s;
 }
+
 .iconosredes a i {
     font-size: 25px;
 }
@@ -666,8 +725,6 @@ strong {
     /* Hacer que los íconos ocupen todo el espacio disponible */
 }
 
-
-
 /*--------------------------------------*/
 /* VISTA LOGIN*/
 .login {
@@ -681,7 +738,8 @@ strong {
     height: 100vh;
     width: 100vw;
 }
-.img-login-contenedor{
+
+.img-login-contenedor {
     display: flex;
     width: 20rem;
     height: 20rem;
@@ -689,7 +747,8 @@ strong {
     align-items: center;
     justify-content: center;
 }
-.login-form{
+
+.login-form {
     display: flex;
     height: auto;
     width: 20rem;
@@ -700,75 +759,80 @@ strong {
     flex-direction: column;
 }
 
-.login-form button{
+.login-form button {
     padding: 10px;
     border-radius: 10px;
     margin: 10px 0;
     border: 1px solid black;
     background-color: #ffeb00a1;
-    transition: background-color .5s;
+    transition: background-color 0.5s;
     font-weight: 500;
 }
-.login-form button:hover{
-    transition: background-color .5s;
+
+.login-form button:hover {
+    transition: background-color 0.5s;
     background-color: #6bc701;
     color: #f2f2f2;
 }
 
-.label{
+.label {
     display: grid;
     grid-template-areas: "input";
 }
-.input{
-    margin: .7rem 0;
+
+.input {
+    margin: 0.7rem 0;
     padding-left: 5px;
     grid-area: input;
     font: inherit;
 }
 
-.label-name{
+.label-name {
     grid-area: input;
     margin: 14px 0;
     z-index: 2;
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
     color: #cecece;
 
-    transition: transform .2s;
+    transition: transform 0.2s;
     transform-origin: center left;
 }
 
-.input:focus + .label-name,
-.input:not(:placeholder-shown) + .label-name{
-    transform: translateY(-100%) scale(.7);
+.input:focus+.label-name,
+.input:not(:placeholder-shown)+.label-name {
+    transform: translateY(-100%) scale(0.7);
     background-color: #00000000;
-    
 }
 
-.login-form input{
+.login-form input {
     border-radius: 8px;
     height: 2rem;
-    width:15rem;
+    width: 15rem;
 }
-.img-login{
+
+.img-login {
     border-radius: 100px;
     overflow: hidden;
     width: 10rem;
     height: 10rem;
     object-fit: cover;
 }
-.error{
+
+.error {
     /* background-color: red; */
     color: #ff0000;
 }
-.error-ok{
+
+.error-ok {
     /* background-color: green; */
-    color: #4CAF50;
+    color: #4caf50;
 }
+
 /*-----------------------------------*/
 /* VISTA PERFIL USUARIO*/
 
 .perfil-usuario {
-    margin: 3rem 0 ;
+    margin: 3rem 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -776,32 +840,33 @@ strong {
     gap: 2rem;
 }
 
-.perfil-usuario div{
+.perfil-usuario div {
     border-radius: 50%;
     height: 10rem;
     overflow: hidden;
 }
+
 .perfil-usuario img {
     width: 10rem;
     height: 10rem;
     object-fit: cover;
 }
 
-.img-perfil{
+.img-perfil {
     height: 2.7rem;
     width: 2.7rem;
     object-fit: cover;
 }
 
-.footer-perfil{
+.footer-perfil {
     position: absolute;
     width: 100%;
     bottom: 0;
 }
 
-
 /*--------------------------------------*/
 
-.logo-index{
+.logo-index {
     filter: drop-shadow(5px 6px 5px black);
 }
+
