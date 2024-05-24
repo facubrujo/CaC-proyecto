@@ -303,6 +303,53 @@ body {
     /* Centra verticalmente el contenido */
 }
 
+/* Media query para resoluciones de pantallas */
+
+@media (max-width: 992px) {
+    #Home h1 {
+        font-size: 2.5rem;
+    }
+
+    #Mejores .titulo h2 {
+        font-size: 2rem;
+    }
+
+    #Mejores .titulo p {
+        text-align: justify;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #Home h1 {
+        font-size: 2.6rem;
+    }
+
+    #Mejores .titulo h2 {
+        font-size: 2.1rem;
+    }
+
+    #Mejores .titulo p {
+        text-align: justify;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #Home h1 {
+        font-size: 2.7rem;
+    }
+
+    #Mejores .titulo h2 {
+        font-size: 2.2rem;
+    }
+
+    #Mejores .titulo p {
+        text-align: justify;
+        font-size: 1.7rem;
+    }
+}
+
 /*------------------- FOOTER -------------------*/
 footer {
     margin-top: auto;
@@ -472,7 +519,7 @@ footer {
 }
 
 /* Media query para resoluciones de pantallas */
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
     .about {
         flex-direction: column;
         /* Cambiar la dirección del flex a columna */
@@ -501,23 +548,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 991px) {
-    .d-flex {
-        margin-bottom: 16px;
-    }
-
-    .navbar-collapse {
-        backdrop-filter: blur(40px);
-        border-radius: 20px;
-        padding: 15px;
-    }
-
-    /* .modo-oscuro {
-    
-    } */
-}
-
-@media (max-width: 380px) {
+@media (max-width: 768px) {
     .about {
         flex-direction: column;
     }
@@ -542,6 +573,46 @@ footer {
 
     .titulo h1 {
         font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .about-img {
+        margin-bottom: 20px;
+    }
+
+    .titulo p {
+        text-align: justify;
+        font-size: 1rem;
+    }
+
+    .about-contenido p {
+        text-align: justify;
+        font-size: 1rem;
+    }
+
+    .about-contenido h2 {
+        text-align: center;
+    }
+
+    .titulo h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .d-flex {
+        margin-bottom: 16px;
+    }
+
+    .navbar-collapse {
+        backdrop-filter: blur(40px);
+        border-radius: 20px;
+        padding: 15px;
     }
 }
 
