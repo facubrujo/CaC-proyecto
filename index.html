@@ -7,8 +7,10 @@
     <!-- link de favicon (icono de pestaña de navegador) -->
     <link rel="shortcut icon" href="img/coctel-favicon.png" type="image/x-icon">
     <title>Cocktail Arg</title>
-    <meta name="description" content="Descubre una gran variedad de cócteles, tragos y bebidas. Consulta recetas de preparación, crea una cuenta y guarda tus bebidas favoritas.">
-    <meta name="keywords" content="cócteles, tragos, bebidas, recetas de cócteles, recetas de tragos, bebidas alcohólicas, bebidas sin alcohol, guardar bebidas favoritas, API de bebidas">
+    <meta name="description"
+        content="Descubre una gran variedad de cócteles, tragos y bebidas. Consulta recetas de preparación, crea una cuenta y guarda tus bebidas favoritas.">
+    <meta name="keywords"
+        content="cócteles, tragos, bebidas, recetas de cócteles, recetas de tragos, bebidas alcohólicas, bebidas sin alcohol, guardar bebidas favoritas, API de bebidas">
     <meta name="author" content="Ruben Ledesma - Fernandez Facundo - Maximiliano Centurion">
 
     <!-- links a los estilos css -->
@@ -23,8 +25,6 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <title>Pagina de tragos</title>
 
 </head>
 
@@ -41,11 +41,12 @@
     </div>
 
     <header>
-        <!---------- NAV-BAR ---------->
+        <!-- -------- NAV-BAR -------- -->
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="./img/4-removebg-preview-fotor-2024052492431.png" alt="Logo" height="50" class="d-inline-block">
+                    <img src="./img/4-removebg-preview-fotor-2024052492431.png" alt="Logo" height="50"
+                        class="d-inline-block">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,8 +72,7 @@
                         </li>
                     </ul>
                     <div class="d-flex mt-3 mt-lg-0" role="search">
-                        <a id="boton-login" href="pages/login.html" class="btn btn-outline-warning"
-                            type="submit">Login</a>
+                        <a id="boton-login" href="pages/login.html" class="btn btn-outline-warning">Login</a>
                     </div>
 
                     <div class="dropdown" style="display : none;" id="contenedor-img-login">
@@ -112,14 +112,13 @@
 
         <section id="Home" class="full-screen-section d-flex flex-column justify-content-center align-items-center">
             <div class="mt-3 text-center">
-                <img src="./img/Logo_ajustado.png" class="img-fluid logo-index">
+                <img src="./img/Logo_ajustado.png" alt="logo-nav" class="img-fluid logo-index">
                 <h1>Encuentra todos tus tragos aquí</h1>
             </div>
             <div class="container mt-5">
                 <div class="row justify-content-center">
 
-                    <form id="formulario-busqueda" class="form-busqueda-index" action="resultado_busqueda.html"
-                        method="GET">
+                    <form id="formulario-busqueda" class="form-busqueda-index" action="resultado_busqueda.html" method="GET">
                         <div class="col-md-9">
                             <div class="input-group">
                                 <input type="text" id="input-busqueda" name="s" class="form-control"
@@ -129,12 +128,10 @@
                                     <button class="btn btn-outline-secondary" type="submit">
                                         <i class="bi bi-search"></i>
                                     </button>
-
                                 </div>
                             </div>
-
+                        </div>
                     </form>
-
                 </div>
             </div>
         </section>
