@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Cocktail Arg - Registro</title>
+    <meta name="description" content="Descubre una gran variedad de cócteles, tragos y bebidas. Consulta recetas de preparación, crea una cuenta y guarda tus bebidas favoritas.">
+    <meta name="keywords" content="cócteles, tragos, bebidas, recetas de cócteles, recetas de tragos, bebidas alcohólicas, bebidas sin alcohol, guardar bebidas favoritas, API de bebidas">
+    <meta name="author" content="Ruben Ledesma - Fernandez Facundo - Maximiliano Centurion">
 
     <!-- Link del Favicon (icono de pestaña de navegador) -->
     <link rel="shortcut icon" href="../img/coctel-favicon.png" type="image/x-icon">
@@ -14,13 +17,14 @@
     <link rel="stylesheet" href="../css/formulario.css">
     <link rel="stylesheet" href="../css/modo_oscuro.css">
 
-    <!-- <link rel="stylesheet" href="css/header_footer_dinamicos.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!-- link al CND de estilos de bootstrapl-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- link para incluir la biblioteca de Font Awesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -29,7 +33,7 @@
             aria-label="Offcanvas navbar large">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="../img/cocktail_icono.png" alt="Logo" width="50" height="50" class="d-inline-block">
+                    <img src="../img/4-removebg-preview-fotor-2024052492431.png" alt="Logo" height="50" class="d-inline-block">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
@@ -38,7 +42,7 @@
                 <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
                     aria-labelledby="offcanvasNavbar2Label">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbar2Label"></h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbar2Label" hidden>Navegación</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
@@ -47,34 +51,21 @@
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link active dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Tragos
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Con alcohol</a></li>
-                                    <li><a class="dropdown-item" href="#">Sin alcohol</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="todos_los_tragos.html">Todos los tragos</a>
-                                    </li>
-                                </ul>
+                            <li class="nav-item">
+                                <a id="todos" class="nav-link active" href="todos_los_tragos.html">Todos los
+                                    tragos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="./quienes_somos.html">Quienes somos</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Contacto</a>
-                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link active" href="registro.html">Registro</a>
                             </li>
                         </ul>
                         <div class="d-flex mt-3 mt-lg-0" role="search">
                             <a id="boton-login" href="login.html" class="btn btn-outline-warning"
-                                type="submit">Login</a>
+                                >Login</a>
                         </div>
 
                         <div class="dropdown" style="display : none;" id="contenedor-img-login">
@@ -115,106 +106,98 @@
     <main>
         <section class="formulario-contenedor">
 
-            <form class="formulario" id="formulario" action="" method="POST">
+            <form class="formulario" id="formulario" method="POST">
                 <h2>Formulario de registro</h2>
-                <section class="formulario-label">
+                <article class="formulario-label">
+                    <h3 hidden>Información personal</h3>
                     <div>
                         <label for="nombre">Nombre: 
                             <span id="nombre-error" ></span>
                         </label>
                         <input id="nombre" type="text" name="firstname" placeholder="Ingrese su nombre" required>
-                        <div id="nombreError" class="mensaje-error"></div>
                     </div>
                     <div>
                         <label for="apellido">Apellido:
                             <span id="apellido-error" ></span>    
                         </label>
                         <input id="apellido" type="text" name="apellido" placeholder="Ingrese su apellido" required>
-                        <div id="apellidoError" class="mensaje-error"></div>
                         
                     </div>
-                </section>
-                <section class="formulario-label">
+                
                     <div>
                         <label for="email">Email: 
                             <span id="email-error" ></span>
                         </label>
                         <input id="email" type="email" name="email" placeholder="Ingrese su email" required>
-                        <div id="email-error" ></div>
                     </div>
                     <div>
                         <label for="esMayor">Mayor de edad: 
                             <span id="esMayor-error" ></span>
                         </label>
                         <select id="esMayor" name="select" class="select" required>
-                            <option>Seleccione una opción</option>
+                            <option value="" disabled selected>Seleccione una opción</option>
                             <option value="si">Si</option>
                             <option value="no">No</option>
                         </select>
                         
                     </div>
-                </section>
-                <section class="formulario-label">
 
                     <div>
                         <label for="password1">Contraseña: 
                             <span id="password1-error" ></span>
                         </label>
                         <input id="password1" type="password" name="contraseña" placeholder="Su contraseña" required>
-                        <div id="passwordError" class="mensaje-error"></div>
                     </div>
                     <div>
                         <label for="password2">Repetir contraseña: 
                             <span id="password2-error" ></span>
                         </label>
                         <input id="password2" type="password" name="contraseña2" placeholder="Repetir contraseña" required>
-                        <div id="password2Error" class="mensaje-error"></div>
                     </div>
-                </section>
 
-                <section>
-                    <div>
+                    <div class="contenedor-imagen">
                         <div id="contenedor-de-imagen" style="display: none;">
-                            <img id="imagen-muestra" class="imagen-muestra" alt="">
+                            <img src="#" id="imagen-muestra" class="imagen-muestra" alt="img-usuario">
                         </div>
                         <label for="archivo" class="btn-seleccionar">Carga una imagen</label>
                         <input id="archivo" type="file" name="imagen" accept="image/*">
                     </div>
-                </section>
-                <section>
+
                     <div class="formulario-radio">
-                        <label>Género:</label>
-                        <input type="radio" name="genero" value="hombre" required>Hombre
-                        <input type="radio" name="genero" value="mujer">Mujer
-                        <input type="radio" name="genero" value="otro">Otro
-                        <br><span id="genero-error"></span>
+                        <div>
+                            <label>Género:
+                                <span id="genero-error"></span>
+                            </label>
+                        </div>
+                        <div class="btn-radio">
+                            <input type="radio" name="genero" value="hombre" required>Hombre
+                            <input type="radio" name="genero" value="mujer">Mujer
+                            <input type="radio" name="genero" value="otro">Otro
+                        </div>
                     </div>
-                </section>
+                </article>
 
                 <input id="submit" class="btn-enviar" type="submit" value="Registrarme">
-                <!-- <div class="error" id="error"></div> -->
             </form>
             <section class="carga-correcta">
                 <div id="carga-correcta">
-                    <h3><span id="usuario-nombre"></span> tu cuenta ha sido creada correctamente</h3>
-                    <a href="pages/login.html" class="btn btn-outline-warning" type="submit">Login</a>
+                    <h3><span id="usuario-nombre"></span> tu cuenta ha sido creada correctamente. Ahora puedes loguear su cuenta</h3>
                 </div>
                 <div></div>
             </section>
         </section>
 
-
+        <button id="scrollBtn" title="Subir arriba"><i class="fa fa-chevron-up"></i></button>
     </main>
 
     <footer>
-        <div class="footerBottom">
+        <div class="footerBottom bg-dark bg-gradient">
             <p>Copyright &copy;2024; Proyecto Full-Stack Python Codo a Codo </p>
         </div>
     </footer>
 
     <!-- Scripts de JavaScript -->
 
-    <!-- <script src="../js/form_control.js"></script> -->
     <script src="../js/formulario_control.js"></script>
 
     <script src="../js/modo_oscuro.js"></script>
@@ -227,6 +210,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+
+    <script src="../js/boton_up.js"></script>
 </body>
 
 </html>

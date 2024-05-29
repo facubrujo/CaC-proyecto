@@ -13,7 +13,6 @@ function vistaElementosCuadricula(datos) {
                 div.style.display = "none";
             }
 
-
             const imgContenedor = document.createElement("div");
             imgContenedor.className = "imgFondo";
 
@@ -29,7 +28,6 @@ function vistaElementosCuadricula(datos) {
                 calificacionForm.appendChild(btn);
             }
 
-
             const tituloTarjeta = document.createElement("h3");
             tituloTarjeta.textContent = trago.strDrink;
             tituloTarjeta.style.textAlign = "center";
@@ -39,8 +37,6 @@ function vistaElementosCuadricula(datos) {
             //console.log(trago.strDrinkThumb);
 
             imgContenedor.style.backgroundImage = `url('${trago.strDrinkThumb}')`;
-
-
 
             imgTarjeta.appendChild(tituloTarjeta);
             imgTarjeta.appendChild(calificacionForm);

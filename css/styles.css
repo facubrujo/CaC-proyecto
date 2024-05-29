@@ -5,8 +5,17 @@
     border: 0;
 }
 
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .contenedor-imagenes {
@@ -31,6 +40,7 @@ body {
 .imagenes {
     overflow: hidden;
     transition: transform 0.5s ease;
+    height: 19rem;
 }
 
 .imagenes:hover {
@@ -47,7 +57,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color:#000000c9;
+    background-color: #000000c9;
     overflow: auto;
     align-items: center;
 }
@@ -55,12 +65,8 @@ body {
 .modal-contenido {
     background-color: #fefefe;
     margin: 15% auto;
-    /* padding: 5px; */
-    /* border: 1px solid #888; */
     border: none;
     width: initial;
-    /* display:flex;
-    flex-direction: row-reverse; */
 }
 
 .trago-modal {
@@ -79,19 +85,51 @@ body {
     gap: 10px;
 }
 
-.receta h3{
+.receta h3 {
     width: inherit;
 }
+
 .receta p {
     width: 20rem;
-    /*auto*/
 }
 
-.cerrar-modal{
+.cerrar-modal {
     margin: 1rem;
     display: flex;
     justify-content: center;
 }
+
+.favoritos-btn {
+    font-size: x-large;
+    color: red;
+    background-color: transparent;
+    margin: 0 1rem;
+    transition: transform 0.5s ease;
+}
+
+.favoritos-btn:hover {
+    transform: scale(1.5);
+    z-index: 33;
+}
+
+/* .btn-guardar{
+    font-weight: 600;
+    margin: 1% 0;
+    width: 20rem;
+    padding: 4px 21px;
+    background-color: transparent;
+    color: #000;
+    border: solid #019922 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.btn-guardar:hover{
+    background-color: #019922;
+    color: #fefefe;
+} */
 
 .cerrar {
     font-weight: 600;
@@ -107,8 +145,7 @@ body {
     text-align: center;
 }
 
-.cerrar:hover,
-.cerrar:focus {
+.cerrar:hover {
     background-color: #ffc107;
     color: #fefefe;
 }
@@ -117,168 +154,58 @@ body {
     width: 20rem;
 }
 
-.cont-img-ingr{
+.cont-img-ingr {
+    margin: 0 auto 1rem;
     width: 10rem;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 }
-.cont-img-ingr div{
+
+.cont-img-ingr div {
     width: 3rem;
     height: 100%;
     display: contents;
 }
-.cont-img-ingr div img{
+
+.cont-img-ingr div img {
     filter: drop-shadow(3px 3px 4px #000);
     transition: transform 0.5s ease;
 }
-.cont-img-ingr div img:hover{
+
+.cont-img-ingr div img:hover {
     transform: scale(1.5);
     z-index: 33;
 }
 
-.texto-contenedor{
-    width: 40rem;
-}
-/* .carousel-contenedor {
-    margin: auto;
-    width: 40rem;
-}
-
-.img-carousel {
-    width: 20px;
-    height: 100%;
-} */
-
-/* .modal {
-    display: block;
-
-}
-.modal-contenido{
-    margin: auto;
-    padding: 20px;
-    width: 50rem;
-    height: 25rem;
-    min-height: 12rem;
-    min-width: 12rem;
-    background-color: aquamarine;
-} */
-
-/* ------------------- FORMULARIO DE REGISTRO ---------------
-
-.formulario {
-    width: 50%;
-    padding: 1em;
-    background-color: #f0f8ff96;
-}
-
-.formulario-contenedor {
-    background-image: url("https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg");
-    background-repeat: repeat;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.formulario-contenedor .form {
-    background-color: #ffffffc9;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.formulario-label {
-    margin-top: 1em;
-    display: flex;
-    justify-content: center;
-} */
-
-/* .formulario div{
-    width: 82%;
-} */
-
-/* .formulario-label label {
-    display: block;
-    margin-bottom: 5px;
-    color: #717171;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-.formulario-label input,
-.formulario-label select {
-    width: 80%;
-    height: 3rem;
-    padding: 12px 16px;
-    border-radius: 8px;
-    color: #000;
-    font-family: inherit;
-    background-color: ffffffc9; */
-/* border: 1px solid #414141; */
-/* border: none;
-}
-
-.mensaje-error {
-    width: auto;
-    color: #9b0000;
-}
-
-.formulario-btn {
-    margin-top: 1rem;
-    width: 80%;
-    height: 2rem;
-    border-radius: 10px;
-    font-weight: bold;
-
-}
-
-.formulario-btn:hover {
-    background-color: orange;
-}
-
-.btn-seleccionar {
-    background-color: #ffffffc9;
-    width: 100%;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.btn-seleccionar:hover {
-    background-color: cadetblue;
-    color: #fefefe;
-}
-
-input[type="file"] {
-    display: none;
-}
-
-.select {
-    background-color: #ffffffc9;
-    border: none;
-    border-radius: 10px;
-    height: 35px;
-}
-
-.formulario-radio {
-    display: flex;
-} */
-
 /* ----- Busqueda de tragos -----*/
 
+.resultados-busqueda {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+
 .trago {
+    max-width: 75rem;
+    width: auto;
     margin: 3rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    border:none;
+    border: none;
     border-radius: 10px;
     gap: 2rem;
     box-shadow: 0px 16px 26px #434343b8;
     overflow: hidden;
+}
+
+.texto-contenedor {
+    max-width: 30rem;
+    width: auto;
+    margin-left: 1rem;
 }
 
 .trago img {
@@ -316,18 +243,34 @@ input[type="file"] {
 
 /*------------------- Estilo del Index -------------------*/
 
+/*------ NAVBAR ------ */
+
+.nav-link {
+    font-size: 1rem !important;
+    color: #fff !important;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border: yellow !important;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
 #Home {
     background-image: url("../img/tragos-playa.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100vh;
-    filter: brightness(75%);
+    filter: brightness(85%);
 }
 
 #Home h1 {
     color: white;
     text-shadow: 3px 3px 5px rgba(255, 215, 0, 0.7);
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #Home button {
@@ -341,10 +284,85 @@ input[type="file"] {
     flex-direction: column;
 }
 
+#Mejores {
+    margin-bottom: 20px;
+}
+
+/* Estilo para los contenedores de imágenes */
+.mtragos img {
+    height: 15rem;
+    width: 15rem;
+    margin: 10px 10px 10px 10px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0.5rem 0.5rem 16px #696969;
+    display: flex;
+    /* Usa flexbox para alinear contenido verticalmente */
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
+    align-items: center;
+    /* Centra verticalmente el contenido */
+}
+
+/* Media query para resoluciones de pantallas */
+
+@media (max-width: 992px) {
+    #Home h1 {
+        font-size: 1.7rem;
+    }
+
+    #Mejores .titulo h2 {
+        font-size: 1.5rem;
+    }
+
+    #Mejores .titulo p {
+        text-align: justify;
+        font-size: 1.2rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    #Home h1 {
+        font-size: 2rem;
+    }
+
+    #Mejores .titulo h2 {
+        font-size: 1.8rem;
+    }
+
+    #Mejores .titulo p {
+        text-align: justify;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #Home h1 {
+        font-size: 2.2rem;
+    }
+
+    #Mejores .titulo h2 {
+        font-size: 2rem;
+    }
+
+    #Mejores .titulo p {
+        text-align: justify;
+        font-size: 1.5rem;
+    }
+
+    .mtragos img{
+        height: 8rem;
+        width: 8rem;
+    }
+}
+
 /*------------------- FOOTER -------------------*/
+footer {
+    margin-top: auto;
+}
 
 .footerBottom {
-    background-color: #111;
     padding: 20px;
     text-align: center;
 }
@@ -378,6 +396,40 @@ input[type="file"] {
     }
 }
 
+#scrollBtn {
+    display: none;
+    /* Ocultar el botón por defecto */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 24px;
+    /* Tamaño del icono */
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #ffc107;
+    cursor: pointer;
+    border: solid #ffc107 1px;
+    border-radius: 50%;
+    /* Hacer el botón redondo */
+    width: 50px;
+    /* Ancho del botón */
+    height: 50px;
+    /* Altura del botón */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#scrollBtn:hover {
+    background-color: rgba(255, 215, 0);
+    /* Color de fondo al pasar el mouse */
+    color: #333;
+}
+
 /*------------------- SECCION QUIENES SOMOS ---------------*/
 
 .titulo {
@@ -391,13 +443,17 @@ input[type="file"] {
 }
 
 .titulo h1 {
-    font-size: 3rem;
-    color: #000;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #2c2c2c;
+    margin-bottom: 10px;
     position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-.titulo h1::after {
+/*SUBRAYADO DE TEXTO*/
+
+/* .titulo h1::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -405,6 +461,14 @@ input[type="file"] {
     display: block;
     margin: 0 auto;
     background-color: #333;
+} */
+
+.titulo p {
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    text-align: center;
 }
 
 .about {
@@ -415,9 +479,18 @@ input[type="file"] {
 }
 
 .about-img {
-    /* flex: 1; */
-    margin-right: 20px;
+    /* flex: 1;*/
+    /* margin-right: 20px;
+    overflow: hidden;*/
+
+    flex: 1;
+    display: flex;
+    /* Usar flexbox para centrar la imagen */
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
+    margin-bottom: 20px;
+    /* Añadir margen inferior para espaciado en resoluciones pequeñas */
 }
 
 .about-img img {
@@ -437,6 +510,7 @@ input[type="file"] {
 
 .about-contenido h2 {
     font-size: 2rem;
+    margin-top: 10px;
     margin-bottom: 10px;
     color: #333;
 }
@@ -444,13 +518,161 @@ input[type="file"] {
 .about-contenido p {
     font-size: 1rem;
     line-height: 1.5;
-    color: #666;
+    color: #333;
+    margin: 0 1rem;
 }
 
-/*-------------- SECCION QUIENES SOMOS EQUIPO----------*/
+.about-contenido h3 {
+    margin-bottom: 20px;
+}
+
+/* Media query para resoluciones de pantallas */
+@media (max-width: 992px) {
+    .about {
+        flex-direction: column;
+        /* Cambiar la dirección del flex a columna */
+    }
+
+    .about-img {
+        margin-bottom: 20px;
+    }
+
+    .titulo p {
+        text-align: justify;
+        font-size: 1.5rem;
+    }
+
+    .about-contenido p {
+        text-align: justify;
+        font-size: 1.5rem;
+        margin: 0 1rem 1rem 1rem;
+    }
+
+    .about-contenido h2 {
+        text-align: center;
+    }
+
+    .titulo h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .about-img {
+        margin-bottom: 20px;
+    }
+
+    .titulo p {
+        text-align: justify;
+        font-size: 1rem;
+    }
+
+    .about-contenido p {
+        text-align: justify;
+        font-size: 1rem;
+        margin: 0 1rem 1rem 1rem;
+    }
+
+    .about-contenido h2 {
+        text-align: center;
+    }
+
+    .titulo h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .about-img {
+        margin-bottom: 20px;
+    }
+
+    .titulo p {
+        text-align: justify;
+        font-size: 1rem;
+    }
+
+    .about-contenido p {
+        text-align: justify;
+        font-size: 1rem;
+        margin: 0 1rem 1rem 1rem;
+    }
+
+    .about-contenido h2 {
+        text-align: center;
+    }
+
+    .titulo h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .d-flex {
+        margin-bottom: 16px;
+    }
+
+    .navbar-collapse {
+        backdrop-filter: blur(40px);
+        border-radius: 20px;
+        padding: 15px;
+    }
+}
+
+/*----------SECCION QUIENE SOMOS SKILLS------------*/
+
+.skills {
+    width: 100%;
+    min-height: 30vh;
+    display: flex;
+    background-color: #f3f3f393;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.skills_contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.skills_box {
+    text-align: center;
+    margin: 40px;
+    transition: transform 0.5s ease;
+}
+
+.skills_box:hover {
+    transform: translateY(-0.25rem);
+}
+
+.skills_img {
+    max-width: 70px;
+    display: block;
+}
+
+.skills_nombre {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/*--------------QUIENES SOMOS // EQUIPO----------*/
 
 .contenedor {
-    margin: 1rem;
+    gap: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -470,10 +692,11 @@ input[type="file"] {
 .heading {
     font-size: 2rem;
     color: #2c2c2c;
-    font-weight: 500;
+    font-weight: 700;
     display: flex;
     align-items: center;
     margin: 20px;
+    text-transform: uppercase;
 }
 
 .heading i {
@@ -484,7 +707,7 @@ input[type="file"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     margin: 0 20px;
 }
 
@@ -552,10 +775,10 @@ strong {
     margin: 5px;
     transition: 0.5s;
 }
-.iconosredes a i {
-    font-size: 20px;
-}
 
+.iconosredes a i {
+    font-size: 25px;
+}
 
 .iconosredes a:hover {
     color: #fff;
@@ -585,8 +808,6 @@ strong {
     /* Hacer que los íconos ocupen todo el espacio disponible */
 }
 
-
-
 /*--------------------------------------*/
 /* VISTA LOGIN*/
 .login {
@@ -600,7 +821,8 @@ strong {
     height: 100vh;
     width: 100vw;
 }
-.img-login-contenedor{
+
+.img-login-contenedor {
     display: flex;
     width: 20rem;
     height: 20rem;
@@ -608,7 +830,8 @@ strong {
     align-items: center;
     justify-content: center;
 }
-.login-form{
+
+.login-form {
     display: flex;
     height: auto;
     width: 20rem;
@@ -619,67 +842,80 @@ strong {
     flex-direction: column;
 }
 
-.login-form button{
+.login-form button {
     padding: 10px;
     border-radius: 10px;
     margin: 10px 0;
     border: 1px solid black;
     background-color: #ffeb00a1;
-    transition: background-color .5s;
+    transition: background-color 0.5s;
     font-weight: 500;
 }
-.login-form button:hover{
-    transition: background-color .5s;
+
+.login-form button:hover {
+    transition: background-color 0.5s;
     background-color: #6bc701;
     color: #f2f2f2;
 }
 
-.label{
+.label {
     display: grid;
     grid-template-areas: "input";
 }
-.input{
-    margin: .7rem 0;
+
+.input {
+    margin: 0.7rem 0;
     padding-left: 5px;
     grid-area: input;
     font: inherit;
 }
 
-.label-name{
+.label-name {
     grid-area: input;
     margin: 14px 0;
     z-index: 2;
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
     color: #cecece;
 
-    transition: transform .2s;
+    transition: transform 0.2s;
     transform-origin: center left;
 }
 
-.input:focus + .label-name,
-.input:not(:placeholder-shown) + .label-name{
-    transform: translateY(-100%) scale(.7);
+.input:focus+.label-name,
+.input:not(:placeholder-shown)+.label-name {
+    transform: translateY(-100%) scale(0.7);
     background-color: #00000000;
-    
 }
 
-.login-form input{
+.login-form input {
     border-radius: 8px;
     height: 2rem;
-    width:15rem;
+    width: 15rem;
 }
-.img-login{
+
+.img-login {
     border-radius: 100px;
     overflow: hidden;
     width: 10rem;
     height: 10rem;
     object-fit: cover;
 }
+
+.error {
+    /* background-color: red; */
+    color: #ff0000;
+}
+
+.error-ok {
+    /* background-color: green; */
+    color: #4caf50;
+}
+
 /*-----------------------------------*/
 /* VISTA PERFIL USUARIO*/
 
 .perfil-usuario {
-    margin: 3rem 0 ;
+    margin: 3rem 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -687,33 +923,33 @@ strong {
     gap: 2rem;
 }
 
-.perfil-usuario div{
+.perfil-usuario div {
     border-radius: 50%;
     height: 10rem;
     overflow: hidden;
 }
+
 .perfil-usuario img {
     width: 10rem;
     height: 10rem;
     object-fit: cover;
 }
 
-.img-perfil{
+.img-perfil {
     height: 2.7rem;
     width: 2.7rem;
     object-fit: cover;
 }
 
-.error{
-    background-color: red;
-    color: #aaa;
+.footer-perfil {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
-.error-ok{
-    background-color: green;
-    color: #aaa;
-}
+
 /*--------------------------------------*/
-.titulo p {
-    margin: 0;
-    padding: 20px;
+
+.logo-index {
+    filter: drop-shadow(5px 6px 5px black);
 }
+

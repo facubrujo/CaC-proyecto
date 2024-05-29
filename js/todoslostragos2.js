@@ -16,28 +16,67 @@ async function tragosSinAlcohol() {
         console.error("error al obtener 'tragos sin alcohol'", error);
     }
 }
+esMayor = JSON.parse(sessionStorage.getItem("esMayor"));
+
+document.addEventListener("DOMContentLoaded", async function () {
+    const alcoholicas = await tragosConAlcohol();
+    const noAlcoholicas = await tragosSinAlcohol();
+    let todos;
+    if (esMayor) {
+        todos = alcoholicas.drinks.concat(noAlcoholicas.drinks);
+       // console.log("TODAS LAS BEBIDAS : ", todos);
+        todasLasBebidas(todos);
+    }else{
+        //console.log("valor de session storage esMayor  :  "+esMayor)
+        todos = noAlcoholicas.drinks; // || {};
+        todasLasBebidas(todos);
+        //console.log("TODAS LAS BEBIDAS SIN ALCOHOL : ", todos);
+    }
+
+});
+
+document.getElementById('todos').addEventListener('click', async function(esMayor) {
+    
+    const alcoholicas = await tragosConAlcohol();
+    const noAlcoholicas = await tragosSinAlcohol();
+    let todos;
+    if (esMayor) {
+        todos = alcoholicas.drinks.concat(noAlcoholicas.drinks);
+        document.getElementById("tit-busqueda").textContent = "Todas las bebidas";
+       // console.log("TODAS LAS BEBIDAS : ", todos);
+        todasLasBebidas(todos);
+    }else{
+        //console.log("valor de session storage esMayor  :  "+esMayor)
+        todos = noAlcoholicas.drinks; // || {};
+        document.getElementById("tit-busqueda").textContent = "Bebiidas sin alcohol";
+        todasLasBebidas(todos);
+        //console.log("TODAS LAS BEBIDAS SIN ALCOHOL : ", todos);
+    }
+});
+todasLasBebidas(todos);
+
+document.getElementById('cAlcohol').addEventListener('click', async function() {
+    const alcoholicas = await tragosConAlcohol();
+    document.getElementById("tit-busqueda").textContent = "Bebidas con alcohol";
+    let todos = alcoholicas.drinks;
+    todasLasBebidas(todos);
+});
+
+document.getElementById('sAlcohol').addEventListener('click', async function() {
+    const noAlcoholicas = await tragosSinAlcohol();
+    document.getElementById("tit-busqueda").textContent = "Bebidas sin alcohol";
+    let todos = noAlcoholicas.drinks;
+    todasLasBebidas(todos);
+});
+
 
 
 // ---- FUNCION TODAS LAS BEBIDAS ALCOOHLICAS Y NO ALCOHOLICAS ----
 
-async function todasLasBebidas() {
+async function todasLasBebidas(todos) {
     try {
-        esMayor = sessionStorage.getItem("esMayor");
         
-        let todos;
-        
-        const alcoholicas = await tragosConAlcohol();
-        const noAlcoholicas = await tragosSinAlcohol();
-        if (esMayor === "true") {
-            todos = alcoholicas.drinks.concat(noAlcoholicas.drinks);
-            //console.log("TODAS LAS BEBIDAS : ", todos);
-        }else{
-            //console.log("valor de session storage esMayor  :  "+esMayor)
-            todos = noAlcoholicas.drinks; // || {};
-            //console.log("TODAS LAS BEBIDAS SIN ALCOHOL : ", todos);
-        }
-
-        //   console.log("DATOS DSDE LA FUNCION : " + todos);
+        //console.log("DATOS DSDE LA FUNCION ----- : " + todos);
         const contenedor = document.getElementById("contenedor-tragos");
         contenedor.innerHTML = "";
         todos.forEach((trago) => {
@@ -76,7 +115,7 @@ async function todasLasBebidas() {
             div.appendChild(imgContenedor);
 
             const p = document.createElement("p");
-            p.style.maxWidth = "15rem";
+            // p.style.maxWidth = "15rem";
             p.textContent = trago.strDrink;
             div.appendChild(p);
 
@@ -100,6 +139,10 @@ async function todasLasBebidas() {
     }
 }
 
-// ---- llamada a los metodos ---- 
-
-todasLasBebidas();
+esMayor = JSON.parse(sessionStorage.getItem("esMayor"));
+const cAlc = document.getElementById("cAlcohol");
+if(!esMayor){
+    cAlc.style.display = "none";
+}else{
+    cAlc.style.display = "block"
+}

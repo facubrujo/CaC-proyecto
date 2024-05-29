@@ -32,7 +32,7 @@ function cerrarSesionFunc() {
                 localStorage.setItem("usuarios", JSON.stringify(todosLosUsuarios));
                 console.log("estado de sesion al cerrar : " + todosLosUsuarios[i].sesion)
                 sessionStorage.removeItem('usuarioOnline');
-                //window.location.href = "/index.html";
+                // window.location.href = "/index.html";
                 window.location.href = "https://facubrujo.github.io/CaC-proyecto/index.html";
                 break;
             }
