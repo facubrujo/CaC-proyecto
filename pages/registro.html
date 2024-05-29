@@ -42,7 +42,7 @@
                 <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
                     aria-labelledby="offcanvasNavbar2Label">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbar2Label"></h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbar2Label" hidden></h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
@@ -65,7 +65,7 @@
                         </ul>
                         <div class="d-flex mt-3 mt-lg-0" role="search">
                             <a id="boton-login" href="login.html" class="btn btn-outline-warning"
-                                type="submit">Login</a>
+                                >Login</a>
                         </div>
 
                         <div class="dropdown" style="display : none;" id="contenedor-img-login">
@@ -106,9 +106,9 @@
     <main>
         <section class="formulario-contenedor">
 
-            <form class="formulario" id="formulario" action="" method="POST">
+            <form class="formulario" id="formulario" method="POST">
                 <h2>Formulario de registro</h2>
-                <section class="formulario-label">
+                <div class="formulario-label">
                     <div>
                         <label for="nombre">Nombre: 
                             <span id="nombre-error" ></span>
@@ -134,7 +134,7 @@
                             <span id="esMayor-error" ></span>
                         </label>
                         <select id="esMayor" name="select" class="select" required>
-                            <option>Seleccione una opción</option>
+                            <option></option>
                             <option value="si">Si</option>
                             <option value="no">No</option>
                         </select>
@@ -156,7 +156,7 @@
 
                     <div class="contenedor-imagen">
                         <div id="contenedor-de-imagen" style="display: none;">
-                            <img id="imagen-muestra" class="imagen-muestra" alt="">
+                            <img src="#" id="imagen-muestra" class="imagen-muestra" alt="img-usuario">
                         </div>
                         <label for="archivo" class="btn-seleccionar">Carga una imagen</label>
                         <input id="archivo" type="file" name="imagen" accept="image/*">
@@ -174,7 +174,7 @@
                             <input type="radio" name="genero" value="otro">Otro
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <input id="submit" class="btn-enviar" type="submit" value="Registrarme">
             </form>
