@@ -38,7 +38,7 @@
                 <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
                     aria-labelledby="offcanvasNavbar2Label">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbar2Label"></h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbar2Label" hidden>Nav</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
@@ -61,7 +61,7 @@
                         </ul>
                         <div class="d-flex mt-3 mt-lg-0" role="search">
                             <a id="boton-login" href="login.html" class="btn btn-outline-warning"
-                                type="submit">Login</a>
+                                >Login</a>
                         </div>
 
                         <div class="dropdown" style="display : none;" id="contenedor-img-login">
@@ -103,8 +103,9 @@
     <main>
         <h1 class="titulo">Perfil usuario</h1>
         <section id="perfil-usuario" class="perfil-usuario">
+            <h2 class="titulo" hidden>Perfil</h2>
             <div>
-                <img src="" alt="imagen perfil" id="img">
+                <img src="#" alt="imagen perfil" id="img">
             </div>
             <ul id="ul"></ul>
         </section>
@@ -113,10 +114,11 @@
             <div class="alcohol " id="mis-favoritos"></div>
         </section>
         <section id="miModal" class="modal">
+            <h3 class="titulo" hidden>Modal</h3>
             <div class="modal-contenido">
                 <div id="contenidoModal" class="trago-modal"></div>
                 <div class="cerrar-modal">
-                    <button class="favoritos-btn" id="mi-lista"><i class="bi bi-heart"></i></i></button>
+                    <button class="favoritos-btn" id="mi-lista"><i class="bi bi-heart"></i></button>
                     <button class="favoritos-btn" id="mi-lista-ok"><i class="bi bi-heart-fill"></i></button>
                     <button class="cerrar" id="cerrarModal">Cerrar</button>
                 </div>
